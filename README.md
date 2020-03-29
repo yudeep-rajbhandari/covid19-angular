@@ -1,3 +1,11 @@
+#Install angular cli: npm install -g @angular/cli 
+
+
+#Then: npm install
+
+
+#then :ng s 
+
 # Covid19Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
