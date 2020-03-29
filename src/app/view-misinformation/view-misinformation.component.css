@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+.content-front{
+  z-index: 1;
+  padding-top: 200px;
+}
+.fullscreen {
+    width:100%;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+   max-height: 60vh;
+    background: gray; /* Just to visualize the extent */
+    background-repeat:   no-repeat;
+    object-fit: cover;
+  }
+/*.banner{*/
+/*  background-image: url("~src/assets/images/thumb/background.jpg");*/
+/*  background-size: cover;*/
+/*  height:-webkit-fill-available;*/
+/*  background-color: rgba(0,0,0,0.8);*/
+/*}*/
+.text-center{
+  text-align: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* coming-soon css */
+.l1-txt1 {
+    font-family: Poppins-Bold;
+    font-size: 50px;
+    line-height: 1.1;
+    color: #fff;
+    text-transform: uppercase;
+}
+.m2-txt1 {
+    font-family: Lato-Light;
+    font-size: 25px;
+    line-height: 1.2;
+    color: #fff;
+}
+.carousel-caption .btn {
+  background: transparent;
+  font-weight: 800;
+}
+
+.headline > h3{
+  color: #000;
+  font-size: 26px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 30px 0 60px;
+}
+
+
+
+body {
+	font-family:  sans-serif;
+}
+
+.square-card {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 255px;
+ 	/*height: 22.5rem;*/
+	border-radius: 6px;
+	background: #fff;
+	text-align: left;
+	position: relative;
+	transition: box-shadow 0.3s ease, border 0.3s;
+	box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+ 	/*border-radius: 6px; */
+	margin-bottom: 20px;
+	margin-top: 20px;
+	/*background-image: url('img3.jpeg')*/ /*below intoro */
+}
+
+.square-card:hover {
+	box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
+	border: none;
+}
+
+/* square-card */
+.square-card a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	color: #525c65;
+	border-bottom: none;
+	text-decoration: none;
+	transition: color 0.3s ease;
+	max-width: 348px;
+}
+.square-card:hover {
+	color: #24292d;
+}
+
+/* 	card-header */
+.card-header {
+	width: 255px;
+	height: 200px;
+	/* background-image:url('sakshi.jpg'); */
+	/*border-radius: 6px; added*/
+    background-repeat: no-repeat;
+ background-attachment:fixed;
+    background-position: center center;
+ 	background-size: cover !important;
+
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+/* card-header_overlay */
+.card-header_overlay {
+ 	/*background-color: rgba(2,179,228,0.8); */
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	height: 9.75em;
+	width: 100%;
+	z-index: 4000;
+}
+/* pill */
+.pill {
+
+	color: #fff;
+	position: relative;
+	top: 15px;
+	left: 5px;
+/* 	background-color: #fff; */
+	background-color: #aa8553;
+	font-size: 0.8125rem;
+	line-height: 1.5rem;
+	height: 50px;/*1.5rem;*/
+	padding: 10px 15px;
+	border-radius: 4px;
+	letter-spacing: .03em;
+	z-index: 5000;
+	text-transform: uppercase;
+	font-weight: 400;
+	box-shadow: 4px 6px 8px 0px rgba(46,61,73,0.2);
+}
+
+/* card-title */
+.card-title {
+ 	padding: 24px 32px;
+	position: relative;
+}
+
+/* card-title > h4 */
+.card-title > h4 {
+	padding: 1em;
+	font-size: 1.25em;
+	line-height: 1.5em;
+	font-weight: 300;
+	text-transform: capitalize;
+	margin: 0;
+	color:black;/* #aa8553*/; /* name color of artist*/
+	letter-spacing: .03em;
+}
+
+/* cta */
+.cta {
+	padding-bottom: 10px;
+}
+.cta a {
+/* 	color: #aa8553; */ /*Brown*/
+	color: #999; /*grey*/
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	display: inline;
+ 	padding: 30px;
+	margin-left: 10px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.cta a:hover {
+	text-decoration: underline;
+	color: #141414; /*kalo*/
+}
+
+
+
+.headline > h2 {
+  color: #000;
+  font-size: 26px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  margin: 30px 0 60px;
+}
+.headline  > h2::after {
+
+  width: 100px;
+  position: absolute;
+  margin: 0 auto;
+  height: 4px;
+  border-radius: 1px;
+  background: #7ac400;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+}
+.checked {
+    color: orange;
+  }
+
+  .watermarked{
+    background-image: url("http://placehold.it/100x100/09f/fff.png");
+    position: relative;
+    left: 30px;
+    opacity: 0.5;
+  }
+
+.single-product-item {
+    width: 100%;
+    border: 1px solid #eeeeee;
+
+
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.product-image-wrap {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.single-product-item img {
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+.single-product-item img {
+    margin: 0;
+    padding: 0;
+    float: left;
+    z-index: 4;
+    width: 100%;
+}
+.single-product-item .product-detail-inner {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.45s ease-in-out;
+    -moz-transition: all 0.45s ease-in-out;
+    -o-transition: all 0.45s ease-in-out;
+    -ms-transition: all 0.45s ease-in-out;
+    transition: all 0.45s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.single-product-item:hover .item-details-overly-info {
+    bottom: 50px;
+}
+.single-product-item .item-details-overly-info {
+    z-index: 10;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    bottom: 0;
+    -webkit-transition: all 0.45s ease-in-out;
+    -moz-transition: all 0.45s ease-in-out;
+    -o-transition: all 0.45s ease-in-out;
+    -ms-transition: all 0.45s ease-in-out;
+    transition: all 0.45s ease-in-out;
+}
+
+.single-product-item:hover img {
+    opacity: 1;
+    transform: scale(1.15, 1.15);
+    -webkit-transform: scale(1.15, 1.15);
+    -moz-transform: scale(1.15, 1.15);
+    -ms-transform: scale(1.15, 1.15);
+    -o-transform: scale(1.15, 1.15);
+}
+.single-product-item:hover .product-detail-inner {
+    opacity: 1;
+}
+
+
+.item-details-overly-info ul li {
+    padding: 0;
+}
+
+.item-details-overly-info ul li a i {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    display: block;
+    margin: 2px;
+    color: #949291;
+    text-align: center;
+
+    background: #fff;
+    transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -webkit-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+}
+
+.item-details-overly-info ul li a i:hover {
+    background: #000;
+    color: #fff;
+}
+
+.product-item-details {
+    padding: 0 10px;
+    display: block;
+    overflow: hidden;
+}
+
+.product-item-details h2 {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 5px 0;
+    margin: 0;
+    font-weight: 400;
+    color: #949291;
+}
+
+.product-item-details h2 a {
+    color: #f08812fb;
+}
+
+.product-item-details h2 a:hover {
+    color: #000;
+}
+
+
+.item-price span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.item-price .old-price {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.item-price .current-price {
+    color: #000;
+    font-weight: 600;
+}
+
+.item-rating ul li {
+    padding: 0;
+    color: #000;
+    font-size: 11px;
+    line-height: 15px;
+}
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+@media (min-width: 770px)  {
+ .btn{
+    text-transform: uppercase;
+    outline: 0;
+    background: rgba(31, 58, 147, 1);
+    width: 100%;
+
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    border-width: 12px;
+    border-radius: 2%;
+    border-color:white;
+    margin-left:180%
+ }
+  }
+
+  @media (max-width: 770px)  {
+    .btn{
+       text-transform: uppercase;
+       outline: 0;
+       background: rgba(31, 58, 147, 1);
+       width: 100%;
+
+       padding: 15px;
+       color: #FFFFFF;
+       font-size: 14px;
+       cursor: pointer;
+       border-width: 12px;
+       border-radius: 2%;
+       border-color:white;
+
+    }
+    .fullscreen {
+        width:100%;
+        height:fit-content;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        min-height: 100vh;
+        background: gray; /* Just to visualize the extent */
+        background-repeat:   no-repeat;
+        object-fit: cover;
+      }
+     }
+

@@ -1,0 +1,56 @@
+<section id="wrapper" class="login-register login-sidebar">
+  <div class="login-box card">
+    <div class="card-body">
+      <form [formGroup]="signupForm" (ngSubmit)="signup()" class="form-horizontal form-material" id="loginform">
+        <a href="javascript:void(0)" class="text-center db logo-container">
+        </a>
+        <h3 class="box-title m-t-40 m-b-0">Report Now</h3>
+        <small>Whats going in your sorrounding?</small>
+        <div class="form-group m-t-20">
+          <div class="col-xs-12">
+            <app-form-error-wrapper [control]="signupForm.controls['productName']" [controlName]="'productName'" [apiErrorType]="'productName'">
+              <input class="form-control" type="text" formControlName="productName" placeholder="What is the product?">
+            </app-form-error-wrapper>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <app-form-error-wrapper [control]="signupForm.controls['location']" [controlName]="'location'" [apiErrorType]="'location'">
+              <input class="form-control" type="text" formControlName="location" placeholder="Please provide us your location">
+            </app-form-error-wrapper>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <app-form-error-wrapper [control]="signupForm.controls['thenPrice']" [controlName]="'thenPrice'" [apiErrorType]="'thenPrice'">
+              <input class="form-control" type="text" formControlName="thenPrice" placeholder="What was the price earlier?">
+            </app-form-error-wrapper>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <app-form-error-wrapper [control]="signupForm.controls['nowPrice']" [controlName]="'nowPrice'" [apiErrorType]="'nowPrice'">
+              <input class="form-control" type="text" formControlName="nowPrice" placeholder="What was the price now?">
+            </app-form-error-wrapper>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <app-form-error-wrapper [control]="signupForm.controls['comments']" [controlName]="'comments'" [apiErrorType]="'comments'">
+              <input class="form-control" type="text" formControlName="comments" placeholder="AnyComments?">
+            </app-form-error-wrapper>
+          </div>
+        </div>
+
+        <div class="form-group text-center m-t-20">
+          <div class="col-xs-12">
+            <button class="btn btn-info btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light" [disabled]="signupForm.invalid || isLoading">
+              <app-button-loader [isLoading]="isLoading" [label]="'Submit'"></app-button-loader>
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>

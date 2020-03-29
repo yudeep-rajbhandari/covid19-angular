@@ -1,0 +1,42 @@
+<section id="wrapper" class="login-register login-sidebar">
+    <div class="login-box card">
+      <div class="card-body">
+        <form [formGroup]="signupForm" (ngSubmit)="signup()" class="form-horizontal form-material" id="loginform">
+          <a href="javascript:void(0)" class="text-center db logo-container">
+          </a>
+          <h3 class="box-title m-t-40 m-b-0">Register Now</h3>
+          <small>Create your account and enjoy</small>
+          <div class="form-group m-t-20">
+            <div class="col-xs-12">
+              <app-form-error-wrapper [control]="signupForm.controls['mInformation']" [controlName]="'mInformation'" [apiErrorType]="'mInformation'">
+                <input class="form-control" type="text" formControlName="mInformation" placeholder="What is the information?">
+              </app-form-error-wrapper>
+            </div>
+          </div>
+          <div class="form-group ">
+            <div class="col-xs-12">
+              <app-form-error-wrapper [control]="signupForm.controls['link']" [controlName]="'link'" [apiErrorType]="'link'">
+                <input class="form-control" type="text" formControlName="link" placeholder="Please provide us a link for information">
+              </app-form-error-wrapper>
+            </div>
+          </div>
+          <div class="form-group ">
+            <div class="col-xs-12">
+              <app-form-error-wrapper [control]="signupForm.controls['source']" [controlName]="'source'" [apiErrorType]="'source'">
+                <input class="form-control" type="text" formControlName="source" placeholder="What is the source?">
+              </app-form-error-wrapper>
+            </div>
+          </div>
+          
+          <div class="form-group text-center m-t-20">
+            <div class="col-xs-12">
+              <button class="btn btn-info btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light" [disabled]="signupForm.invalid || isLoading">
+                <app-button-loader [isLoading]="isLoading" [label]="'Submit'"></app-button-loader>
+              </button>
+            </div>
+          </div>
+        
+        </form>
+      </div>
+    </div>
+  </section>

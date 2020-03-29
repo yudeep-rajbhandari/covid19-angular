@@ -1,0 +1,55 @@
+
+
+<div class='panels'>
+
+  <div class='panel overlay panel1'>
+    <div class="save_button">
+      <button type="button" class="btn btn-primary btn-lg btn-block">World with Covid </button>
+    </div>
+
+  </div>
+  <div class='panel overlay panel2'>
+    <div class="save_button">
+    <button type="button" class="btn btn-danger btn-lg btn-block" (click)="openit()">Report </button>
+    </div>
+  </div>
+  <div class='panel overlay panel3'>
+     <div class="save_button">
+    <button type="button" class="btn btn-info btn-lg btn-block" (click)="openit1()">View </button>
+     </div>
+  </div>
+
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-body">
+    <div class="col text-center">
+   <h5> What do you want to report?</h5>
+    <div class="btn-group-vertical">
+
+    <a href="/misinformation" role="button" class="btn btn-outline-info btn-sm" title="Popover title" data-content="Popover body content is set in this attribute.">Misinformation</a>
+
+        <hr>
+    <a href="/blackmarketing" role="button" class="btn btn-outline-info btn-sm" title="Popover title" data-content="Popover body content is set in this attribute.">Black Marketing</a>
+<hr>
+    <a href="/suspectedcase" role="button" class="btn btn-outline-info btn-sm" title="Popover title" data-content="Popover body content is set in this attribute.">Suspected cases</a>
+      </div>
+    </div>
+      </div>
+</ng-template>
+
+<ng-template #content1 let-modal>
+  <div class="modal-body">
+    <div class="col text-center">
+      <h5> What do you want to view?</h5>
+      <div class="btn-group-vertical">
+
+        <a href="/getmisinformation" role="button" class="btn btn-outline-info btn-sm" title="Popover title" data-content="Popover body content is set in this attribute.">Misinformation</a>
+        <hr>
+        <a href="/getblackmarketing" role="button" class="btn btn-outline-info btn-sm" title="Popover title" data-content="Popover body content is set in this attribute.">Black Marketing</a>
+        <hr>
+        <a href="/getsuspectedcase" role="button" class="btn btn-outline-info btn-sm" title="Popover title" data-content="Popover body content is set in this attribute.">Suspected cases</a>
+      </div>
+    </div>
+  </div>
+</ng-template>
