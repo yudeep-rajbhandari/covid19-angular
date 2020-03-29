@@ -16,7 +16,11 @@
         <li class="list-group-item">Negative:{{data.Negative}}</li>
       </ul>
     </div>
+
   </div>
+    <div style="display: block;" *ngIf="!isDataAvailable">
+      <div class="loading">Loading&#8230;</div>
+    </div>
 
 
   </div>
