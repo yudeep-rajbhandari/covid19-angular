@@ -1,6 +1,6 @@
-Install angular cli: npm install -g @angular/cli
-Then: npm install
-then :ng s
+Install angular cli: npm install -g @angular/cli \n
+Then: npm install \n
+then :ng s \n
 
 # Covid19Angular
 
