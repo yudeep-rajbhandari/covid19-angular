@@ -1,66 +1,52 @@
 <div class="container-fluid">
-<div class="row">
-  <div class="col-lg-4">
+  <div class="row">
+    <div class="col-lg-4">
       <div style="display: block;" *ngIf="isDataAvailable">
-    <google-chart
-      [title]="chart.title1"
-      [type]="chart.type"
-      [data]="chart.data1"
-      [options]="chart.options">
-    </google-chart>
-    <div class="card text-center bg-primary mb-3 w-75" >
-      <div class="card-header text-white">Nepal Stats</div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Total tested:{{data.Total_Samples_Tested}}</li>
-        <li class="list-group-item">Positive:{{data.Positive}}</li>
-        <li class="list-group-item">Negative:{{data.Negative}}</li>
-      </ul>
+        <google-chart [title]="chart.title1" [type]="chart.type" [data]="chart.data1" [options]="chart.options">
+        </google-chart>
+        <div class="card text-center bg-primary mb-3 w-75">
+          <div class="card-header text-white">Nepal Stats</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Total tested:{{data.Total_Samples_Tested}}</li>
+            <li class="list-group-item">Positive:{{data.Positive}}</li>
+            <li class="list-group-item">Negative:{{data.Negative}}</li>
+          </ul>
+        </div>
+
+      </div>
+      <div style="display: block;" *ngIf="!isDataAvailable">
+        <div class="loading">Loading&#8230;</div>
+      </div>
+
+
     </div>
-
-  </div>
-    <div style="display: block;" *ngIf="!isDataAvailable">
-      <div class="loading">Loading&#8230;</div>
-    </div>
-
-
-  </div>
-  <div class="col-lg-4">
-    <div style="display: block;" *ngIf="isSAARCDataAvailable">
-      <google-chart
-        [title]="chart.title2"
-        [type]="chart.type2"
-        [data]="chart.data2"
-        [columnNames]="chart.column2"
-        [options]="chart.options2"
-      >
-      </google-chart>
-      <div class="card text-center bg-primary mb-3 w-75">
-        <div class="card-header text-white">SAARC Stats</div>
-        <ul class="list-group list-group-flush" *ngFor="let s of SAARCdata">
-          <li class="list-group-item">{{s.country}}, {{s.Active_Cases}} Active cases,{{s.Total_Deaths==""?0:s.Total_Deaths}} Deaths </li>
-        </ul>
+    <div class="col-lg-4">
+      <div style="display: block;" *ngIf="isSAARCDataAvailable">
+        <google-chart [title]="chart.title2" [type]="chart.type2" [data]="chart.data2" [columnNames]="chart.column2"
+          [options]="chart.options2">
+        </google-chart>
+        <div class="card text-center bg-primary mb-3 w-75">
+          <div class="card-header text-white">SAARC Stats</div>
+          <ul class="list-group list-group-flush" *ngFor="let s of SAARCdata">
+            <li class="list-group-item">{{s.country}}, {{s.Active_Cases}} Active
+              cases,{{s.Total_Deaths==""?0:s.Total_Deaths}} Deaths </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-lg-4">
-    <div style="display: block;" *ngIf="isDataAvailable">
-      <google-chart
-        [title]="chart.title"
-        [type]="chart.type"
-        [data]="chart.data"
-        [options]="chart.options">
-      </google-chart>
-      <div class="card text-center bg-primary mb-3 w-75" >
-        <div class="card-header text-white">Nepal Stats</div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Total positive:{{data.Positive}}</li>
-          <li class="list-group-item">Recovered:{{data.Recovered}}</li>
-          <li class="list-group-item">Isolation:{{data.Isolation}}</li>
-        </ul>
+    <div class="col-lg-4">
+      <div style="display: block;" *ngIf="isDataAvailable">
+        <google-chart [title]="chart.title" [type]="chart.type" [data]="chart.data" [options]="chart.options">
+        </google-chart>
+        <div class="card text-center bg-primary mb-3 w-75">
+          <div class="card-header text-white">Nepal Stats</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Total positive:{{data.Positive}}</li>
+            <li class="list-group-item">Recovered:{{data.Recovered}}</li>
+            <li class="list-group-item">Isolation:{{data.Isolation}}</li>
+          </ul>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 </div>
-
-

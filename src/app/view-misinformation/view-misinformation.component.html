@@ -1,13 +1,12 @@
-
-<div class="card-columns">
-<div class="card   text-center p-3"   *ngFor = "let prod of misinformation; let i=index" style="position: unset">
-  <div class="card-body text-{{textbox[i%4]}}-50 bg-{{colorbox[(i%4)]}}" >
-    <h4 class="card-text">Source:{{prod.source}}</h4>
-    <h5 class="card-text">{{prod.mInformation}}</h5>
-    <div class="card-body">
-      <a (click)="gotoUrl(prod.link)" class="card-link" style="cursor:pointer">Go to link</a>
+<div class="misinformation-container">
+<div class=" text-center p-3"   *ngFor = "let prod of misinformation; let i=index" >
+  <div class="card-body card-div"  >
+    <h4 class="card-text card-div-title" >Source:{{prod.source}}</h4>
+    <h5 class="card-text card-div-text" >{{prod.mInformation}}</h5>
+    <div class="card-body ">
+      <a (click)="gotoUrl(prod.link)" class="card-link card-div-goto" >Go to link</a>
     </div>
-    <p class="card-footer text-muted">{{prod.created_date}}</p>
+    <p class=" text-muted card-div-time " >{{prod.created_date}}</p>
   </div>
 </div>
 </div>
