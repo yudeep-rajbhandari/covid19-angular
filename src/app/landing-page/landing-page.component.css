@@ -7,8 +7,19 @@ body {
 }
 .panels {
   display: flex;
+flex-direction: row;
+  /* display: grid; */
   min-height: 100vh;
   overflow: hidden;
+}
+@media only screen and (max-width: 578px) {
+  .panels {
+    display: flex;
+  flex-direction: column;
+    /* display: grid; */
+    min-height: 100vh;
+    overflow: hidden;
+  }
 }
 .panel {
   display: flex;
@@ -16,28 +27,10 @@ body {
   align-items: center;
   flex-direction: column;
   flex: 1;
-  /*cursor: pointer;*/
   background-position: center;
   background-size: cover;
-  /*transition:*/
-  /*  flex .7s cubic-bezier(0.61,-0.19, 0.7,-0.11),*/
-  /*  font-size .7s cubic-bezier(0.61,-0.19, 0.7,-0.11),*/
-  /*  background .2s;*/
-  /*box-shadow: inset 0 0 0 5px rgba(255, 255, 255, .2);*/
 }
-.overlay {
-  position: relative;
-}
-.overlay:after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: .7s;
-  /*background: rgba(0, 0, 0, .5);*/
-}
+
 div > p {
   display: flex;
   justify-content: center;
@@ -92,16 +85,125 @@ div > p:first-child {
 }
 .save_button {
   width: 80%;
-cursor: pointer;
-  z-index: 99999;
-
-
-
+  cursor: pointer;
+  z-index: 1;
+  font-size: 24px;
 }
 
 .modal-content{
-  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%) !important;
-  -webkit-border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-  border-radius: 0px !important;
+margin-top: 30px;
 }
+
+.dialog-body{
+  padding: 60px;
+  font-family: AvertaBold;
+overflow: hidden;
+}
+
+.button-mis{
+  height: 50;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0px 2px 5px 0px #9cced9;
+  border: 2px solid#31A2B8;
+  background-color: #31A2B8;
+  padding: 12px 36px;
+  font-size: 16px;
+  transition: 0.3s;
+  color: #fff;
+  cursor: pointer;
+  text-decoration:none
+}
+
+.button-mis:hover{
+  background-color: #fff;
+  border: 2px solid #31A2B8;
+  color: #31A2B8;
+}
+
+
+.button-view{
+  height: 50;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0px 2px 5px 0px #104b58;
+  border: 2px solid#31A2B8;
+  background-color: #31A2B8;
+  padding: 8px 36px;
+  /* font-size: 24px; */
+  transition: 0.3s;
+  color: #fff;
+  cursor: pointer;
+  text-decoration:none;
+  z-index: 1;
+  font-family: AvertaLight;
+
+}
+
+.button-view:hover{
+  background-color: #217685;
+  border: 2px solid #217685;
+  color: #ffffff;
+}
+
+
+.button-report{
+  height: 50;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0px 2px 5px 0px #860d0d;
+  border: 2px solid#c71818;
+  background-color: #c71818;
+  padding: 8px 36px;
+  /* font-size: 24px; */
+  transition: 0.3s;
+  color: #fff;
+  cursor: pointer;
+  text-decoration:none;
+  z-index: 1;
+  font-family: AvertaLight;
+
+}
+
+.button-report:hover{
+  background-color: #a31111;
+  border: 2px solid #a31111;
+  color: #ffffff;
+
+}
+
+.button-world{
+  height: 50;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0px 2px 5px 0px #183807;
+  border: 2px solid#179e32;
+  background-color: #179e32;
+  padding: 8px 36px;
+  
+  transition: 0.3s;
+  color: #fff;
+  cursor: pointer;
+  text-decoration:none;
+  z-index: 1;
+  font-family: AvertaLight;
+
+}
+
+.button-world:hover{
+  background-color: #348d04;
+  border: 2px solid #348d04;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 1000px) {
+.save_button{
+  font-size: 18px;
+}
+}
+
+@media only screen and (max-width: 800px) {
+  .save_button{
+    font-size: 16px;
+  }
+  }

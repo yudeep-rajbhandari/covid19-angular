@@ -1,58 +1,59 @@
 <div class='panels'>
 
-  <div class='panel overlay panel1'>
+  <div class='panel  panel1'>
     <div class="save_button">
-      <button type="button" class="btn btn-primary btn-lg btn-block">World with Covid </button>
-    </div>
-
-  </div>
-  <div class='panel overlay panel2'>
-    <div class="save_button">
-      <button type="button" class="btn btn-danger btn-lg btn-block" (click)="openit()">Report </button>
+      <button type="button" class="button-world">World with Covid </button>
     </div>
   </div>
-  <div class='panel overlay panel3'>
+  <div class='panel  panel2'>
     <div class="save_button">
-      <button type="button" class="btn btn-info btn-lg btn-block" (click)="openit1()">View </button>
+      <button type="button" class="button-report" (click)="openit()">Report </button>
+    </div>
+  </div>
+  <div class='panel  panel3'>
+    <div class="save_button">
+      <button type="button" class="button-view" (click)="openit1()">View </button>
     </div>
   </div>
 
 </div>
 
-<ng-template #content let-modal>
-  <div class="modal-body">
+<ng-template #content let-modal style="border-radius: 24px;">
+  <div class=" dialog-body">
     <div class="col text-center">
-      <h5> What do you want to report?</h5>
+      <h4> What do you want to report?</h4>
       <div class="btn-group-vertical">
+        <a href="/misinformation"  class="button-mis mt-3" title="Report Misinformation">
+        
+            Misinformation
+        </a>
+        <a href="/blackmarketing" class="button-mis mt-3" title="Report Black Marketing">
 
-        <a href="/misinformation" role="button" class="btn btn-outline-info btn-sm" title="Popover title"
-          data-content="Popover body content is set in this attribute.">Misinformation</a>
+            Black Marketing
 
-        <hr>
-        <a href="/blackmarketing" role="button" class="btn btn-outline-info btn-sm" title="Popover title"
-          data-content="Popover body content is set in this attribute.">Black Marketing</a>
-        <hr>
-        <a href="/suspectedcase" role="button" class="btn btn-outline-info btn-sm" title="Popover title"
-          data-content="Popover body content is set in this attribute.">Suspected cases</a>
+        </a>
+        <a href="/suspectedcase" class="button-mis mt-3" title="Report Suspected Cases">
+            Suspected Cases
+        </a>
       </div>
     </div>
   </div>
 </ng-template>
 
 <ng-template #content1 let-modal>
-  <div class="modal-body">
+  <div class="modal-body dialog-body">
     <div class="col text-center">
       <h5> What do you want to view?</h5>
       <div class="btn-group-vertical">
-
-        <a href="/getmisinformation" role="button" class="btn btn-outline-info btn-sm" title="Popover title"
-          data-content="Popover body content is set in this attribute.">Misinformation</a>
-        <hr>
-        <a href="/getblackmarketing" role="button" class="btn btn-outline-info btn-sm" title="Popover title"
-          data-content="Popover body content is set in this attribute.">Black Marketing</a>
-        <hr>
-        <a href="/getsuspectedcase" role="button" class="btn btn-outline-info btn-sm" title="Popover title"
-          data-content="Popover body content is set in this attribute.">Suspected cases</a>
+        <a href="/getmisinformation"  class="button-mis mt-3" title="View Misinformation">        
+            Misinformation
+        </a>
+        <a href="/getblackmarketing" class="button-mis mt-3" title="View Black Marketing">
+            Black Marketing
+        </a>
+        <a href="/getsuspectedcase" class="button-mis mt-3" title="View Suspected Cases">
+            Suspected Cases
+        </a>
       </div>
     </div>
   </div>

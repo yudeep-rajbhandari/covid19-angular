@@ -1,7 +1,7 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-4">
-      <div style="display: block;" *ngIf="isDataAvailable">
+<div >
+  <div class="visualize">
+    <div >
+      <div style="" *ngIf="isDataAvailable">
         <google-chart [title]="chart.title1" [type]="chart.type" [data]="chart.data1" [options]="chart.options">
         </google-chart>
         <div class="card text-center bg-primary mb-3 w-75">
@@ -14,14 +14,15 @@
         </div>
 
       </div>
-      <div style="display: block;" *ngIf="!isDataAvailable">
+      <div style="" *ngIf="!isDataAvailable">
         <div class="loading">Loading&#8230;</div>
       </div>
 
 
     </div>
-    <div class="col-lg-4">
-      <div style="display: block;" *ngIf="isSAARCDataAvailable">
+    
+    <div >
+      <div style="" *ngIf="isSAARCDataAvailable">
         <google-chart [title]="chart.title2" [type]="chart.type2" [data]="chart.data2" [columnNames]="chart.column2"
           [options]="chart.options2">
         </google-chart>
@@ -34,8 +35,9 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-4">
-      <div style="display: block;" *ngIf="isDataAvailable">
+    
+    <div >
+      <div style="" *ngIf="isDataAvailable">
         <google-chart [title]="chart.title" [type]="chart.type" [data]="chart.data" [options]="chart.options">
         </google-chart>
         <div class="card text-center bg-primary mb-3 w-75">
