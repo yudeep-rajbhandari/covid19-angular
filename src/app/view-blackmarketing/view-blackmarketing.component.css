@@ -1,27 +1,4 @@
-@font-face {
-    src: url('../../assets/fonts/AvertaBold.otf');
-    font-family: AvertaBold;
-}
 
-@font-face {
-    src: url('../../assets/fonts/AvertaExtraBold.otf');
-    font-family: AvertaExtraBold;
-}
-
-@font-face {
-    src: url('../../assets/fonts/AvertaLight.otf');
-    font-family: AvertaLight;
-}
-
-@font-face {
-    src: url('../../assets/fonts/AvertaSemibold.otf');
-    font-family: AvertaSemiBold;
-}
-
-@font-face {
-    src: url('../../assets/fonts/Rumpelstiltskin-EPdj.ttf');
-    font-family: Rumpelstiltskin;
-}
 
 .blackmarketing-container{
     display:grid; 
@@ -41,7 +18,7 @@
 	}
 }
 
-.card-div{
+.blackmarketing-div{
     background-color: white;
     box-shadow: 0px 2px 5px 0px #c7c7c7;
     border-radius: 4px;
@@ -50,17 +27,17 @@
     position:relative
 }
 
-.card-div:hover{
+.blackmarketing-div:hover{
     background-color: white;
     box-shadow: 0px 10px 15px 0px #c7c7c7;
     border-radius: 4px;
 }
 
-.card-div-title{
+.blackmarketing-div-title{
     font-family: AvertaSemiBold;
 }
 
-.card-div-text{
+.blackmarketing-div-text{
     font-family: AvertaLight;
 }
 
@@ -69,6 +46,6 @@
     bottom:0;
 }
 
-.card-div-time{
+.blackmarketing-div-time{
     font-family: AvertaLight; 
 }

@@ -1,2 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+    src: url('../src/assets/fonts/AvertaBold.otf');
+    font-family: AvertaBold;
+}
+
+@font-face {
+    src: url('../src/assets/fonts/AvertaExtraBold.otf');
+    font-family: AvertaExtraBold;
+}
+
+@font-face {
+    src: url('../src/assets/fonts/AvertaLight.otf');
+    font-family: AvertaLight;
+}
+
+@font-face {
+    src: url('../src/assets/fonts/AvertaSemibold.otf');
+    font-family: AvertaSemiBold;
+}
+
+@font-face {
+    src: url('../src/assets/fonts/Rumpelstiltskin-EPdj.ttf');
+    font-family: Rumpelstiltskin;
+}
