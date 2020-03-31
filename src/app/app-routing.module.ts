@@ -9,8 +9,11 @@ import {ViewBlackmarketingComponent} from './view-blackmarketing/view-blackmarke
 import {ViewSuspectedcasesComponent} from './view-suspectedcases/view-suspectedcases.component';
 import {VisualizenepalComponent} from './visualizenepal/visualizenepal.component';
 import {HomepageComponent} from './homepage/homepage.component';
+import {NepalMapComponent} from './nepal-map/nepal-map.component';
 
-const routes: Routes = [{path: 'misinformation', component: MisinformationComponent},
+const routes: Routes = [
+  {path: 'nepalmap', component: NepalMapComponent},
+  {path: 'misinformation', component: MisinformationComponent},
   {path: 'getmisinformation', component: ViewMisinformationComponent},
   {path: 'landingpage', component: LandingPageComponent},
   {path: 'blackmarketing', component: BlackmarketingComponent},
