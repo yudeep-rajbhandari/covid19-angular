@@ -11,5 +11,7 @@ export class NepalMapComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  showStats(val1) {
+    console.log(val1);
+}
 }

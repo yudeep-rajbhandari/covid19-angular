@@ -20,14 +20,15 @@ import {CoreModule} from './core';
 import {SharedModule} from './shared';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CommonModule} from '@angular/common';
-import { NepalMapComponent } from './nepal-map/nepal-map.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import {NepalMapComponent} from  './nepal-map/nepal-map.component';
 
 
 @NgModule({
     declarations: [AppComponent, MisinformationComponent, ViewMisinformationComponent,
       LandingPageComponent, SuspectedcaseComponent, BlackmarketingComponent,
       ViewSuspectedcasesComponent, ViewBlackmarketingComponent,
-      VisualizenepalComponent, HomepageComponent, NepalMapComponent],
+      VisualizenepalComponent, HomepageComponent, NavbarComponent, NepalMapComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,

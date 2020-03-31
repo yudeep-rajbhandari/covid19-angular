@@ -25,11 +25,11 @@ declare namespace Authentication {
   }
 
   export interface nepaldata{
-    Recovered:number;
-    Total_Samples_Tested:number;
-    Negative:number;
-    Positive:number;
-    Isolation:number;
+    recovered:number;
+    total_Samples_Tested:number;
+    negative:number;
+    positive:number;
+    isolation:number;
 
   }
   export interface SAARCdata{
