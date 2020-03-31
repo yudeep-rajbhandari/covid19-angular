@@ -27,11 +27,20 @@ export class VisualizenepalComponent implements OnInit {
   chart = {title: 'COVID-19 Positive Cases in Nepal', type: 'PieChart', data: this.mydata, title1: 'COVID-19 Testing and Results in Nepal', title2: 'COVID-19 affected cases one in million in SAARC', data1: this.mydata1, type2: 'ColumnChart', data2: this.mydata2, column2: ['Country', 'Cases'],
     options: {
     width: 600,
-    height: 440,
+      height: 440,
+      chartArea:{left:10},
+      legend: {
+        position: 'top'}},
+    options1: {
+      width: 500,
+      height: 440,
+      // chartArea:{left:0},
       legend: {
         position: 'top'}},
   options2: {
-    height: 300,
+    height: 400,
+    width:500,
+     chartArea:{left:10},
     legend: {
       position: 'top'}
   }};
