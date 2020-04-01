@@ -28,19 +28,19 @@ export class VisualizenepalComponent implements OnInit {
     options: {
     width: 600,
       height: 440,
-      chartArea:{left:10},
+      chartArea:{left:0},
       legend: {
         position: 'top'}},
     options1: {
       width: 500,
       height: 440,
-      // chartArea:{left:0},
+      //chartArea:{left:0},
       legend: {
         position: 'top'}},
   options2: {
-    height: 400,
+    height: 440,
     width:500,
-     chartArea:{left:10},
+     chartArea:{left:0},
     legend: {
       position: 'top'}
   }};

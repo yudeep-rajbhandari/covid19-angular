@@ -12,7 +12,7 @@ html, body, div, p, ul, li {
 
 /* This class is applied to the containing div <div class="nav"> and is used to set the background color and height of the navbar */
 .nav {
-  background: #000;
+  background: #000000 ;
   height: 60px; /* set same as height & line-height below */
 }
 
@@ -27,12 +27,13 @@ html, body, div, p, ul, li {
 
 /* :hover allows you change the background color of the nav items when you mouse over them. Play around with the transition value to change the speed of the hover transition. */
 .nav li:hover {
-  background: red;
+  background: #808B96;
   transition: background .3s;
 }
 
 /* This rule is applied to the link <a> tag. It lets you turn off the link underline and set the link text color. */
 .nav-link {
-  color: #fff;
+  color: #ffffff ;
+  
   text-decoration: none;
 }
