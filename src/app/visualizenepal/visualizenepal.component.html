@@ -7,20 +7,18 @@
         <div class="card text-center bg-primary mb-3 w-80">
           <div class="card-header text-white">Nepal Stats</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Total tested:{{data.Total_Samples_Tested}}</li>
-            <li class="list-group-item">Positive:{{data.Positive}}</li>
-            <li class="list-group-item">Negative:{{data.Negative}}</li>
+            <li class="list-group-item">Total tested:{{data.total_Samples_Tested}}</li>
+            <li class="list-group-item">Positive:{{data.positive}}</li>
+            <li class="list-group-item">Negative:{{data.negative}}</li>
           </ul>
         </div>
 
       </div>
-      <div *ngIf="!isDataAvailable">
-        <div class="loading">Loading&#8230;</div>
-      </div>
+
 
 
     </div>
-    
+
     <div >
       <div class="w-80" *ngIf="isSAARCDataAvailable">
         <google-chart [title]="chart.title2" [type]="chart.type2" [data]="chart.data2" [columnNames]="chart.column2"
@@ -34,8 +32,11 @@
           </ul>
         </div>
       </div>
+      <div *ngIf="!isDataAvailable">
+        <div class="loading">Loading&#8230;</div>
+      </div>
     </div>
-    
+
     <div >
       <div class="w-80" *ngIf="isDataAvailable">
         <google-chart [title]="chart.title" [type]="chart.type" [data]="chart.data" [options]="chart.options">
@@ -43,9 +44,9 @@
         <div class="card text-center bg-primary mb-3 w-80">
           <div class="card-header text-white">Nepal Stats</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Total positive:{{data.Positive}}</li>
-            <li class="list-group-item">Recovered:{{data.Recovered}}</li>
-            <li class="list-group-item">Isolation:{{data.Isolation}}</li>
+            <li class="list-group-item">Total positive:{{data.positive}}</li>
+            <li class="list-group-item">Recovered:{{data.recovered}}</li>
+            <li class="list-group-item">Isolation:{{data.isolation}}</li>
           </ul>
         </div>
       </div>
