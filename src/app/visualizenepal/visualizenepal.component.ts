@@ -26,7 +26,7 @@ export class VisualizenepalComponent implements OnInit {
   // tslint:disable-next-line:max-line-length
   chart = {title: 'COVID-19 Positive Cases in Nepal', type: 'PieChart', data: this.mydata, title1: 'COVID-19 Testing and Results in Nepal', title2: 'COVID-19 affected cases one in million in SAARC', data1: this.mydata1, type2: 'ColumnChart', data2: this.mydata2, column2: ['Country', 'Cases'],
     options: {
-    width: 600,
+    width: 500,
     height: 440},
   options2: {
     height: 300
