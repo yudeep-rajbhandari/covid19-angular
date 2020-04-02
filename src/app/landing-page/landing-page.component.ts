@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,11 +10,11 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private modal: NgbModal) { }
+  constructor(private modal: NgbModal, private router: Router) { }
   @ViewChild('content', {static: false})
-  private content:any;
+  private content: any;
   @ViewChild('content1', {static: false})
-  private content1:any;
+  private content1: any;
 
 
   ngOnInit() {
@@ -25,6 +26,10 @@ export class LandingPageComponent implements OnInit {
   }
   openit1() {
     this.modal.open(this.content1, {ariaLabelledBy: 'modal-basic-title'});
+  }
+  openit2() {
+    this.router.navigate(['visualizeNepal']);
+
   }
 
 }
