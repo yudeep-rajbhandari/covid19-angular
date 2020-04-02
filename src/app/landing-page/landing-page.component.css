@@ -26,6 +26,7 @@ h3{
   text-align: right;  
   color: #7B241C;
 }
+
 @media only screen and (max-width: 578px) {
   .panels {
     display: flex;
