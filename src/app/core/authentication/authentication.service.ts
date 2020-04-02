@@ -100,6 +100,7 @@ export class AuthenticationService {
   getWorldData() {
     return this.httpClient.get<Authentication.SAARCdata[]>('update/SAARC');
   }
+
   /**
    * Logs out the user and clear credentials.
    * @return {Observable<boolean>} True if the user was logged out successfully.

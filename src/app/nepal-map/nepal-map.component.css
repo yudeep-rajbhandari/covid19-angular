@@ -3,55 +3,101 @@
 .district {
     cursor: pointer;
   }
-  
+
   /* line 3, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district .prov1 {
     fill: #007bff;
   }
-  
+
   /* line 6, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district .prov2 {
     fill: #ba9cd6;
   }
-  
+
   /* line 9, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district .prov3 {
     fill: #fcaa3f;
   }
-  
+
   /* line 12, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district .prov4 {
     fill: #6c757d;
   }
-  
+
   /* line 15, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district .prov5 {
     fill: #17a2b8;
   }
-  
+
   /* line 18, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district .prov6 {
     fill: #dc3545;
   }
-  
+
   /* line 21, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district .prov7 {
     fill: #28a745;
   }
-  
+
   /* line 25, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district:hover path {
     opacity: 0.8;
   }
-  
+
   /* line 32, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .maptext {
     color: #f1f1f1;
     font-size: 12px;
     font-family: AvertaSemiBold
   }
-  
+
   text{
       color: white;
   }
   /*# sourceMappingURL=main.css.map */
+
+.field-tip:hover .tip-content {
+  right:-20px;
+  opacity:1;
+}
+body {
+  padding:30px;
+  font:normal 12px/1.5 Arial, sans-serif;
+}
+
+.field-tip {
+  position:relative;
+  cursor:help;
+}
+.field-tip .tip-content {
+  position:absolute;
+  top:-10px;
+  right:9999px;
+  width:200px;
+  margin-right:-220px;
+  padding:10px;
+  color:#fff;
+  background:#333;
+  -webkit-box-shadow:2px 2px 5px #aaa;
+  -moz-box-shadow:2px 2px 5px #aaa;
+  box-shadow:2px 2px 5px #aaa;
+  opacity:0;
+  -webkit-transition:opacity 250ms ease-out;
+  -moz-transition:opacity 250ms ease-out;
+  -ms-transition:opacity 250ms ease-out;
+  -o-transition:opacity 250ms ease-out;
+  transition:opacity 250ms ease-out;
+}
+
+.field-tip .tip-content:before {
+  content:' ';
+  position:absolute;
+  top:50%;
+  left:-16px;
+  width:0;
+  height:0;
+  margin-top:-8px;
+  border:8px solid transparent;
+  border-right-color:#333;
+}
+

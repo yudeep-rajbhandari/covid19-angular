@@ -13,6 +13,10 @@ declare namespace Authentication {
     cPassword: string;
   }
 
+  export interface DataPayload {
+    results:hospitals[];
+  }
+
   export interface suspectedcase{
        symptoms:string;
        period:string;
@@ -22,6 +26,13 @@ declare namespace Authentication {
      contactFromOutside:string;
     status :string,
     created_date :string
+  }
+
+  export interface hospitals{
+    district_name:string;
+    category_name:string;
+    name:string;
+    contact_num:string
   }
 
   export interface nepaldata{
