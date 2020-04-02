@@ -24,6 +24,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import {NepalMapComponent} from  './nepal-map/nepal-map.component';
 
 
+
 @NgModule({
     declarations: [AppComponent, MisinformationComponent, ViewMisinformationComponent,
       LandingPageComponent, SuspectedcaseComponent, BlackmarketingComponent,
@@ -40,8 +41,7 @@ import {NepalMapComponent} from  './nepal-map/nepal-map.component';
     HttpClientModule,
     NgbModule,
     CoreModule,
-    SharedModule,
-  ],
+    SharedModule],
   providers: [],
   bootstrap: [AppComponent]
 })
