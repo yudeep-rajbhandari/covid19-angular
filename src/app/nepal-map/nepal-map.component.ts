@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import { HttpClient, HttpBackend } from '@angular/common/http';
 import hospitals = Authentication.hospitals;
 import DataPayload = Authentication.DataPayload;
@@ -41,6 +41,7 @@ public mydiv: ElementRef;
     $('[data-toggle="tooltip"]').tooltip();
 
   }
+
   showStats(val1: MouseEvent) {
     this.selectevent = val1.target as Element;
     for (const value of this.Hospitals) {
@@ -54,9 +55,8 @@ public mydiv: ElementRef;
         console.log(val1.screenY);
         const shand = document.getElementById('selectIt');
         shand.style.position = 'absolute';
-        shand.style.left = val1.clientX + 'px';
-        shand.style.top =  val1.clientY + 'px';
-        timeout(1000);
+        shand.style.left = val1.pageX + 'px';
+        shand.style.top =  val1.pageY + 'px';
         shand.style.display = 'block';
 
       }

@@ -10,6 +10,9 @@ import {ViewSuspectedcasesComponent} from './view-suspectedcases/view-suspectedc
 import {VisualizenepalComponent} from './visualizenepal/visualizenepal.component';
 import {HomepageComponent} from './homepage/homepage.component';
 import {NepalMapComponent} from './nepal-map/nepal-map.component';
+import {CoronaFearComponent} from './corona-fear/corona-fear.component';
+import {GetcoronaFearComponent} from './getcorona-fear/getcorona-fear.component';
+import {VisualizeCoronaFearComponent} from './visualize-corona-fear/visualize-corona-fear.component';
 
 const routes: Routes = [
   {path: 'nepalmap', component: NepalMapComponent},
@@ -22,6 +25,11 @@ const routes: Routes = [
   {path: 'getsuspectedcase', component: ViewSuspectedcasesComponent},
   {path: 'visualizeNepal', component: VisualizenepalComponent},
   {path: 'homepage', component: HomepageComponent},
+  {path: 'coronaCases', component: CoronaFearComponent},
+  {path: 'getcoronaCases', component: GetcoronaFearComponent},
+  {path: 'visualizecorona', component: VisualizeCoronaFearComponent},
+
+
   {
     path: '',
     redirectTo: '/homepage',

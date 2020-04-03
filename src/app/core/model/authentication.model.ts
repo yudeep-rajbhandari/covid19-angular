@@ -22,8 +22,18 @@ declare namespace Authentication {
        period:string;
      age:string;
      gender:string;
-   bodyTemperature:string;
-     contactFromOutside:string;
+    description:string;
+    statuses:string;
+    status :string,
+    created_date :string
+  }
+  export interface coronaFear{
+    location:string;
+    responsibleHospital:string;
+    age:string;
+    gender:string;
+    description:string;
+    statuses:string;
     status :string,
     created_date :string
   }
@@ -41,6 +51,7 @@ declare namespace Authentication {
     negative:number;
     positive:number;
     isolation:number;
+    death:number;
 
   }
   export interface SAARCdata{

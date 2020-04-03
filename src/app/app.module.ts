@@ -22,6 +22,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CommonModule} from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import {NepalMapComponent} from  './nepal-map/nepal-map.component';
+import { CoronaFearComponent } from './corona-fear/corona-fear.component';
+import { GetcoronaFearComponent } from './getcorona-fear/getcorona-fear.component';
+import { VisualizeCoronaFearComponent } from './visualize-corona-fear/visualize-corona-fear.component';
 
 
 
@@ -29,7 +32,7 @@ import {NepalMapComponent} from  './nepal-map/nepal-map.component';
     declarations: [AppComponent, MisinformationComponent, ViewMisinformationComponent,
       LandingPageComponent, SuspectedcaseComponent, BlackmarketingComponent,
       ViewSuspectedcasesComponent, ViewBlackmarketingComponent,
-      VisualizenepalComponent, HomepageComponent, NavbarComponent, NepalMapComponent],
+      VisualizenepalComponent, HomepageComponent, NavbarComponent, NepalMapComponent, CoronaFearComponent, GetcoronaFearComponent, VisualizeCoronaFearComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
