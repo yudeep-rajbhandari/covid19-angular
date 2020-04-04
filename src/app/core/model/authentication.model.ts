@@ -52,6 +52,7 @@ declare namespace Authentication {
     positive:number;
     isolation:number;
     death:number;
+    total_recovered:number
 
   }
   export interface SAARCdata{

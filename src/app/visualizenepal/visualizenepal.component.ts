@@ -57,7 +57,7 @@ export class VisualizenepalComponent implements OnInit {
     this.httpClient.get<nepaldata>('https://covidapi.naxa.com.np/api/v1/stats/?format=json').subscribe(data => {
       console.log(data);
       this.data = data;
-      this.recovered = data.confirmed - data.isolation;
+      this.recovered = data.total_recovered;
       this.positive = data.confirmed;
       this.negative = data.tested - data.confirmed;
       this.mydata.push(['Total Positive', parseInt(String(data.confirmed), 10)]);
