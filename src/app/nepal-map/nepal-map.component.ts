@@ -2,6 +2,7 @@ import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/c
 import { HttpClient, HttpBackend } from '@angular/common/http';
 import hospitals = Authentication.hospitals;
 import DataPayload = Authentication.DataPayload;
+import {NotificationService} from '../core/notification/notification.service';
 import {timeout} from 'rxjs/operators';
 declare var $: any;
 
@@ -27,7 +28,7 @@ selectevent: Element;
 
 @ViewChild('selectIt', {static: false})
 public mydiv: ElementRef;
-  constructor(handler: HttpBackend) {
+  constructor(handler: HttpBackend, private ns:NotificationService) {
     this.httpClient = new HttpClient(handler);
     this.httpClient.get<DataPayload>('https://covidapi.naxa.com.np/api/v1/health-facility2/').subscribe(data => {
       console.log(data);
@@ -42,7 +43,7 @@ public mydiv: ElementRef;
 
   }
 
-  showStats(val1: MouseEvent) {
+  showDistrictforMap(val1: MouseEvent) {
     this.selectevent = val1.target as Element;
     for (const value of this.Hospitals) {
       if (value.district_name.toLocaleLowerCase() == this.selectevent.id) {
@@ -50,24 +51,34 @@ public mydiv: ElementRef;
         this.Number = value.contact_num;
         this.HospitalName = value.name;
         this.District = value.district_name ;
+        this.ns.success1('\n' +value.contact_num +'\n' + this.District,this.HospitalName );
         this.dataentry = true;
-        console.log(val1.screenX);
-        console.log(val1.screenY);
-        const shand = document.getElementById('selectIt');
-        shand.style.position = 'absolute';
-        shand.style.left = val1.pageX + 'px';
-        shand.style.top =  val1.pageY + 'px';
-        shand.style.display = 'block';
+        // console.log(val1.screenX);
+        // console.log(val1.screenY);
+        // const shand = document.getElementById('selectIt');
+        // shand.style.position = 'absolute';
+        // shand.style.left = val1.pageX + 'px';
+        // shand.style.top =  val1.pageY + 'px';
+        // setTimeout(()=>{
+        //   shand.style.display = 'block';
+        // },100)
+
 
       }
     }
 }
 
+showStats(){
+
+}
 removeStats() {
 this.dataentry = false;
 this.val = 'none';
-timeout(3000);
-  const shand = document.getElementById('selectIt');
-  shand.style.display = 'none';
+
+//setTimeout(() => {
+//   const shand = document.getElementById('selectIt');
+//   shand.style.display = 'none';
+// }, 3000);
+
 }
 }

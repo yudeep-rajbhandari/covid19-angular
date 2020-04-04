@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../core';
 import nepaldata = Authentication.nepaldata;
 import SAARCdata = Authentication.SAARCdata;
+import { HttpClient, HttpBackend } from '@angular/common/http';
 
 
 @Component({
@@ -13,6 +14,9 @@ export class VisualizenepalComponent implements OnInit {
 
   isDataAvailable: boolean;
   isSAARCDataAvailable: boolean;
+  positive:number;
+  negative:number;
+  recovered: number;
 
 
   data: nepaldata;
@@ -46,21 +50,38 @@ export class VisualizenepalComponent implements OnInit {
   }};
 
 
-  constructor(private apicall: AuthenticationService) {
-    this.apicall.getNepalLivedata().subscribe(data => {
+  constructor(private apicall: AuthenticationService,private handler: HttpBackend,  private httpClient: HttpClient) {
+
+    this.httpClient = new HttpClient(handler);
+    this.httpClient.get<nepaldata>('https://covidapi.naxa.com.np/api/v1/stats/?format=json').subscribe(data => {
       console.log(data);
-      this.mydata = this.mydata || [];
       this.data = data;
-      this.mydata.push(['Total Positive', parseInt(String(data.positive), 10)]);
-      this.mydata.push(['Recovered', parseInt(String(data.recovered), 10)]);
+      this.recovered=data.confirmed-data.isolation;
+      this.positive = data.confirmed;
+      this.negative = data.tested - data.confirmed;
+      this.mydata.push(['Total Positive', parseInt(String(data.confirmed), 10)]);
+      this.mydata.push(['Recovered', this.recovered]);
       this.mydata.push(['Isolation', parseInt(String(data.isolation), 10)]);
-      this.mydata1.push(['Total Tested', parseInt(String(data.total_Samples_Tested), 10)]);
-      this.mydata1.push(['Positive', parseInt(String(data.positive), 10)]);
-      this.mydata1.push(['Negative', parseInt(String(data.negative), 10)]);
-      // this.mydata = [['Total Tested', data.Total_Samples_Tested], ['Positive', data.Positive], ['Negative', data.Negative]];
+      this.mydata1.push(['Total Tested', parseInt(String(data.tested), 10)]);
+      this.mydata1.push(['Positive', this.positive]);
+      this.mydata1.push(['Negative', this.negative]);
       console.log('mydata', this.mydata);
       this.isDataAvailable = true;
     });
+    // this.apicall.getNepalLivedata().subscribe(data => {
+    //   console.log(data);
+    //   this.mydata = this.mydata || [];
+    //   this.data = data;
+    //   this.mydata.push(['Total Positive', parseInt(String(data.positive), 10)]);
+    //   this.mydata.push(['Recovered', parseInt(String(data.recovered), 10)]);
+    //   this.mydata.push(['Isolation', parseInt(String(data.isolation), 10)]);
+    //   this.mydata1.push(['Total Tested', parseInt(String(data.total_Samples_Tested), 10)]);
+    //   this.mydata1.push(['Positive', parseInt(String(data.positive), 10)]);
+    //   this.mydata1.push(['Negative', parseInt(String(data.negative), 10)]);
+    //   // this.mydata = [['Total Tested', data.Total_Samples_Tested], ['Positive', data.Positive], ['Negative', data.Negative]];
+    //   console.log('mydata', this.mydata);
+    //   this.isDataAvailable = true;
+    // });
     this.apicall.getWorldData().subscribe(data => {
       this.acitveCases = this.acitveCases || [];
       this.totalDeaths = this.totalDeaths || [];

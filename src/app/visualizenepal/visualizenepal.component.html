@@ -7,7 +7,7 @@
     float: none; /* Added */
 
     }
- 
+
 </style>
 
 <div class="container">
@@ -21,14 +21,14 @@
         <div class="card text-center bg-primary mb-3 w-100 ">
           <div class="card-header text-white">Nepal Stats</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Total tested:{{data.total_Samples_Tested}}</li>
-            <li class="list-group-item">Positive:{{data.positive}}</li>
-            <li class="list-group-item">Negative:{{data.negative}}</li>
+            <li class="list-group-item">Total tested:{{data.tested}}</li>
+            <li class="list-group-item">Positive:{{this.positive}}</li>
+            <li class="list-group-item">Negative:{{this.negative}}</li>
           </ul>
         </div>
       </div>
     </div>
-  
+
 
     <div class="col-md-4">
       <div class="w-80" *ngIf="isSAARCDataAvailable">
@@ -48,7 +48,7 @@
       <div *ngIf="!isDataAvailable">
         <div class="loading">Loading&#8230;</div>
       </div>
-    
+
 
     <div class="col-md-4">
       <div class="w-80" *ngIf="isDataAvailable">
@@ -58,8 +58,8 @@
         <div class="card text-center bg-primary mb-3 w-100">
           <div class="card-header text-white">Nepal Stats</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Total positive:{{data.positive}}</li>
-            <li class="list-group-item">Recovered:{{data.recovered}}</li>
+            <li class="list-group-item">Total positive:{{this.positive}}</li>
+            <li class="list-group-item">Recovered:{{this.recovered}}</li>
             <li class="list-group-item">Isolation:{{data.isolation}}</li>
           </ul>
         </div>

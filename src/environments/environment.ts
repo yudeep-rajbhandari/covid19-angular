@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   serverBaseUrl: 'http://thiscovid-backend.herokuapp.com/',
-  serverUrl: 'http://13.92.124.37:8080/',
+  serverUrl: 'http://localhost:8080/',
 };
 
 /*
