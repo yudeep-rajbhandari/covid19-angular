@@ -47,8 +47,8 @@ declare namespace Authentication {
 
   export interface nepaldata{
     recovered:number;
-    total_Samples_Tested:number;
-    negative:number;
+    confirmed:number;
+    tested:number;
     positive:number;
     isolation:number;
     death:number;

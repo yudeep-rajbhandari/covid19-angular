@@ -14,8 +14,8 @@ export class VisualizenepalComponent implements OnInit {
 
   isDataAvailable: boolean;
   isSAARCDataAvailable: boolean;
-  positive:number;
-  negative:number;
+  positive: number;
+  negative: number;
   recovered: number;
 
 
@@ -32,31 +32,31 @@ export class VisualizenepalComponent implements OnInit {
     options: {
     width: 600,
       height: 440,
-      chartArea:{left:0},
+      chartArea: {left: 0},
       legend: {
         position: 'top'}},
     options1: {
       width: 500,
       height: 440,
-      //chartArea:{left:0},
+      // chartArea:{left:0},
       legend: {
         position: 'top'}},
   options2: {
     height: 440,
-    width:500,
-     chartArea:{left:0},
+    width: 500,
+     chartArea: {left: 0},
     legend: {
       position: 'top'}
   }};
 
 
-  constructor(private apicall: AuthenticationService,private handler: HttpBackend,  private httpClient: HttpClient) {
+  constructor(private apicall: AuthenticationService, private handler: HttpBackend,  private httpClient: HttpClient) {
 
     this.httpClient = new HttpClient(handler);
     this.httpClient.get<nepaldata>('https://covidapi.naxa.com.np/api/v1/stats/?format=json').subscribe(data => {
       console.log(data);
       this.data = data;
-      this.recovered=data.confirmed-data.isolation;
+      this.recovered = data.confirmed - data.isolation;
       this.positive = data.confirmed;
       this.negative = data.tested - data.confirmed;
       this.mydata.push(['Total Positive', parseInt(String(data.confirmed), 10)]);
