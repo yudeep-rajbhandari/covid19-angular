@@ -25,14 +25,15 @@ import {NepalMapComponent} from  './nepal-map/nepal-map.component';
 import { CoronaFearComponent } from './corona-fear/corona-fear.component';
 import { GetcoronaFearComponent } from './getcorona-fear/getcorona-fear.component';
 import { VisualizeCoronaFearComponent } from './visualize-corona-fear/visualize-corona-fear.component';
-
+import { HospitalListComponent } from './hospital-list/hospital-list.component';
+import {DataModule} from './core/service/data.module';
 
 
 @NgModule({
     declarations: [AppComponent, MisinformationComponent, ViewMisinformationComponent,
       LandingPageComponent, SuspectedcaseComponent, BlackmarketingComponent,
       ViewSuspectedcasesComponent, ViewBlackmarketingComponent,
-      VisualizenepalComponent, HomepageComponent, NavbarComponent, NepalMapComponent, CoronaFearComponent, GetcoronaFearComponent, VisualizeCoronaFearComponent],
+      VisualizenepalComponent, HomepageComponent, NavbarComponent, NepalMapComponent, CoronaFearComponent, GetcoronaFearComponent, VisualizeCoronaFearComponent, HospitalListComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -44,7 +45,8 @@ import { VisualizeCoronaFearComponent } from './visualize-corona-fear/visualize-
     HttpClientModule,
     NgbModule,
     CoreModule,
-    SharedModule],
+    SharedModule,
+  DataModule],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -42,7 +42,8 @@ declare namespace Authentication {
     district_name:string;
     category_name:string;
     name:string;
-    contact_num:string
+    contact_num:string;
+    municipality_name:string;
   }
 
   export interface nepaldata{

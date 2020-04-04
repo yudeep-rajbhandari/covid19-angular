@@ -5,7 +5,7 @@
         to the official counts.the virus has been detected in 172 countries including Nepal.The Corona pandemic has sickened more than one million people arount the globe according
         to the official counts.</p>
     </div>
-<div class="nepalmap" id="nepalmapAnchor">
+<div class="nepalmap" id="nepalmapAnchor" *ngIf="showstuff">
     <p>zoom and hover over map for more details</p>
     <svg version="1.1" id="Layer_1" x="0px" y="0px" width="90%" viewBox="0 0 1224.992 817.002"
         enable-background="new 0 0 1224.992 817.002">
@@ -1342,7 +1342,9 @@
 
     </svg>
 </div>
-
+  <div *ngIf="!showstuff">
+    <div class="loading">Loading&#8230;</div>
+  </div>
 
 </div>
 

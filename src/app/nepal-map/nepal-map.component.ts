@@ -3,7 +3,7 @@ import { HttpClient, HttpBackend } from '@angular/common/http';
 import hospitals = Authentication.hospitals;
 import DataPayload = Authentication.DataPayload;
 import {NotificationService} from '../core/notification/notification.service';
-import {timeout} from 'rxjs/operators';
+import {DataService} from '../core/service/data.service';
 declare var $: any;
 
 
@@ -14,6 +14,7 @@ declare var $: any;
 })
 export class NepalMapComponent implements OnInit {
 dataentry: boolean;
+showstuff: boolean;
   private httpClient: HttpClient;
   data: DataPayload;
   Hospitals: hospitals[];
@@ -28,21 +29,25 @@ selectevent: Element;
 
 @ViewChild('selectIt', {static: false})
 public mydiv: ElementRef;
-  constructor(handler: HttpBackend, private ns:NotificationService) {
+  constructor(handler: HttpBackend, private ns: NotificationService, private dataService:DataService) {
     this.httpClient = new HttpClient(handler);
     this.httpClient.get<DataPayload>('https://covidapi.naxa.com.np/api/v1/health-facility2/').subscribe(data => {
       console.log(data);
       this.data = data;
       this.Hospitals = this.data.results;
+      this.showstuff = true;
       console.log(this.Hospitals);
     });
   }
 
   ngOnInit() {
-    $('[data-toggle="tooltip"]').tooltip();
+  this.dataService.sharedData = this.Hospitals;
 
   }
 
+  gotoTop() {
+    document.documentElement.scrollTop = 0;
+  }
   showDistrictforMap(val1: MouseEvent) {
     this.selectevent = val1.target as Element;
     for (const value of this.Hospitals) {
@@ -51,7 +56,7 @@ public mydiv: ElementRef;
         this.Number = value.contact_num;
         this.HospitalName = value.name;
         this.District = value.district_name ;
-        this.ns.success1('\n' +value.contact_num +'\n' + this.District,this.HospitalName );
+        this.ns.success1('\n' + value.contact_num==null?'N/A':value.contact_num + '\n' + this.District + '\n'+value.municipality_name, this.HospitalName);
         this.dataentry = true;
         // console.log(val1.screenX);
         // console.log(val1.screenY);
@@ -68,14 +73,14 @@ public mydiv: ElementRef;
     }
 }
 
-showStats(){
+showStats() {
 
 }
 removeStats() {
 this.dataentry = false;
 this.val = 'none';
 
-//setTimeout(() => {
+// setTimeout(() => {
 //   const shand = document.getElementById('selectIt');
 //   shand.style.display = 'none';
 // }, 3000);
