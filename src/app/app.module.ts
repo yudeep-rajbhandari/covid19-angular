@@ -26,8 +26,6 @@ import { CoronaFearComponent } from './corona-fear/corona-fear.component';
 import { GetcoronaFearComponent } from './getcorona-fear/getcorona-fear.component';
 import { VisualizeCoronaFearComponent } from './visualize-corona-fear/visualize-corona-fear.component';
 import { HospitalListComponent } from './hospital-list/hospital-list.component';
-import {DataModule} from './core/service/data.module';
-
 
 @NgModule({
     declarations: [AppComponent, MisinformationComponent, ViewMisinformationComponent,
@@ -45,8 +43,7 @@ import {DataModule} from './core/service/data.module';
     HttpClientModule,
     NgbModule,
     CoreModule,
-    SharedModule,
-  DataModule],
+    SharedModule],
   providers: [],
   bootstrap: [AppComponent]
 })

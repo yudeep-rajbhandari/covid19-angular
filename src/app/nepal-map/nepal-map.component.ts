@@ -3,7 +3,6 @@ import { HttpClient, HttpBackend } from '@angular/common/http';
 import hospitals = Authentication.hospitals;
 import DataPayload = Authentication.DataPayload;
 import {NotificationService} from '../core/notification/notification.service';
-import {DataService} from '../core/service/data.service';
 declare var $: any;
 
 
@@ -29,7 +28,7 @@ selectevent: Element;
 
 @ViewChild('selectIt', {static: false})
 public mydiv: ElementRef;
-  constructor(handler: HttpBackend, private ns: NotificationService, private dataService:DataService) {
+  constructor(handler: HttpBackend, private ns: NotificationService) {
     this.httpClient = new HttpClient(handler);
     this.httpClient.get<DataPayload>('https://covidapi.naxa.com.np/api/v1/health-facility2/').subscribe(data => {
       console.log(data);
@@ -41,7 +40,6 @@ public mydiv: ElementRef;
   }
 
   ngOnInit() {
-  this.dataService.sharedData = this.Hospitals;
 
   }
 
