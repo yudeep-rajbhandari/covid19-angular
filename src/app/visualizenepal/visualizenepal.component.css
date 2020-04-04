@@ -23,6 +23,15 @@
   white-space: nowrap;
   overflow: hidden;
 }
+.card.text-center.mb-3.w-100{
+  background-color: lightsalmon;
+}
+.card-header.text-white{
+  font-size: 1rem;
+}
+li .list-group-item{
+  font-size: 12px;
+}
 /* Absolute Center Spinner */
 .loading {
   position: fixed;
