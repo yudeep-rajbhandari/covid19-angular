@@ -33,6 +33,7 @@ export class VisualizenepalComponent implements OnInit {
     width: 600,
       height: 440,
       chartArea: {left: 0},
+      colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
       legend: {
         position: 'top'}},
     options1: {

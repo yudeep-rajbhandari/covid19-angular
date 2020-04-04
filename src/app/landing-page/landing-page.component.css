@@ -5,15 +5,44 @@ body {
   margin: 0;
   background: #257BA0;
 }
-.container-fluid{
-  background-image: url(../../assets/images/whiteworld.jpg);
-  background-size: cover;
-  position: absolute;
+.corona{
+  margin: 10px auto;
+  text-align: center;
+} 
+.corona h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #D35400;
+}
+.corona h6{
+  font-family: sans-serif;
+  color: #E59866; 
+}
+.subnav{
+  background-color:#FFFFE0;
+	list-style-type: none;
+  text-align: center; 
+  padding: 0px;
+  margin: 0;
+}
+.subnav li{
+  display: inline-block;
+  font-size: 15px;
+  padding: 10px;
+}
+.corona-text p{
+  padding: 20px 150px 0 150px;
+  text-align: left;
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #515A5A;
 
 }
-.row{
-  min-height: 90vh;
+.scroll-down{
+  margin: 0 auto;
+  text-align: center;
 }
+
+
 .panels {
   display: flex;
 /* flex-direction: row; */
@@ -46,7 +75,7 @@ h3{
   background-size: cover;
 }
 
-div > p {
+/* div > p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +92,7 @@ div > p {
 }
 div > p:first-child {
   transform: translateY(-100%);
-}
+} */
 /*div > p:nth-child(2) {*/
 /*  font-size: 3em;*/
 /*  text-transform: uppercase;*/

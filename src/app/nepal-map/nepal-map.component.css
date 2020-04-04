@@ -1,4 +1,29 @@
 
+
+.nepalmap-head h2{
+  margin-top: 20px;
+  color: #2E4053;
+  font-size:2rem ;
+  font-style: normal;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.nepalmap-head p{
+  padding: 20px 150px 0 150px;
+  text-align: left;
+  font-family: sans-serif;
+  color: #515A5A;
+}
+.nepalmap p{
+  margin: 0 auto;
+  text-align: center;
+  font-family: sans-serif;
+  color: #515A5A;
+  position: relative;
+  background-color:#FFFFE0;
+  border-radius: 17%; 
+  width: 30%;
+}
 /* line 1, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
 .district {
     cursor: pointer;
@@ -6,7 +31,7 @@
 
   /* line 3, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district .prov1 {
-    fill: #007bff;
+    fill: #5DADE2 ;
   }
 
   /* line 6, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
@@ -16,7 +41,7 @@
 
   /* line 9, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district .prov3 {
-    fill: #fcaa3f;
+    fill: #F5B041 ;
   }
 
   /* line 12, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
@@ -31,12 +56,12 @@
 
   /* line 18, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district .prov6 {
-    fill: #dc3545;
+    fill: #EC7063;
   }
 
   /* line 21, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
   .district .prov7 {
-    fill: #28a745;
+    fill: #58D68D;
   }
 
   /* line 25, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */

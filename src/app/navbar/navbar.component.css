@@ -12,7 +12,7 @@ html, body, div, p, ul, li {
 
 /* This class is applied to the containing div <div class="nav"> and is used to set the background color and height of the navbar */
 .nav {
-  background: #000000 ;
+  background: #F5B041  ;
   height: 60px; /* set same as height & line-height below */
 }
 
