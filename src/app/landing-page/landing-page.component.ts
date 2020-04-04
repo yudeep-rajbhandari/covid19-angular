@@ -1,6 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
+import {NepalMapComponent} from '../nepal-map/nepal-map.component';
+import { ViewportScroller } from '@angular/common';
 
 
 @Component({
@@ -10,14 +12,16 @@ import { Router } from '@angular/router';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private modal: NgbModal, private router: Router) { }
+  constructor(private modal: NgbModal, private router: Router, private viewportScroller: ViewportScroller) { }
   @ViewChild('content', {static: false})
   private content: any;
   @ViewChild('content1', {static: false})
   private content1: any;
-
+  @ViewChild('#cold', {static: false})
+  private table: NepalMapComponent;
 
   ngOnInit() {
+
   }
 
 
@@ -29,6 +33,12 @@ export class LandingPageComponent implements OnInit {
   }
   openit2() {
     this.router.navigate(['visualizeNepal']);
+
+  }
+
+  gotoMap() {
+    document.querySelector('#nepalmapAnchor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+   // this.viewportScroller.scrollToAnchor('nepalmapAnchor');
 
   }
 
