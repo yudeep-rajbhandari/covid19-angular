@@ -15,8 +15,10 @@ RUN npm install
 # RUN npm ci --only=production
 # Bundle app source
 COPY . .
-RUN ng build --prod --output-path=/usr/src/app/dist/covid19-angular
- COPY . .
+RUN npm run build
+
+#RUN ng build --prod --output-path=/usr/src/app/dist/covid19-angular
+# COPY . .
 
 
 
