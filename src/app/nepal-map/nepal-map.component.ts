@@ -48,27 +48,34 @@ public mydiv: ElementRef;
   }
   showDistrictforMap(val1: MouseEvent) {
     this.selectevent = val1.target as Element;
-    for (const value of this.Hospitals) {
-      if (value.district_name.toLocaleLowerCase() == this.selectevent.id) {
-        this.Type = value.category_name ;
-        this.Number = value.contact_num;
-        this.HospitalName = value.name;
-        this.District = value.district_name ;
-        this.ns.success1('\n' + value.contact_num==null?'N/A':value.contact_num + '\n' + this.District + '\n'+value.municipality_name, this.HospitalName);
-        this.dataentry = true;
-        // console.log(val1.screenX);
-        // console.log(val1.screenY);
-        // const shand = document.getElementById('selectIt');
-        // shand.style.position = 'absolute';
-        // shand.style.left = val1.pageX + 'px';
-        // shand.style.top =  val1.pageY + 'px';
-        // setTimeout(()=>{
-        //   shand.style.display = 'block';
-        // },100)
 
+    const hosp = this.Hospitals.filter(hospital => hospital.district_name.toLocaleLowerCase() == this.selectevent.id);
+    if (hosp.length != 0) {
+      for (const value of hosp) {
+        if (value.district_name.toLocaleLowerCase() == this.selectevent.id) {
+          this.Type = value.category_name ;
+          this.Number = value.contact_num;
+          this.HospitalName = value.name;
+          this.District = value.district_name ;
+          this.ns.success1('\n' + value.contact_num =='nan' ? 'N/A' : value.contact_num + '\n' + this.District + '\n' + value.municipality_name, this.HospitalName);
+          this.dataentry = true;
+          // console.log(val1.screenX);
+          // console.log(val1.screenY);
+          // const shand = document.getElementById('selectIt');
+          // shand.style.position = 'absolute';
+          // shand.style.left = val1.pageX + 'px';
+          // shand.style.top =  val1.pageY + 'px';
+          // setTimeout(()=>{
+          //   shand.style.display = 'block';
+          // },100)
 
+        }
       }
+    } else {
+      this.ns.success1('No result found','Sorry!!');
     }
+
+
 }
 
 showStats() {

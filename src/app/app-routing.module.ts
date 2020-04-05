@@ -14,7 +14,7 @@ import {CoronaFearComponent} from './corona-fear/corona-fear.component';
 import {GetcoronaFearComponent} from './getcorona-fear/getcorona-fear.component';
 import {VisualizeCoronaFearComponent} from './visualize-corona-fear/visualize-corona-fear.component';
 import { HospitalListComponent } from './hospital-list/hospital-list.component';
-
+import {AQIvisualizeComponent} from './aqivisualize/aqivisualize.component';
 
 const routes: Routes = [
   {path: 'nepalmap', component: NepalMapComponent},
@@ -31,6 +31,8 @@ const routes: Routes = [
   {path: 'getcoronaCases', component: GetcoronaFearComponent},
   {path: 'visualizecorona', component: VisualizeCoronaFearComponent},
   {path: 'hospitalList', component: HospitalListComponent},
+  {path: 'AQIVisualize', component: AQIvisualizeComponent},
+
 
 
   {

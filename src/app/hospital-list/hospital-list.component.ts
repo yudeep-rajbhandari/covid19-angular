@@ -11,6 +11,7 @@ import DataPayload = Authentication.DataPayload;
   styleUrls: ['./hospital-list.component.css']
 })
 export class HospitalListComponent implements OnInit {
+
   databool:boolean;
   Hospitals: hospitals[];
   data : DataPayload;
