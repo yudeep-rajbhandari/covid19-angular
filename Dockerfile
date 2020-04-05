@@ -10,13 +10,17 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 RUN npm install
-
+RUN ng build --prod --output-path=/usr/src/app/dist/covid19-angular
 
 # If you are building your code for production
 # RUN npm ci --only=production
 # Bundle app source
 COPY . .
 
+
+
+
+#COPY --from=build  /usr/src/app/dist/covid19-angular
+
 EXPOSE 3000
-RUN ng build --prod --output-path=/usr/src/app/dist/covid19-angular
 CMD [ "node", "server.js" ]
