@@ -4,11 +4,10 @@
     <h6>Updated Date: {{this.date}}</h6>
   </div>
   <div class="subnav">
-    <ul>
-      <li><a  (click)="gotoMap()">Map</a></li>
-      <li><a  (click)="gotoMap()">Countrytable</a></li>
-      <li><a  (click)="gotoMap()">CoronaFear</a></li>
-    </ul>
+    <button type="button" class="btn btn-outline-dark btn-sm" (click)="gotoMap()"> Map</button>
+    <button type="button" class="btn btn-outline-dark btn-sm" (click)="gotoVisualize()"> CountryTable</button>
+    <button type="button" class="btn btn-outline-dark btn-sm" (click)="gotoCoronaFear()"> CoronaFear</button>
+    <button type="button" class="btn btn-outline-dark btn-sm" (click)="gotoAqi()"> AOI</button>
   </div>
   <div class="corona-text">
     <p>The Corona pandemic has sickened more than one million people arount the globe according
