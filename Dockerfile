@@ -22,7 +22,7 @@ RUN npm run build
 
 
 
-#COPY --from=build  /usr/src/app/dist/covid19-angular
+COPY --from=build  /usr/src/app/dist/covid19-angular  /usr/src/app/dist/covid19-angular
 
 EXPOSE 3000
 CMD [ "node", "server.js" ]
