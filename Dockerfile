@@ -1,4 +1,5 @@
 FROM node:10
+FROM johnpapa/angular-cli
 
 # Create app directory
 WORKDIR /usr/src/app
