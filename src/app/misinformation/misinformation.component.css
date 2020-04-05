@@ -1,6 +1,6 @@
 
   #cover {
-    /* background: #F4F6F6  url('../../assets/images/corona.jpg') center center no-repeat; */
+    background: #F4F6F6  url('../../assets/images/corona.jpg') center center no-repeat;
     background-size: cover;
     height: 100%;
     text-align: center;

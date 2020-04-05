@@ -3,6 +3,7 @@ import { AuthenticationService } from '../core';
 import nepaldata = Authentication.nepaldata;
 import SAARCdata = Authentication.SAARCdata;
 import { HttpClient, HttpBackend } from '@angular/common/http';
+import { style } from '@angular/animations';
 
 
 @Component({
@@ -28,24 +29,29 @@ export class VisualizenepalComponent implements OnInit {
   acitveCases: number[];
   totalDeaths: number[];
   // tslint:disable-next-line:max-line-length
-  chart = {title: 'COVID-19 Positive Cases in Nepal', type: 'PieChart', data: this.mydata, title1: 'COVID-19 Testing and Results in Nepal', title2: 'COVID-19 affected cases one in million in SAARC', data1: this.mydata1, type2: 'ColumnChart', data2: this.mydata2, column2: ['Country', 'Cases'],
+  chart = { title: 'COVID-19 Positive Cases in Nepal', 
+            type: 'PieChart', data: this.mydata, 
+            title1: 'COVID-19 Testing and Results in Nepal', 
+            title2: 'COVID-19 affected cases one in million in SAARC', 
+            data1: this.mydata1, type2: 'ColumnChart', 
+            data2: this.mydata2, column2: ['Country', 'Cases'],
     options: {
-    width: 600,
-      height: 440,
+      width: 400,
+      height: 300,
       chartArea: {left: 0},
       colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
       legend: {
         position: 'top'}},
     options1: {
-      width: 500,
-      height: 440,
+      width: 400,
+      height: 300,
       colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
       // chartArea:{left:0},
       legend: {
         position: 'top'}},
   options2: {
-    height: 440,
-    width: 500,
+    height: 300,
+    width: 400,
     colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
      chartArea: {left: 0},
     legend: {

@@ -19,6 +19,7 @@ export class LandingPageComponent implements OnInit {
   private content1: any;
   @ViewChild('#cold', {static: false})
   private table: NepalMapComponent;
+  date= new Date().toDateString();
 
   ngOnInit() {
 

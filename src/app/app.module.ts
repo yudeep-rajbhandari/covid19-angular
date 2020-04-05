@@ -26,12 +26,13 @@ import { CoronaFearComponent } from './corona-fear/corona-fear.component';
 import { GetcoronaFearComponent } from './getcorona-fear/getcorona-fear.component';
 import { VisualizeCoronaFearComponent } from './visualize-corona-fear/visualize-corona-fear.component';
 import { HospitalListComponent } from './hospital-list/hospital-list.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     declarations: [AppComponent, MisinformationComponent, ViewMisinformationComponent,
       LandingPageComponent, SuspectedcaseComponent, BlackmarketingComponent,
       ViewSuspectedcasesComponent, ViewBlackmarketingComponent,
-      VisualizenepalComponent, HomepageComponent, NavbarComponent, NepalMapComponent, CoronaFearComponent, GetcoronaFearComponent, VisualizeCoronaFearComponent, HospitalListComponent],
+      VisualizenepalComponent, HomepageComponent, NavbarComponent, NepalMapComponent, CoronaFearComponent, GetcoronaFearComponent, VisualizeCoronaFearComponent, HospitalListComponent, FooterComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from '../core/service/data.service';
+// import {DataService} from '../core/service/data.service';
 import hospitals = Authentication.hospitals;
 import {HttpBackend, HttpClient} from '@angular/common/http';
 import {NotificationService} from '../core/notification/notification.service';

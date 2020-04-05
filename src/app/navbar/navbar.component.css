@@ -1,3 +1,5 @@
+
+
 /* This first section is a simple "reset". It allows the navbar to push up against the top of the browser window with no white space around it. This code also sets the default font for your whole page. Put it at the very top of your css page.  */
 html, body, div, p, ul, li {
   margin: 0;
@@ -9,31 +11,41 @@ html, body, div, p, ul, li {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
 }
-
-/* This class is applied to the containing div <div class="nav"> and is used to set the background color and height of the navbar */
-.nav {
-  background: #F5B041  ;
-  height: 60px; /* set same as height & line-height below */
+.navbar.navbar-expand-md{
+  background-color: bisque;
+  width: 100%;
+  position: relative;
 }
+/* This class is applied to the containing div <div class="nav"> and is used to set the background color and height of the navbar */
+.navbar-brand {
+  color:  #D35400  ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+}
+.navbar-nav .nav-item .nav-link{
+  color: #F5B041;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav-link.dropdown-toggle{
+  color: #F5B041;
+
+}
+a .dropdown-item{
+  background-color: #FAD7A0;
+}
 /* This rule centers the nav items verticaly in the bar with the height and line height properties. Spacing between the nav items is controlled by setting right and left padding.  */
-.nav li {
+/* .nav li {
   display: inline-block;
   list-style: none;
-  height: 60px; /* should be the same as line-height */
-  line-height: 60px; /* should be the same as height */
-  padding: 0 40px; /* "0" sets top and bottom padding to none */
+} */
+.nav-item a:hover{
+  background:#FAD7A0 ;
 }
-
 /* :hover allows you change the background color of the nav items when you mouse over them. Play around with the transition value to change the speed of the hover transition. */
-.nav li:hover {
+.navbar .navbar-expand-md:hover {
   background: #808B96;
   transition: background .3s;
 }
 
 /* This rule is applied to the link <a> tag. It lets you turn off the link underline and set the link text color. */
-.nav-link {
-  color: #ffffff ;
-  
-  text-decoration: none;
-}
+
