@@ -11,10 +11,12 @@ html, body, div, p, ul, li {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
 }
+.container{
+  padding: 0 40px 0 40px;
+}
 .navbar.navbar-expand-md{
-  background-color: bisque;
-  width: 100%;
-  position: relative;
+  /* background-color: bisque; */
+  /* position: relative; */
 }
 /* This class is applied to the containing div <div class="nav"> and is used to set the background color and height of the navbar */
 .navbar-brand {
