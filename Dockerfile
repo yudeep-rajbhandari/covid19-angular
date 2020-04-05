@@ -2,7 +2,7 @@ FROM node:10
 FROM johnpapa/angular-cli
 
 # Create app directory
-WORKDIR .
+WORKDIR /usr/src/app
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -15,7 +15,9 @@ RUN npm install
 # RUN npm ci --only=production
 # Bundle app source
 COPY . .
+
 RUN npm run build
+
 
 
 #COPY --from=build  /usr/src/app/dist/covid19-angular
