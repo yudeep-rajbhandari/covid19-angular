@@ -1,18 +1,19 @@
 
   #cover {
-    background: #F4F6F6  url('../../assets/images/corona.jpg') center center no-repeat;
-    background-size: cover;
+    /* background: #F4F6F6  url('../../assets/images/corona.jpg') center center no-repeat; */
+    /* background-size: cover;
     height: 100%;
     text-align: center;
     display: flex;
     align-items: center;
     position: relative;
+    padding-bottom:170px; */
 }
 
 #cover-caption {
-    width: 100%;
+    /* width: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 1; */
 }
 
 /* only used for background overlay not needed for centering */
@@ -23,7 +24,7 @@ form:before {
     position: absolute;
     top: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.05);
     z-index: -1;
     border-radius: 10px;
 }

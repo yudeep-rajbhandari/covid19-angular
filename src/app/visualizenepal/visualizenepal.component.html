@@ -13,7 +13,7 @@
         <google-chart [title]="chart.title1" [type]="chart.type" [data]="chart.data1" [options]="chart.options">
         </google-chart>
   
-        <div class="card text-center  mb-3 w-100">
+        <div class="card text-center mb-3 w-100">
           <div class="card-header text-white">Nepal Stats</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Total tested:{{data.tested}}</li>
@@ -65,39 +65,3 @@
 
   </div>
 </div>
-
-<!-- <div class="container-fluid">
-  <div class="row">
-<div class="col-sm">
-  <div class="card text-center bg-primary mb-3 w-75">
-    <div class="card-header text-white">Nepal Stats</div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Total tested:{{data.total_Samples_Tested}}</li>
-      <li class="list-group-item">Positive:{{data.positive}}</li>
-      <li class="list-group-item">Negative:{{data.negative}}</li>
-    </ul>
-  </div>
-</div>
-  <div class="col-sm">
-          <div class="card text-center bg-primary mb-3 w-75">
-            <div class="card-header text-white">SAARC Stats</div>
-            <ul class="list-group list-group-flush" *ngFor="let s of SAARCdata">
-              <li class="list-group-item">{{s.country}}, {{s.Active_Cases}} Active
-                cases,{{s.Total_Deaths==""?0:s.Total_Deaths}} Deaths </li>
-            </ul>
-          </div>
-</div>
-<div class="col-sm">
-  <div class="col d-flex justify-content-lg-start">
-          <div class="card text-center bg-primary mb-3 w-75">
-            <div class="card-header text-white">Nepal Stats</div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Total positive:{{data.positive}}</li>
-              <li class="list-group-item">Recovered:{{data.recovered}}</li>
-              <li class="list-group-item">Isolation:{{data.isolation}}</li>
-            </ul>
-          </div>
-  </div>
-</div>
-  </div>
-</div> -->
