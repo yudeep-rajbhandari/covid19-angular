@@ -18,5 +18,5 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
-RUN ng build --prod
+RUN ng build --prod --output-path=/usr/src/app/dist/covid19-angular
 CMD [ "node", "server.js" ]
