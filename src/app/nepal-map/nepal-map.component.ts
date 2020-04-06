@@ -30,7 +30,7 @@ selectevent: Element;
 public mydiv: ElementRef;
   constructor(handler: HttpBackend, private ns: NotificationService) {
     this.httpClient = new HttpClient(handler);
-    this.httpClient.get<DataPayload>('https://covidapi.naxa.com.np/api/v1/health-facility2/').subscribe(data => {
+    this.httpClient.get<DataPayload>('https://covidapi.mohp.gov.np/api/v1/health-facility2/').subscribe(data => {
       console.log(data);
       this.data = data;
       this.Hospitals = this.data.results;

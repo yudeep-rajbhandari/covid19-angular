@@ -12,17 +12,17 @@ import DataPayload = Authentication.DataPayload;
 })
 export class HospitalListComponent implements OnInit {
 
-  databool:boolean;
+  databool: boolean;
   Hospitals: hospitals[];
-  data : DataPayload;
-  constructor(handler: HttpBackend, private ns: NotificationService, private httpClient:HttpClient){
+  data: DataPayload;
+  constructor(handler: HttpBackend, private ns: NotificationService, private httpClient: HttpClient) {
     this.httpClient = new HttpClient(handler);
-    this.httpClient.get<DataPayload>('https://covidapi.naxa.com.np/api/v1/health-facility2/').subscribe(data => {
+    this.httpClient.get<DataPayload>('https://covidapi.mohp.gov.np/api/v1/health-facility2/').subscribe(data => {
       console.log(data);
       this.data = data;
       this.Hospitals = this.data.results;
       console.log(this.Hospitals);
-      this.databool =true;
+      this.databool = true;
     });
   }
 

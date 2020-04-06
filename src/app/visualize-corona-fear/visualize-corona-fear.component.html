@@ -2,14 +2,14 @@
 <div class="container">
   <div class="visualize" id="CoronaAnchor">
     <h3>Corona Fear in Nepal</h3>
-    <p>The Corona pandemic has sickened more than one million people arount the globe according
-      to the official counts.the virus has been detected in 172 countries including Nepal.The Corona pandemic has sickened more than one million people arount the globe according
-      to the official counts.the virus has been detected in 172 countries including Nepal.The Corona pandemic has sickened more than one million people arount the globe according
-      to the official counts.the virus has been detected in 172 countries including Nepal.</p>
-    <div class="row" *ngIf="isDataAvailable">
+    <p>The primary duty of medical professionals is to provide care to all the patients who come to them without
+      any discrimination and to do the best to save people’s lives. This is their social as well as professional duty.
+      But ever since the number of people infected with COVID-19 gradually started to go up in Nepal, many doctors across the country,
+      including in Kathmandu valley, have started refusing to attend to patients with fever and dry cough.</p>
+    <div class="row" *ngIf="isDataAvailable && thisdata">
       <div class="col-md-6">
           <google-chart #googleChartComponent (select)="onSelect($event)" [title]="chart.title" [type]="chart.type" [data]="chart.data" [options]="chart.options" [columnNames]="chart.columns" >
-          </google-chart> 
+          </google-chart>
       </div>
     <div class="col-md-6 align-self-center">
       <div class="card text-center mb-3 w-100">
