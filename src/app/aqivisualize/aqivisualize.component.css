@@ -10,3 +10,9 @@
     font-size: 1rem;
     color: #2E4053;
 }
+
+@media only screen and (max-width: 767px){
+    google-chart{
+        width: 40%;
+    }
+}

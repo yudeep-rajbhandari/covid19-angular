@@ -6,8 +6,8 @@
         <form [formGroup]="signupForm" (ngSubmit)="signup()" class="form-horizontal form-material" id="loginform">
           <a href="javascript:void(0)" class="text-center db logo-container">
           </a>
-          <h3 class="box-title">Register Now</h3>
-          <small>Create your account and enjoy</small>
+          <h3 class="box-title">Report Here</h3>
+          <small>Please report if you know some misinformation</small>
           <div></div>
           <div class="form-group">
             <div class="col-sm-12">
@@ -30,7 +30,7 @@
               </app-form-error-wrapper>
             </div>
           </div>
-          
+
           <div class="form-group text-center">
             <div class="col-sm-12">
               <button class="btn btn-info btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light" [disabled]="signupForm.invalid || isLoading">
@@ -38,7 +38,7 @@
               </button>
             </div>
           </div>
-        
+
         </form>
         </div>
       </div>
