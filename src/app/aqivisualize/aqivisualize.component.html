@@ -1,0 +1,16 @@
+<div class="container" id="aqiAnchor">
+  <h3>Air Quality Monitor</h3>
+  <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
+  <div class="aqi" *ngIf="ready">
+    <google-chart #chart
+                  [title]="title"
+                  [type]="type"
+                  [data]="data"
+                  [columnNames]="columnNames"
+                  [options]="options"
+                >
+    </google-chart>
+    </div>
+</div>
+
+

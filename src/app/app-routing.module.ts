@@ -9,8 +9,16 @@ import {ViewBlackmarketingComponent} from './view-blackmarketing/view-blackmarke
 import {ViewSuspectedcasesComponent} from './view-suspectedcases/view-suspectedcases.component';
 import {VisualizenepalComponent} from './visualizenepal/visualizenepal.component';
 import {HomepageComponent} from './homepage/homepage.component';
+import {NepalMapComponent} from './nepal-map/nepal-map.component';
+import {CoronaFearComponent} from './corona-fear/corona-fear.component';
+import {GetcoronaFearComponent} from './getcorona-fear/getcorona-fear.component';
+import {VisualizeCoronaFearComponent} from './visualize-corona-fear/visualize-corona-fear.component';
+import { HospitalListComponent } from './hospital-list/hospital-list.component';
+import {AQIvisualizeComponent} from './aqivisualize/aqivisualize.component';
 
-const routes: Routes = [{path: 'misinformation', component: MisinformationComponent},
+const routes: Routes = [
+  {path: 'nepalmap', component: NepalMapComponent},
+  {path: 'misinformation', component: MisinformationComponent},
   {path: 'getmisinformation', component: ViewMisinformationComponent},
   {path: 'landingpage', component: LandingPageComponent},
   {path: 'blackmarketing', component: BlackmarketingComponent},
@@ -19,6 +27,14 @@ const routes: Routes = [{path: 'misinformation', component: MisinformationCompon
   {path: 'getsuspectedcase', component: ViewSuspectedcasesComponent},
   {path: 'visualizeNepal', component: VisualizenepalComponent},
   {path: 'homepage', component: HomepageComponent},
+  {path: 'coronaCases', component: CoronaFearComponent},
+  {path: 'getcoronaCases', component: GetcoronaFearComponent},
+  {path: 'visualizecorona', component: VisualizeCoronaFearComponent},
+  {path: 'hospitalList', component: HospitalListComponent},
+  {path: 'AQIVisualize', component: AQIvisualizeComponent},
+
+
+
   {
     path: '',
     redirectTo: '/homepage',

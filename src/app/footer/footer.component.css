@@ -1,0 +1,54 @@
+/* .footer h4{
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    color:#7B241C;
+} */
+/* .col-md-6 a{
+    display: inline-block;
+    text-align: left;
+    font-size: 15px;
+} */
+a{
+    padding: 0 20px 0 20px;
+}
+
+.col-md-6 a{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    color: brown;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#left{
+    text-align: left;
+}
+/* #left:after{    
+    content: 'Top';
+    color: red;
+    font-weight: bold;
+    padding-left: 260px;
+} */
+#right{
+    text-align: right;
+}
+
+/*Responsive Footer*/
+@media screen and (max-width:767px) {
+    /* .footer h4{
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        color:#7B241C;
+    } */
+    .col-md-6 a{
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        font-size: 13px;
+        color: brown;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+}

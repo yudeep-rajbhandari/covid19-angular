@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+.content-front{
+  z-index: 1;
+  padding-top: 200px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.suspected-container{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .suspected-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .suspected-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.suspected-div{
+  background-color: white;
+  box-shadow: 0px 2px 5px 0px #c7c7c7;
+  border-radius: 4px;
+  transition: 0.4s;
+  height:100%;
+  position:relative
+}
+
+.suspected-div:hover{
+  background-color: white;
+  box-shadow: 0px 10px 15px 0px #c7c7c7;
+  border-radius: 4px;
+}
+
+.suspected-div-title{
+  font-family: AvertaSemiBold;
+}
+
+.suspected-div-text{
+  font-family: AvertaLight;
+}
+
+.suspected-div-time{
+  font-family: AvertaLight;
+}
+
+.footer{
+  position: absolute;
+  bottom:0;
+}

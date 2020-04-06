@@ -1,0 +1,31 @@
+.visualize{
+    overflow:hidden;
+    margin-top: 40px;
+}
+.visualize h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-style: normal;
+    color: #2E4053;
+}
+.visualize p{
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #2E4053;
+}
+.card.text-center.mb-3.w-100{
+margin: 0 auto; /* Added */
+float: none; /* Added */
+background-color: lightsalmon;;
+
+}
+.card-header.text-white{
+    font-size: 15px;
+}
+.list-group.list-group-flush .list-group-item{
+font-size: 0.9em;
+}
+
+@media only screen and (max-width: 768px){
+
+}

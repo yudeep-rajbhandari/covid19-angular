@@ -1,0 +1,78 @@
+
+
+/* This first section is a simple "reset". It allows the navbar to push up against the top of the browser window with no white space around it. This code also sets the default font for your whole page. Put it at the very top of your css page.  */
+html, body, div, p, ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+.container{
+  padding: 0 40px 0 40px;
+}
+.navbar.navbar-expand-md{
+  /* background-color: bisque; */
+  /* position: relative; */
+}
+/* This class is applied to the containing div <div class="nav"> and is used to set the background color and height of the navbar */
+.navbar-brand {
+  color:  #D35400  ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.navbar-nav .nav-item .nav-link{
+  color: #F5B041;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav-link.dropdown-toggle{
+  color: #F5B041;
+
+}
+a .dropdown-item{
+  background-color: #FAD7A0;
+}
+/* This rule centers the nav items verticaly in the bar with the height and line height properties. Spacing between the nav items is controlled by setting right and left padding.  */
+/* .nav li {
+  display: inline-block;
+  list-style: none;
+} */
+.nav-item a:hover{
+  background:#FAD7A0 ;
+}
+/* :hover allows you change the background color of the nav items when you mouse over them. Play around with the transition value to change the speed of the hover transition. */
+.navbar .navbar-expand-md:hover {
+  background: #808B96;
+  transition: background .3s;
+}
+
+/* This rule is applied to the link <a> tag. It lets you turn off the link underline and set the link text color. */
+
+/*Responsive*/
+@media screen and (max-width: 600px) {
+  .navbar .navbar-expand-md a:not(:first-child) {display: none;}
+  .navbar .navbar-expand-md a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .navbar-expand-md.responsive {position: relative;}
+  .navbar .navbar-expand-md.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar .navbar-expand-md.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 768px){
+
+}

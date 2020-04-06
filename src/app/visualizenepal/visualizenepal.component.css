@@ -1,8 +1,55 @@
-.card-text{
-  font-size:12px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+
+.visualize{
+  overflow:hidden;
+  display: grid;
+  grid-template-columns:repeat(3, auto);
+  grid-gap:10px;
+}
+.googlechart h3{
+  color: #2E4053;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  font-style: inherit;
+}
+.googlechart p{
+  color: #2E4053;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  
+} 
+
+
+.card.text-center.mb-3.w-100{
+  background-color: lightsalmon;
+}
+.card-header.text-white{
+  font-size: 15px;
+}
+.card.text-center.bg-primary.mb-3.w-75{
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+} 
+.list-group.list-group-flush .list-group-item{
+  font-size: 0.9em;
+}
+
+@media only screen and (max-width: 768px){
+  .visualize{
+    display: grid;
+    grid-template-columns:repeat(1, auto)
+  }
+  .card-header.text-white{
+    text-align: left;
+  }
+  .list-group.list-group-flush .list-group-item{
+    text-align: left;
+    position: relative;
+  }
+ }
+@media only screen and (max-width: 900px) {
+  .visualize{
+    grid-template-columns:repeat(2, auto)
+  }
 }
 /* Absolute Center Spinner */
 .loading {
@@ -58,6 +105,8 @@
   -webkit-box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1.1em 0 0, rgba(255,255,255, 0.75) 0 1.5em 0 0, rgba(255,255,255, 0.75) -1.1em 1.1em 0 0, rgba(255,255,255, 0.75) -1.5em 0 0 0, rgba(255,255,255, 0.75) -1.1em -1.1em 0 0, rgba(255,255,255, 0.75) 0 -1.5em 0 0, rgba(255,255,255, 0.75) 1.1em -1.1em 0 0;
   box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1.1em 0 0, rgba(255,255,255, 0.75) 0 1.5em 0 0, rgba(255,255,255, 0.75) -1.1em 1.1em 0 0, rgba(255,255,255, 0.75) -1.5em 0 0 0, rgba(255,255,255, 0.75) -1.1em -1.1em 0 0, rgba(255,255,255, 0.75) 0 -1.5em 0 0, rgba(255,255,255, 0.75) 1.1em -1.1em 0 0;
 }
+
+
 
 /* Animation */
 

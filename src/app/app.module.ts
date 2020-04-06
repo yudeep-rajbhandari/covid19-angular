@@ -20,13 +20,20 @@ import {CoreModule} from './core';
 import {SharedModule} from './shared';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CommonModule} from '@angular/common';
-
+import { NavbarComponent } from './navbar/navbar.component';
+import {NepalMapComponent} from  './nepal-map/nepal-map.component';
+import { CoronaFearComponent } from './corona-fear/corona-fear.component';
+import { GetcoronaFearComponent } from './getcorona-fear/getcorona-fear.component';
+import { VisualizeCoronaFearComponent } from './visualize-corona-fear/visualize-corona-fear.component';
+import { HospitalListComponent } from './hospital-list/hospital-list.component';
+import { AQIvisualizeComponent } from './aqivisualize/aqivisualize.component';
+import {FooterComponent} from './footer/footer.component'
 
 @NgModule({
     declarations: [AppComponent, MisinformationComponent, ViewMisinformationComponent,
       LandingPageComponent, SuspectedcaseComponent, BlackmarketingComponent,
       ViewSuspectedcasesComponent, ViewBlackmarketingComponent,
-      VisualizenepalComponent, HomepageComponent],
+      VisualizenepalComponent, HomepageComponent,FooterComponent, NavbarComponent, NepalMapComponent, CoronaFearComponent, GetcoronaFearComponent, VisualizeCoronaFearComponent, HospitalListComponent, AQIvisualizeComponent],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -38,8 +45,7 @@ import {CommonModule} from '@angular/common';
     HttpClientModule,
     NgbModule,
     CoreModule,
-    SharedModule,
-  ],
+    SharedModule],
   providers: [],
   bootstrap: [AppComponent]
 })

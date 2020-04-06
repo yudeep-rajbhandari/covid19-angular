@@ -13,49 +13,78 @@ declare namespace Authentication {
     cPassword: string;
   }
 
-  export interface suspectedcase{
-       symptoms:string;
-       period:string;
-     age:string;
-     gender:string;
-   bodyTemperature:string;
-     contactFromOutside:string;
-    status :string,
-    created_date :string
+  export interface DataPayload {
+    results: hospitals[];
   }
 
-  export interface nepaldata{
-    Recovered:number;
-    Total_Samples_Tested:number;
-    Negative:number;
-    Positive:number;
-    Isolation:number;
-
-  }
-  export interface SAARCdata{
-    country:string;
-    Active_Cases:number;
-    Total_Deaths:number;
-    TotIn1M:number;
-    DIn1M:number;
-
+  export interface suspectedcase {
+       symptoms: string;
+       period: string;
+     age: string;
+     gender: string;
+    description: string;
+    statuses: string;
+    status: string;
+    created_date: string;
   }
 
-  export interface misinformation{
-    mInformation: string,
-    link: string,
-    source :string,
-    status :string,
-    created_date :string
+  export interface AQIdata {
+    value: string;
+    datetime: string;
   }
-  export interface blackMarketing{
-    productName: string,
-    location: string,
-    thenPrice :string,
-    status :string,
-    created_date :string,
-    nowPrice:string,
-    comments:string
+  export interface coronaFear {
+    location: string;
+    responsibleHospital: string;
+    age: string;
+    gender: string;
+    description: string;
+    statuses: string;
+    status: string;
+    created_date: string;
+  }
+
+  export interface hospitals {
+    district_name: string;
+    category_name: string;
+    name: string;
+    contact_num: string;
+    municipality_name: string;
+  }
+
+  export interface nepaldata {
+    recovered: number;
+    confirmed: number;
+    tested: number;
+    positive: number;
+    isolation: number;
+    death: number;
+    total_recovered: number;
+
+  }
+  export interface SAARCdata {
+    country: string;
+    Active_Cases: number;
+    Total_Deaths: number;
+    TotIn1M: number;
+    DIn1M: number;
+
+  }
+
+  export interface misinformation {
+    mInformation: string;
+    link: string;
+    source: string;
+    status: string;
+    created_date: string;
+  }
+  export interface blackMarketing {
+    productName: string;
+    location: string;
+    thenPrice: string;
+    status: string;
+    created_date: string;
+    nowPrice: string;
+    comments: string;
   }
 
 
@@ -73,10 +102,10 @@ declare namespace Authentication {
     updatedAt: Date;
   }
 
-  export interface mInformationres{
-    status : string,
-    message : string,
-    obj : misinformation
+  export interface mInformationres {
+    status: string;
+    message: string;
+    obj: misinformation;
 
   }
 

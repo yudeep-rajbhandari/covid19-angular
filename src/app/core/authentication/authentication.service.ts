@@ -65,6 +65,28 @@ export class AuthenticationService {
       })
     );
   }
+
+  saveCoronaFear(
+    payload: Authentication.coronaFear
+  ): Observable<Authentication.User> {
+    return this.httpClient.post('coronaFear', payload).pipe(
+      map((body: Authentication.User) => {
+        return body;
+      })
+    );
+  }
+
+  getCoronaFear(): Observable<Authentication.coronaFear[]> {
+    console.log("<<<<<<<<<")
+    return this.httpClient.get('coronaFear').pipe(
+      map((body: Authentication.coronaFear[]) => {
+        console.log("<<<<<<<<<<<<<<")
+        return body;
+      })
+    );
+  }
+
+
   saveblackmarketing(
     payload: Authentication.blackMarketing
   ): Observable<Authentication.User> {
@@ -100,6 +122,7 @@ export class AuthenticationService {
   getWorldData() {
     return this.httpClient.get<Authentication.SAARCdata[]>('update/SAARC');
   }
+
   /**
    * Logs out the user and clear credentials.
    * @return {Observable<boolean>} True if the user was logged out successfully.

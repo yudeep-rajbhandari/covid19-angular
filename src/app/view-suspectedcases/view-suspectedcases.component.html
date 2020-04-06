@@ -1,15 +1,15 @@
 
 <div class="suspected-container">
   <div class="text-center p-3"   *ngFor = "let prod of suspectedcases; let i=index">
-    <div class="card-body card-div " >
-      <h6 class="card-text text-left card-div-title">Age: <span class="card-div-text">{{prod.age}}</span></h6>
-      <h6 class="card-text text-left card-div-title">Temperatue: <span class="card-div-text">{{prod.bodyTemperature}}</span></h6>
-      <h6 class="card-text text-left card-div-title">Gender: <span class="card-div-text">{{prod.gender}}</span></h6>
-      <h6 class="card-text text-left card-div-title">Symptoms: <span class="card-div-text">{{prod.symptoms}}</span></h6>
-      <h6 class="card-text text-left card-div-title">Period: <span class="card-div-text">{{prod.period}}</span></h6>
-      <h6 class="card-text text-left card-div-title">Contact From Outside: <span class="card-div-text">{{prod.contactFromOutside}}</span></h6>
+    <div class="card-body suspected-div " >
+      <h6 class="card-text text-left suspected-div-title">Age: <span class="suspected-div-text">{{prod.age}}</span></h6>
+      <h6 class="card-text text-left suspected-div-title">Temperatue: <span class="suspected-div-text">{{prod.bodyTemperature}}</span></h6>
+      <h6 class="card-text text-left suspected-div-title">Gender: <span class="suspected-div-text">{{prod.gender}}</span></h6>
+      <h6 class="card-text text-left suspected-div-title">Symptoms: <span class="suspected-div-text">{{prod.symptoms}}</span></h6>
+      <h6 class="card-text text-left suspected-div-title">Period: <span class="suspected-div-text">{{prod.period}}</span></h6>
+      <h6 class="card-text text-left suspected-div-title">Contact From Outside: <span class="suspected-div-text">{{prod.contactFromOutside}}</span></h6>
       <div class="footer">
-        <div class=" text-muted card-div-time">{{prod.created_date}}</div>
+        <div class=" text-muted suspected-div-time">{{prod.created_date}}</div>
       </div>
     </div>
   </div>

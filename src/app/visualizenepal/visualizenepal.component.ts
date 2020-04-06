@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../core';
 import nepaldata = Authentication.nepaldata;
 import SAARCdata = Authentication.SAARCdata;
+import { HttpClient, HttpBackend } from '@angular/common/http';
+import { style } from '@angular/animations';
 
 
 @Component({
@@ -13,6 +15,9 @@ export class VisualizenepalComponent implements OnInit {
 
   isDataAvailable: boolean;
   isSAARCDataAvailable: boolean;
+  positive: number;
+  negative: number;
+  recovered: number;
 
 
   data: nepaldata;
@@ -24,41 +29,76 @@ export class VisualizenepalComponent implements OnInit {
   acitveCases: number[];
   totalDeaths: number[];
   // tslint:disable-next-line:max-line-length
-  chart = {title: 'COVID-19 Positive Cases in Nepal', type: 'PieChart', data: this.mydata, title1: 'COVID-19 Testing and Results in Nepal', title2: 'COVID-19 affected cases one in million in SAARC', data1: this.mydata1, type2: 'ColumnChart', data2: this.mydata2, column2: ['Country', 'Cases'],
+  chart = { title: 'COVID-19 Positive Cases in Nepal',
+            type: 'PieChart', data: this.mydata,
+            title1: 'COVID-19 Testing and Results in Nepal',
+            title2: 'COVID-19 affected cases one in million in SAARC',
+            data1: this.mydata1, type2: 'ColumnChart',
+            data2: this.mydata2, column2: ['Country', 'Cases'],
     options: {
-    width: 600,
-    height: 340},
+      width: 400,
+      height: 300,
+      chartArea: {left: 0},
+      colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+      legend: {
+        position: 'top'}},
+    options1: {
+      width: 400,
+      height: 300,
+      colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+      // chartArea:{left:0},
+      legend: {
+        position: 'top'}},
   options2: {
-    height: 300
+    height: 300,
+    width: 400,
+    colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
+     chartArea: {left: 0},
+    legend: {
+      position: 'top'}
   }};
 
 
-  constructor(private apicall: AuthenticationService) {
-    this.apicall.getNepalLivedata().subscribe(data => {
+  constructor(private apicall: AuthenticationService, private handler: HttpBackend,  private httpClient: HttpClient) {
+
+    this.httpClient = new HttpClient(handler);
+    this.httpClient.get<nepaldata>('https://covidapi.mohp.gov.np/api/v1/stats/?format=json').subscribe(data => {
       console.log(data);
-      this.mydata = this.mydata || [];
       this.data = data;
-      this.mydata.push(['Total Positive', parseInt(String(data.Positive), 10)]);
-      this.mydata.push(['Recovered', parseInt(String(data.Recovered), 10)]);
-      this.mydata.push(['Isolation', parseInt(String(data.Isolation), 10)]);
-      this.mydata1.push(['Total Tested', parseInt(String(data.Total_Samples_Tested), 10)]);
-      this.mydata1.push(['Positive', parseInt(String(data.Positive), 10)]);
-      this.mydata1.push(['Negative', parseInt(String(data.Negative), 10)]);
-      // this.mydata = [['Total Tested', data.Total_Samples_Tested], ['Positive', data.Positive], ['Negative', data.Negative]];
+      this.recovered = data.total_recovered;
+      this.positive = data.confirmed;
+      this.negative = data.tested - data.confirmed;
+      this.mydata.push(['Total Positive', parseInt(String(data.confirmed), 10)]);
+      this.mydata.push(['Recovered', this.recovered]);
+      this.mydata.push(['Isolation', parseInt(String(data.isolation), 10)]);
+      this.mydata1.push(['Total Tested', parseInt(String(data.tested), 10)]);
+      this.mydata1.push(['Positive', this.positive]);
+      this.mydata1.push(['Negative', this.negative]);
       console.log('mydata', this.mydata);
       this.isDataAvailable = true;
     });
+    // this.apicall.getNepalLivedata().subscribe(data => {
+    //   console.log(data);
+    //   this.mydata = this.mydata || [];
+    //   this.data = data;
+    //   this.mydata.push(['Total Positive', parseInt(String(data.positive), 10)]);
+    //   this.mydata.push(['Recovered', parseInt(String(data.recovered), 10)]);
+    //   this.mydata.push(['Isolation', parseInt(String(data.isolation), 10)]);
+    //   this.mydata1.push(['Total Tested', parseInt(String(data.total_Samples_Tested), 10)]);
+    //   this.mydata1.push(['Positive', parseInt(String(data.positive), 10)]);
+    //   this.mydata1.push(['Negative', parseInt(String(data.negative), 10)]);
+    //   // this.mydata = [['Total Tested', data.Total_Samples_Tested], ['Positive', data.Positive], ['Negative', data.Negative]];
+    //   console.log('mydata', this.mydata);
+    //   this.isDataAvailable = true;
+    // });
     this.apicall.getWorldData().subscribe(data => {
       this.acitveCases = this.acitveCases || [];
       this.totalDeaths = this.totalDeaths || [];
-      console.log(data);
       this.SAARCdata = data;
       this.SAARCdata.map(elem => {
-  this.mydata2.push([elem.country, parseFloat(String(elem.TotIn1M))]);
-  console.log(elem.TotIn1M);
+    this.mydata2.push([elem.country, parseFloat(String(elem.TotIn1M))]);
       });
       this.isSAARCDataAvailable = true;
-
     });
 
 

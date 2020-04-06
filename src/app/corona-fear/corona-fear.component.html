@@ -1,0 +1,101 @@
+<section id="cover" class="min-vh-100">
+  <div id="cover-caption">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12 mx-auto text-center form p-4">
+          <form [formGroup]="signupForm" (ngSubmit)="signup()" class="form-horizontal form-material" id="loginform">
+            <a href="javascript:void(0)" class="text-center db logo-container">
+            </a>
+            <h3 class="box-title m-t-40 m-b-0">Register Now</h3>
+            <small>Create your account and enjoy</small>
+            <div class="form-group m-t-20">
+              <div class="col-xs-12">
+                <app-form-error-wrapper [control]="signupForm.controls['location']" [controlName]="'location'" [apiErrorType]="'Location'">
+                  <input type="text"  multiple class="form-control" formControlName="location" placeholder="What is your location?">
+
+
+
+                  <!--              <select id="multiple-checkboxes" multiple="multiple" class="form-control" type="text" formControlName="symptoms" placeholder="What symptoms are you facing?">-->
+                  <!--                <option value="php">PHP</option>-->
+                  <!--                <option value="javascript">JavaScript</option>-->
+                  <!--                <option value="java">Java</option>-->
+                  <!--                <option value="sql">SQL</option>-->
+                  <!--                <option value="jquery">Jquery</option>-->
+                  <!--                <option value=".net">.Net</option>-->
+                  <!--              </select>-->
+                </app-form-error-wrapper>
+              </div>
+            </div>
+
+            <div class="form-group m-t-20">
+              <div class="col-xs-12">
+                <app-form-error-wrapper [control]="signupForm.controls['responsibleHospital']" [controlName]="'responsibleHospital'" [apiErrorType]="'responsibleHospital'">
+                  <input   class="form-control" type="text" formControlName="responsibleHospital" placeholder="Which hospital was referred?">
+
+                </app-form-error-wrapper>
+              </div>
+            </div>
+            <div class="form-group ">
+              <div class="col-xs-12">
+                <app-form-error-wrapper [control]="signupForm.controls['age']" [controlName]="'age'" [apiErrorType]="'age'">
+                  <input list="age" class="form-control" type="text" formControlName="age" placeholder="Please provide us the age">
+                  <datalist id="age">
+                    <option value="0-10 years"></option>
+                    <option value="10- 20 years"></option>
+                    <option value="20- 30 years"></option>
+                    <option value="30- 40 years"></option>
+                    <option value="40- 50 years"></option>
+                    <option value="More than 60 years"></option>
+                  </datalist>
+                </app-form-error-wrapper>
+              </div>
+            </div>
+            <div class="form-group ">
+              <div class="col-xs-12">
+                <app-form-error-wrapper [control]="signupForm.controls['gender']" [controlName]="'gender'" [apiErrorType]="'gender'">
+                  <input list="gender" class="form-control" type="text" formControlName="gender" placeholder="What is the gender?">
+                  <datalist id="gender">
+                    <option value="Male"></option>
+                    <option value="Female"></option>
+                    <option value="Others"></option>
+                  </datalist>
+                </app-form-error-wrapper>
+              </div>
+            </div>
+            <div class="form-group ">
+              <div class="col-xs-12">
+                <app-form-error-wrapper [control]="signupForm.controls['description']" [controlName]="'description'" [apiErrorType]="'description'">
+                  <input  class="form-control" type="text" formControlName="description" placeholder="Provide us some description or link">
+                </app-form-error-wrapper>
+              </div>
+            </div>
+
+            <div class="form-group ">
+              <div class="col-xs-12">
+                <app-form-error-wrapper [control]="signupForm.controls['statuses']" [controlName]="'statuses'" [apiErrorType]="'statuses'">
+                  <input list="Op" class="form-control" type="text" formControlName="statuses" placeholder="What is the status now?">
+                  <datalist id="Op">
+                    <option value="Dead"></option>
+                    <option value="Highly affected"></option>
+                    <option value="Affected"></option>
+                    <option value="Normal"></option>
+                  </datalist>
+                </app-form-error-wrapper>
+              </div>
+            </div>
+
+
+            <div class="form-group text-center m-t-20">
+              <div class="col-xs-12">
+                <button class="btn btn-info btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light" [disabled]="signupForm.invalid || isLoading">
+                  <app-button-loader [isLoading]="isLoading" [label]="'Submit'"></app-button-loader>
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,259 @@
+
+.nepalmap-head h2{
+  margin-top: 20px;
+  color: #2E4053;
+  font-size:2rem ;
+  font-style: normal;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.nepalmap-head p{
+  padding: 20px 150px 0 150px;
+  text-align: left;
+  font-family: sans-serif;
+  color: #515A5A;
+}
+.nepalmap p{
+  margin: 0 auto;
+  text-align: center;
+  font-family: sans-serif;
+  color: #515A5A;
+  position: relative;
+  background-color:#FFFFE0;
+  border-radius: 17%;
+  width: 30%;
+}
+
+/*Responsive*/
+@media only screen and (max-width:767px){
+  .nepalmap-head p{
+    padding: 0px;
+    text-align: left;
+  }
+  .nepalmap p{
+    width: 100%;
+    
+  }
+}
+/* line 1, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
+.district {
+    cursor: pointer;
+  }
+
+  /* line 3, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
+  .district .prov1 {
+    fill: #5DADE2 ;
+  }
+
+  /* line 6, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
+  .district .prov2 {
+    fill: #ba9cd6;
+  }
+
+  /* line 9, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
+  .district .prov3 {
+    fill: #F5B041 ;
+  }
+
+  /* line 12, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
+  .district .prov4 {
+    fill: #6c757d;
+  }
+
+  /* line 15, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
+  .district .prov5 {
+    fill: #17a2b8;
+  }
+
+  /* line 18, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
+  .district .prov6 {
+    fill: #EC7063;
+  }
+
+  /* line 21, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
+  .district .prov7 {
+    fill: #58D68D;
+  }
+
+  /* line 25, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
+  .district:hover path {
+    opacity: 0.8;
+  }
+
+  /* line 32, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
+  .maptext {
+    color: #f1f1f1;
+    font-size: 12px;
+    font-family: AvertaSemiBold
+  }
+
+  text{
+      color: white;
+  }
+  /*# sourceMappingURL=main.css.map */
+
+.field-tip:hover .tip-content {
+  right:-20px;
+  opacity:1;
+}
+body {
+  padding:30px;
+  font:normal 12px/1.5 Arial, sans-serif;
+}
+
+.field-tip {
+  position:relative;
+  cursor:help;
+}
+.field-tip .tip-content {
+  position:absolute;
+  top:-10px;
+  right:9999px;
+  width:200px;
+  margin-right:-220px;
+  padding:10px;
+  color:#fff;
+  background:#333;
+  -webkit-box-shadow:2px 2px 5px #aaa;
+  -moz-box-shadow:2px 2px 5px #aaa;
+  box-shadow:2px 2px 5px #aaa;
+  opacity:0;
+  -webkit-transition:opacity 250ms ease-out;
+  -moz-transition:opacity 250ms ease-out;
+  -ms-transition:opacity 250ms ease-out;
+  -o-transition:opacity 250ms ease-out;
+  transition:opacity 250ms ease-out;
+}
+
+.field-tip .tip-content:before {
+  content:' ';
+  position:absolute;
+  top:50%;
+  left:-16px;
+  width:0;
+  height:0;
+  margin-top:-8px;
+  border:8px solid transparent;
+  border-right-color:#333;
+}
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 10em;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 10em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0, .8));
+
+  background: -webkit-radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0,.8));
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 150ms infinite linear;
+  -moz-animation: spinner 150ms infinite linear;
+  -ms-animation: spinner 150ms infinite linear;
+  -o-animation: spinner 150ms infinite linear;
+  animation: spinner 150ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1.1em 0 0, rgba(255,255,255, 0.75) 0 1.5em 0 0, rgba(255,255,255, 0.75) -1.1em 1.1em 0 0, rgba(255,255,255, 0.75) -1.5em 0 0 0, rgba(255,255,255, 0.75) -1.1em -1.1em 0 0, rgba(255,255,255, 0.75) 0 -1.5em 0 0, rgba(255,255,255, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1.1em 0 0, rgba(255,255,255, 0.75) 0 1.5em 0 0, rgba(255,255,255, 0.75) -1.1em 1.1em 0 0, rgba(255,255,255, 0.75) -1.5em 0 0 0, rgba(255,255,255, 0.75) -1.1em -1.1em 0 0, rgba(255,255,255, 0.75) 0 -1.5em 0 0, rgba(255,255,255, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
