@@ -1,115 +1,117 @@
-<!--<section id="cover" class="min-vh-100">-->
-<!--  <div id="cover-caption">-->
-<!--  <div class="container">-->
-<!--    <div class="row">-->
-<!--      <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12 mx-auto text-center form p-4">-->
-<!--      <form [formGroup]="signupForm" (ngSubmit)="signup()" class="form-horizontal form-material" id="loginform">-->
-<!--        <a href="javascript:void(0)" class="text-center db logo-container">-->
-<!--        </a>-->
-<!--        <h3 class="box-title m-t-40 m-b-0">Register Now</h3>-->
-<!--        <small>Create your account and enjoy</small>-->
-<!--        <div class="form-group m-t-20">-->
-<!--          <div class="col-xs-12">-->
-<!--            <app-form-error-wrapper [control]="signupForm.controls['symptoms']" [controlName]="'symptoms'" [apiErrorType]="'symptoms'">-->
-<!--              <input type="email"  list="emails" multiple class="form-control" formControlName="symptoms" placeholder="What symptoms are you facing?">-->
-<!--              <datalist id="emails">-->
-<!--                <option value="Dry Cough"></option>-->
-<!--                <option value="Diminished sense of smell"></option>-->
-<!--                <option value="Sore Throat"></option>-->
-<!--                <option value="Weakness"></option>-->
-<!--                <option value="Loss of Appetite"></option>-->
-<!--                <option value="None of these"></option>-->
-<!--                <option value="More than one"></option>-->
-<!--              </datalist>-->
 
 
-<!--              &lt;!&ndash;              <select id="multiple-checkboxes" multiple="multiple" class="form-control" type="text" formControlName="symptoms" placeholder="What symptoms are you facing?">&ndash;&gt;-->
-<!--&lt;!&ndash;                <option value="php">PHP</option>&ndash;&gt;-->
-<!--&lt;!&ndash;                <option value="javascript">JavaScript</option>&ndash;&gt;-->
-<!--&lt;!&ndash;                <option value="java">Java</option>&ndash;&gt;-->
-<!--&lt;!&ndash;                <option value="sql">SQL</option>&ndash;&gt;-->
-<!--&lt;!&ndash;                <option value="jquery">Jquery</option>&ndash;&gt;-->
-<!--&lt;!&ndash;                <option value=".net">.Net</option>&ndash;&gt;-->
-<!--&lt;!&ndash;              </select>&ndash;&gt;-->
-<!--            </app-form-error-wrapper>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <div class="form-group m-t-20">-->
-<!--          <div class="col-xs-12">-->
-<!--            <app-form-error-wrapper [control]="signupForm.controls['period']" [controlName]="'period'" [apiErrorType]="'period'">-->
-<!--              <input  list="period" class="form-control" type="text" formControlName="period" placeholder="How long have you felt so?">-->
-<!--              <datalist id="period">-->
-<!--                <option value="Less than 14 days"></option>-->
-<!--                <option value="More than 14 days"></option>-->
-<!--              </datalist>-->
-<!--            </app-form-error-wrapper>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="form-group ">-->
-<!--          <div class="col-xs-12">-->
-<!--            <app-form-error-wrapper [control]="signupForm.controls['age']" [controlName]="'age'" [apiErrorType]="'age'">-->
-<!--              <input list="age" class="form-control" type="text" formControlName="age" placeholder="Please provide us your age">-->
-<!--              <datalist id="age">-->
-<!--                <option value="0-10 years"></option>-->
-<!--                <option value="10- 20 years"></option>-->
-<!--                <option value="20- 30 years"></option>-->
-<!--                <option value="30- 40 years"></option>-->
-<!--                <option value="40- 50 years"></option>-->
-<!--                <option value="More than 60 years"></option>-->
-<!--              </datalist>-->
-<!--            </app-form-error-wrapper>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="form-group ">-->
-<!--          <div class="col-xs-12">-->
-<!--            <app-form-error-wrapper [control]="signupForm.controls['gender']" [controlName]="'gender'" [apiErrorType]="'gender'">-->
-<!--              <input list="gender" class="form-control" type="text" formControlName="gender" placeholder="What is your gender?">-->
-<!--              <datalist id="gender">-->
-<!--                <option value="Male"></option>-->
-<!--                <option value="Female"></option>-->
-<!--               <option value="Others"></option>-->
-<!--              </datalist>-->
-<!--            </app-form-error-wrapper>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="form-group ">-->
-<!--          <div class="col-xs-12">-->
-<!--            <app-form-error-wrapper [control]="signupForm.controls['bodyTemperature']" [controlName]="'bodyTemperature'" [apiErrorType]="'bodyTemperature'">-->
-<!--              <input list="temp" class="form-control" type="text" formControlName="bodyTemperature" placeholder="What is your body temperature?">-->
-<!--              <datalist id="temp">-->
-<!--                <option value="Normal(97.6 C)"></option>-->
-<!--                <option value="High(100 C)"></option>-->
-<!--                <option value="Very High(>100)"></option>-->
-<!--              </datalist>-->
-<!--            </app-form-error-wrapper>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <div class="form-group ">-->
-<!--          <div class="col-xs-12">-->
-<!--            <app-form-error-wrapper [control]="signupForm.controls['contactFromOutside']" [controlName]="'contactFromOutside'" [apiErrorType]="'contactFromOutside'">-->
-<!--              <input list="Op" class="form-control" type="text" formControlName="contactFromOutside" placeholder="Do you have any recent travel history?">-->
-<!--              <datalist id="Op">-->
-<!--                <option value="Yes"></option>-->
-<!--                <option value="No"></option>-->
-<!--              </datalist>-->
-<!--            </app-form-error-wrapper>-->
-<!--          </div>-->
-<!--        </div>-->
+<section id="cover" class="min-vh-100">
+  <div id="cover-caption">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12 mx-auto text-center form p-4">
+      <form [formGroup]="signupForm" (ngSubmit)="signup()" class="form-horizontal form-material" id="loginform">
+        <a href="javascript:void(0)" class="text-center db logo-container">
+        </a>
+        <h3 class="box-title m-t-40 m-b-0">Register Now</h3>
+        <small>Create your account and enjoy</small>
+        <div class="form-group m-t-20">
+          <div class="col-xs-12">
+            <app-form-error-wrapper [control]="signupForm.controls['symptoms']" [controlName]="'symptoms'" [apiErrorType]="'symptoms'">
+              <input type="email"  list="emails" multiple class="form-control" formControlName="symptoms" placeholder="What symptoms are you facing?">
+              <datalist id="emails">
+                <option value="Dry Cough"></option>
+                <option value="Diminished sense of smell"></option>
+                <option value="Sore Throat"></option>
+                <option value="Weakness"></option>
+                <option value="Loss of Appetite"></option>
+                <option value="None of these"></option>
+                <option value="More than one"></option>
+              </datalist>
 
 
-<!--        <div class="form-group text-center m-t-20">-->
-<!--          <div class="col-xs-12">-->
-<!--            <button class="btn btn-info btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light" [disabled]="signupForm.invalid || isLoading">-->
-<!--              <app-button-loader [isLoading]="isLoading" [label]="'Submit'"></app-button-loader>-->
-<!--            </button>-->
-<!--          </div>-->
-<!--        </div>-->
+              <!--              <select id="multiple-checkboxes" multiple="multiple" class="form-control" type="text" formControlName="symptoms" placeholder="What symptoms are you facing?">-->
+<!--                <option value="php">PHP</option>-->
+<!--                <option value="javascript">JavaScript</option>-->
+<!--                <option value="java">Java</option>-->
+<!--                <option value="sql">SQL</option>-->
+<!--                <option value="jquery">Jquery</option>-->
+<!--                <option value=".net">.Net</option>-->
+<!--              </select>-->
+            </app-form-error-wrapper>
+          </div>
+        </div>
 
-<!--      </form>-->
-<!--    </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  </div>-->
-<!--</section>-->
+        <div class="form-group m-t-20">
+          <div class="col-xs-12">
+            <app-form-error-wrapper [control]="signupForm.controls['period']" [controlName]="'period'" [apiErrorType]="'period'">
+              <input  list="period" class="form-control" type="text" formControlName="period" placeholder="How long have you felt so?">
+              <datalist id="period">
+                <option value="Less than 14 days"></option>
+                <option value="More than 14 days"></option>
+              </datalist>
+            </app-form-error-wrapper>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <app-form-error-wrapper [control]="signupForm.controls['age']" [controlName]="'age'" [apiErrorType]="'age'">
+              <input list="age" class="form-control" type="text" formControlName="age" placeholder="Please provide us your age">
+              <datalist id="age">
+                <option value="0-10 years"></option>
+                <option value="10- 20 years"></option>
+                <option value="20- 30 years"></option>
+                <option value="30- 40 years"></option>
+                <option value="40- 50 years"></option>
+                <option value="More than 60 years"></option>
+              </datalist>
+            </app-form-error-wrapper>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <app-form-error-wrapper [control]="signupForm.controls['gender']" [controlName]="'gender'" [apiErrorType]="'gender'">
+              <input list="gender" class="form-control" type="text" formControlName="gender" placeholder="What is your gender?">
+              <datalist id="gender">
+                <option value="Male"></option>
+                <option value="Female"></option>
+               <option value="Others"></option>
+              </datalist>
+            </app-form-error-wrapper>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <app-form-error-wrapper [control]="signupForm.controls['bodyTemperature']" [controlName]="'bodyTemperature'" [apiErrorType]="'bodyTemperature'">
+              <input list="temp" class="form-control" type="text" formControlName="bodyTemperature" placeholder="What is your body temperature?">
+              <datalist id="temp">
+                <option value="Normal(97.6 C)"></option>
+                <option value="High(100 C)"></option>
+                <option value="Very High(>100)"></option>
+              </datalist>
+            </app-form-error-wrapper>
+          </div>
+        </div>
+
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <app-form-error-wrapper [control]="signupForm.controls['contactFromOutside']" [controlName]="'contactFromOutside'" [apiErrorType]="'contactFromOutside'">
+              <input list="Op" class="form-control" type="text" formControlName="contactFromOutside" placeholder="Do you have any recent travel history?">
+              <datalist id="Op">
+                <option value="Yes"></option>
+                <option value="No"></option>
+              </datalist>
+            </app-form-error-wrapper>
+          </div>
+        </div>
+
+
+        <div class="form-group text-center m-t-20">
+          <div class="col-xs-12">
+            <button class="btn btn-info btn-lg btn-block btn-rounded text-uppercase waves-effect waves-light" [disabled]="signupForm.invalid || isLoading">
+              <app-button-loader [isLoading]="isLoading" [label]="'Submit'"></app-button-loader>
+            </button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+    </div>
+  </div>
+  </div>
+</section>

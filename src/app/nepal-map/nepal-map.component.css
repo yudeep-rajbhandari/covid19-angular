@@ -1,5 +1,4 @@
 
-
 .nepalmap-head h2{
   margin-top: 20px;
   color: #2E4053;
@@ -23,6 +22,18 @@
   background-color:#FFFFE0;
   border-radius: 17%;
   width: 30%;
+}
+
+/*Responsive*/
+@media only screen and (max-width:767px){
+  .nepalmap-head p{
+    padding: 0px;
+    text-align: left;
+  }
+  .nepalmap p{
+    width: 100%;
+    
+  }
 }
 /* line 1, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
 .district {

@@ -51,3 +51,28 @@ a .dropdown-item{
 
 /* This rule is applied to the link <a> tag. It lets you turn off the link underline and set the link text color. */
 
+/*Responsive*/
+@media screen and (max-width: 600px) {
+  .navbar .navbar-expand-md a:not(:first-child) {display: none;}
+  .navbar .navbar-expand-md a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .navbar-expand-md.responsive {position: relative;}
+  .navbar .navbar-expand-md.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar .navbar-expand-md.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 768px){
+
+}

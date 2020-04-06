@@ -33,7 +33,7 @@ export class VisualizeCoronaFearComponent implements OnInit {
   // tslint:disable-next-line:max-line-length
   chart = {title: 'COVID-19 Nepal', type: 'ColumnChart', data: this.mydata, columns: ['Causes', 'Cases'],
     options: {
-      width: 550,
+      width: 490,
       height: 400,
       colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
       chartArea: {left: 0},

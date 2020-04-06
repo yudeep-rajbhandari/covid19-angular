@@ -42,5 +42,16 @@ export class LandingPageComponent implements OnInit {
    // this.viewportScroller.scrollToAnchor('nepalmapAnchor');
 
   }
+  gotoVisualize() {
+    document.querySelector('#visualizAnchor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+   // this.viewportScroller.scrollToAnchor('nepalmapAnchor');
 
+  }
+  gotoCoronaFear(){
+    document.querySelector('#CoronaAnchor').scrollIntoView({ behavior: 'smooth', block: 'center'});
+  }
+
+  gotoAqi(){
+    document.querySelector('#aqiAnchor').scrollIntoView({ behavior: 'smooth', block: 'center'});
+  }
 }

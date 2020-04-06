@@ -1,0 +1,12 @@
+.container h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    font-style: normal;
+    color: #2E4053;
+    padding-top: 50px;
+}
+.container p{
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #2E4053;
+}

@@ -25,3 +25,7 @@ background-color: lightsalmon;;
 .list-group.list-group-flush .list-group-item{
 font-size: 0.9em;
 }
+
+@media only screen and (max-width: 768px){
+
+}

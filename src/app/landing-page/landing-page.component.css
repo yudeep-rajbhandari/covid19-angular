@@ -18,10 +18,9 @@ body {
   color: #E59866; 
 }
 .subnav{
-  background-color:#FFFFE0;
+  /* background-color:#FFFFE0; */
 	list-style-type: none;
   text-align: center; 
-  padding: 0px;
   margin: 0;
 }
 .subnav li{
@@ -42,89 +41,18 @@ body {
   text-align: center;
 }
 
-
-.panels {
-  display: flex;
-/* flex-direction: row; */
-  display: grid;
-  min-height: 50vh;
-  position: relative;
-  overflow: hidden;
-}
 h3{
   text-align: right;  
   color: #7B241C;
 }
-@media only screen and (max-width: 578px) {
-  .panels {
-    display: flex;
-  /* flex-direction: column; */
-    text-align: right;
-    display: grid;
-    min-height: 100vh;
-    overflow: hidden;
-  }
-}
-.panel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* flex-direction: column; */
-  flex: 1;
-  background-position: center;
-  background-size: cover;
-}
 
-/* div > p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  margin: 0;
-  width: 100%;
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-  text-align: center;
-  transition: transform .5s;
-  user-select: none;
-}
-div > p:first-child {
-  transform: translateY(-100%);
-} */
-/*div > p:nth-child(2) {*/
-/*  font-size: 3em;*/
-/*  text-transform: uppercase;*/
-/*  font-weight: bold;*/
-/*}*/
-/*div > p:last-child {*/
-/*  transform: translateY(100%);*/
-/*}*/
-
-/* Classes toggled in JS */
-.panel.open {
-  flex: 3;
-  font-size: 1.5em;
-}
-/*div.active > p:first-child {*/
-/*  transform: translateY(0);*/
-/*}*/
-/*div.active > p:last-child {*/
-/*  transform: translateY(0);*/
-/*}*/
-/*.overlay.active:after {*/
-/*  background: rgba(0, 0, 0, .7);*/
-/*}*/
-
-/* Images in CSS as background-images */
-/* .panel1 { background-image: url('https://cdn.shopify.com/s/files/1/0049/7428/0790/collections/hoodies-350451_2100x.jpg?v=1563558538'); }
-.panel2 { background-image: url('https://cdn.shopify.com/s/files/1/0049/7428/0790/collections/hoodies-350451_2100x.jpg?v=1563558538'); }
-.panel3 { background-image: url('https://cdn.shopify.com/s/files/1/0049/7428/0790/collections/womens-tanks-652176_2100x.jpg?v=1563558678'); } */
-
-@media only screen and (max-width: 600px) {
-  .panel p {
-    font-size: .5em;
+@media only screen and (max-width: 767px) {
+  .corona-text p{
+    padding: 0px;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #515A5A;    
   }
 }
 .save_button {
