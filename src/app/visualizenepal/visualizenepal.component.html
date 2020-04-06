@@ -8,7 +8,7 @@
   </div>
     <div class="visualize">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6 col-lg-4 col-sm-12">
       <div class="w-80" *ngIf="isDataAvailable">
         <google-chart [title]="chart.title1" [type]="chart.type" [data]="chart.data1" [options]="chart.options">
         </google-chart>
@@ -25,7 +25,7 @@
     </div>
 
 
-    <div class="col-md-4">
+    <div class="col-md-4 col-lg-4 col-sm-12">
       <div class="w-80" *ngIf="isSAARCDataAvailable">
         <google-chart [title]="chart.title2" [type]="chart.type2" [data]="chart.data2" [columnNames]="chart.column2"
           [options]="chart.options2">
@@ -45,7 +45,7 @@
       </div>
 
 
-    <div class="col-md-4">
+    <div class="col-md-4 col-lg-4 col-sm-12">
       <div class="w-80" *ngIf="isDataAvailable">
         <google-chart [title]="chart.title" [type]="chart.type" [data]="chart.data" [options]="chart.options">
         </google-chart>
