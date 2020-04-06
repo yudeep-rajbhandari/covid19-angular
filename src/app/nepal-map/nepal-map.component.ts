@@ -46,18 +46,25 @@ public mydiv: ElementRef;
   gotoTop() {
     document.documentElement.scrollTop = 0;
   }
-  showDistrictforMap(val1: MouseEvent) {
+  showDistrictforMap(val1) {
     this.selectevent = val1.target as Element;
-
-    const hosp = this.Hospitals.filter(hospital => hospital.district_name.toLocaleLowerCase() == this.selectevent.id);
+    this.valX = (this.selectevent.id == '' ? this.selectevent.textContent : this.selectevent.id).trim().toLocaleLowerCase();
+    if(this.valX=='bkt'){
+      this.valX='bhaktapur';
+    }
+    if(this.valX=='ktm'){
+      this.valX='kathmandu'
+    }
+    console.log(this.valX);
+    const hosp = this.Hospitals.filter(hospital => hospital.district_name.toLocaleLowerCase() == this.valX);
     if (hosp.length != 0) {
       for (const value of hosp) {
-        if (value.district_name.toLocaleLowerCase() == this.selectevent.id) {
+        if (value.district_name.toLocaleLowerCase() == this.valX) {
           this.Type = value.category_name ;
           this.Number = value.contact_num;
           this.HospitalName = value.name;
           this.District = value.district_name ;
-          this.ns.success1('\n' + value.contact_num =='nan' ? 'N/A' : value.contact_num + '\n' + this.District + '\n' + value.municipality_name, this.HospitalName);
+          this.ns.success1('\n' + value.contact_num == 'nan' ? 'N/A' : value.contact_num + '\n' + this.District + '\n' + value.municipality_name, this.HospitalName);
           this.dataentry = true;
           // console.log(val1.screenX);
           // console.log(val1.screenY);
@@ -72,7 +79,7 @@ public mydiv: ElementRef;
         }
       }
     } else {
-      this.ns.success1('No result found','Sorry!!');
+      this.ns.success1('No result found', 'Sorry!!');
     }
 
 
