@@ -29,6 +29,7 @@ export class VisualizeCoronaFearComponent implements OnInit {
   data: coronaFear;
   nepaldata: nepaldata;
   mydata: any = [];
+  thisdata:boolean;
 
   // tslint:disable-next-line:max-line-length
   chart = {title: 'COVID-19 Nepal', type: 'ColumnChart', data: this.mydata, columns: ['Causes', 'Cases'],
@@ -52,6 +53,7 @@ export class VisualizeCoronaFearComponent implements OnInit {
       this.nepaldata = data;
       this.Cdeath = this.nepaldata.death;
       this.mydata.unshift(['Death due to Corona', parseInt(String(this.Cdeath), 10)]);
+      this.thisdata = true;
     });
     this.apicall.getCoronaFear().subscribe(data => {
       console.log(data);
