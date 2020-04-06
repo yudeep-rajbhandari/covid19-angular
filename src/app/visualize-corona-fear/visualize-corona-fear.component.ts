@@ -47,7 +47,7 @@ export class VisualizeCoronaFearComponent implements OnInit {
   constructor(private apicall: AuthenticationService, private handler: HttpBackend,  private httpClient: HttpClient, private router: Router) {
 
     this.httpClient = new HttpClient(handler);
-    this.httpClient.get<nepaldata>('https://covidapi.naxa.com.np/api/v1/stats/?format=json').subscribe(data => {
+    this.httpClient.get<nepaldata>('https://covidapi.mohp.gov.np/api/v1/stats/?format=json').subscribe(data => {
       console.log(data);
       this.nepaldata = data;
       this.Cdeath = this.nepaldata.death;
