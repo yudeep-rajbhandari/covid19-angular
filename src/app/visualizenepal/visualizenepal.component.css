@@ -1,4 +1,6 @@
-
+.container{
+  overflow: hidden;
+}
 .visualize{
   overflow:hidden;
   display: grid;
@@ -17,11 +19,11 @@
   margin-bottom: 30px;
   
 } 
-
-
-.card.text-center.mb-3.w-100{
+.card{  
   background-color: lightsalmon;
+  text-align: center;
 }
+
 .card-header.text-white{
   font-size: 15px;
 }
@@ -32,8 +34,12 @@
 .list-group.list-group-flush .list-group-item{
   font-size: 0.9em;
 }
-
-@media only screen and (max-width: 768px){
+@media only screen and (max-width:600px) and (min-width:300px){
+  .card{
+    width:50%;
+  }
+}
+@media only screen and (max-width: 767px){
   .visualize{
     display: grid;
     grid-template-columns:repeat(1, auto)
@@ -41,11 +47,15 @@
   .card-header.text-white{
     text-align: left;
   }
+  .card{
+    width: 85%;
+  }
   .list-group.list-group-flush .list-group-item{
     text-align: left;
     position: relative;
   }
  }
+
 @media only screen and (max-width: 900px) {
   .visualize{
     grid-template-columns:repeat(2, auto)
