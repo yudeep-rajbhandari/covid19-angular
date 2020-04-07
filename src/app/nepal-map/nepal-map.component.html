@@ -1347,7 +1347,7 @@
 
 </div>
 
-<div id="selectIt"  style="display: none">
+<div id="selectIt"  style="display: none" (mouseleave)="hideme(this.$event)">
   <div class="card" >
     <h2>{{this.provinceName}}</h2>
     <div class="card-body">

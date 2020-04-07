@@ -63,10 +63,6 @@ public mydiv: ElementRef;
     // });
   }
   showProvincedata1(mouse) {
-    this.selectevent = mouse as Element;
-    // const id1 = mouse.path.filter(al=>al.id.includes('pradesh'));
-    // console.log(id1);
-
     const id = mouse.path.some(elem => {
       if (elem.id) {
       if (elem.id.includes('pradesh')) {
@@ -108,13 +104,23 @@ public mydiv: ElementRef;
 
 
    });
- } else{
+ } else if ((document.activeElement === document.getElementById('nepalmapAnchor'))) {
+      console.log("out of focuse")
+      const myelem = document.getElementById('selectIt');
+      myelem.style.display = 'none';
+    }
+
+    else {
    const myelem = document.getElementById('selectIt');
    myelem.style.display = 'none';
  }
 
   }
 
+  hideme(hideme){
+    const myelem = document.getElementById('selectIt');
+    myelem.style.display = 'none';
+  }
 //   showProvincedata(mouse: MouseEvent, provinceNum,diva) {
 //     const div = document.getElementById(diva);
 //     const provData1 = this.provinceData.filter(elem => elem.province_id == provinceNum);
