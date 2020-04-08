@@ -13,7 +13,7 @@
         <google-chart [title]="chart.title1" [type]="chart.type" [data]="chart.data1" [options]="chart.options">
         </google-chart>
   
-        <div class="card text-center mb-3 w-100">
+        <div class="card">
           <div class="card-header text-white">Nepal Stats</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Total tested:{{data.tested}}</li>
@@ -31,7 +31,7 @@
           [options]="chart.options2">
         </google-chart>
 
-        <div class="card text-center mb-3 w-100">
+        <div class="card">
           <div class="card-header text-white">SAARC Stats</div>
           <ul class="list-group list-group-flush" *ngFor="let s of SAARCdata">
             <li class="list-group-item">{{s.country}}, {{s.Active_Cases}} Active
@@ -50,7 +50,7 @@
         <google-chart [title]="chart.title" [type]="chart.type" [data]="chart.data" [options]="chart.options">
         </google-chart>
 
-        <div class="card text-center mb-3 w-100">
+        <div class="card">
           <div class="card-header text-white">Nepal Stats</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Total positive:{{this.positive}}</li>

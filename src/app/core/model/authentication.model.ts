@@ -42,6 +42,20 @@ declare namespace Authentication {
     status: string;
     created_date: string;
   }
+  export interface ProvinceData {
+    total_death: number;
+    num_of_isolation_bed: number;
+    total_tested: number;
+    total_negative: number;
+    update_date: number;
+    province_name: string;
+    occupied_isolation_bed: number;
+    total_in_isolation: number;
+    total_recovered: number;
+    facility_count: number;
+    total_positive: number;
+    province_id: number;
+  }
 
   export interface hospitals {
     district_name: string;

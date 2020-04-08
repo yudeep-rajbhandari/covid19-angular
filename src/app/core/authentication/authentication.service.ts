@@ -77,10 +77,16 @@ export class AuthenticationService {
   }
 
   getCoronaFear(): Observable<Authentication.coronaFear[]> {
-    console.log("<<<<<<<<<")
     return this.httpClient.get('coronaFear').pipe(
       map((body: Authentication.coronaFear[]) => {
-        console.log("<<<<<<<<<<<<<<")
+        return body;
+      })
+    );
+  }
+  getProvinceData(): Observable<Authentication.ProvinceData[]> {
+    return this.httpClient.get('provinceData').pipe(
+      map((body: Authentication.ProvinceData[]) => {
+
         return body;
       })
     );

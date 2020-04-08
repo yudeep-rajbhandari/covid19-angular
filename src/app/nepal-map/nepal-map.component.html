@@ -5,8 +5,8 @@
         A country-wide lockdown came into effect on 24 March, and is scheduled to end as per the health condition of the country.</p>
     </div>
 <div class="nepalmap" id="nepalmapAnchor" *ngIf="showstuff">
-    <p>Click on the district for more information</p>
-    <svg version="1.1" id="Layer_1" x="0px" y="0px" width="90%" viewBox="0 0 1224.992 817.002"
+    <p>Click on the province for more information</p>
+    <svg (mousemove)="showProvincedata1(this.$event)" version="1.1" id="Layer_1" x="0px" y="0px" width="90%" viewBox="0 0 1224.992 817.002"
         enable-background="new 0 0 1224.992 817.002">
 
         <g id="bg" transform="translate(5240,-472)">
@@ -145,8 +145,8 @@
     c2.013,0.708,4.11,0.992,6.208,1.587c0.312-3.09,0.708-6.604,3.713-8.306c1.701,0.595,3.402,1.304,5.103,2.013L-4969.121,549.386z"></path>
         </g>
 
-        <g id="pradesh-1">
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+        <g id="pradesh-1" (click)="showProvincedata(this.$event,1)" >
+                  <g class="district" >
                 <path id="sunsari"
                     class="mkhover prov1" d="M1038.273,659.396c5.103,2.013,10.4-0.313,15.591,0.312c3.484,0.992,6.688,2.494,10.092,3.713
         c-0.397,4.791-4.396,7.994-6.406,12.189c-0.396,3.288,0.313,6.604,0.198,10.006c0.113,3.289-3.401,5.698-2.494,9.1
@@ -158,7 +158,7 @@
         L1038.273,659.396z"></path>
                 <text class="maptext" transform="matrix(1 0 0 1 1016.1074 696.002)" > Sunsari</text>
             </g>
-                <g class="district"  (click)="showDistrictforMap(this.$event)" >
+               <g class="district" >
                 <path id="udayapur"
                     class="mkhover prov1" d="M927.979,612.198c1.392,1.104,2.894,2.409,3.401,4.192c1.105,3.203,3.713,5.612,6.604,7.2
         c2.406-0.198,4.9-0.709,7.197-1.588c2.894-1.813,5.188-4.988,8.787-5.301c3.486,0.794,6.806,2.297,10.204,3.203
@@ -175,7 +175,7 @@
         L927.979,612.198z"></path>
                 <text class="maptext" transform="matrix(1 0 0 1 963.6641 669.001)" >Udayapur</text>
             </g>
-                <g class="district"  (click)="showDistrictforMap(this.$event)" >
+               <g class="district" >
                 <path id="morang"  class="mkhover prov1"
                     d="M1066.479,664.412c2.895-1.898,5.697-4.109,8.394-6.293c1.813,1.104,3.6,2.605,5.896,2.495
         c3.715-0.198,7.398,1.104,11.196,0.794c3.401,0.11,7.313-0.907,10.29,1.389c3.912,2.211,5.414,6.689,7.994,10.091
@@ -188,7 +188,7 @@
                 </path>
                 <text class="maptext" transform="matrix(1 0 0 1 1064.0898 705.1055)" >Morang</text>
             </g>
-                <g class="district"  (click)="showDistrictforMap(this.$event)" >
+               <g class="district" >
                 <path id="jhapa"  class="mkhover prov1"
                     d="M1174.677,679.408c3.005-3.09,3.997-7.2,4.904-11.313c1.304,0.907,2.607,1.814,3.912,2.607
         c0.198,3.997,0.113,7.909-1.19,11.707c-1.188,3.399-1.188,7.087-2.297,10.487c-2.211,5.5-4.9,10.688-7.086,16.103
@@ -206,7 +206,7 @@
                 </path>
                 <text class="maptext" transform="matrix(1 0 0 1 1127.8262 707.9814)" >Jhapa</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="okhaldhunga"
                     class="mkhover prov1" d="M914.088,565.002c2.807-3.005,5.104-6.604,8.787-8.703c4.11,0.992,8.107,2.693,10.488,6.293
         c1.503,3.203,2.807,6.605,4.192,9.896c2.016,0.51,4.396,0.51,6.098,1.896c3.997,3.289,7.197,7.516,10.913,11.112
@@ -217,7 +217,7 @@
         c0.514-7.993,3.997-15.789,10.29-20.891L914.088,565.002z"></path>
                 <text class="maptext" transform="matrix(1 0 0 1 906.1445 595.0039)" >Okhaldunga</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="illam"  class="mkhover prov1"
                     d="M1146.189,622.092c4.106-0.511,8.588-1.896,12.5,0.198c0.511,3.486,1.188,7.001,2.69,10.204
         c2.101,0.113,4.195,0.313,6.293,0.511c1.19,3.401,3.603,6.009,6.803,7.795c-0.51,1.899-1.304,3.912-0.794,6.01
@@ -231,7 +231,7 @@
         c3.799-3.713,8.104-7.597,13.604-8.504L1146.189,622.092z"></path>
                 <text class="maptext" transform="matrix(1 0 0 1 1134.5742 659.3955)" >Illam</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="dhankuta"
                     class="mkhover prov1" d="M1053.779,609.307c3.714,0.599,7.396,0.514,10.998,0.313c2.212,0.793,3.997,2.409,6.01,3.6
         c-1.7,5.104-2.692,11.313,1.189,15.704c4.193,4.396,3.8,10.8,4.509,16.412c3.398-0.595,7.71-3.996,10.289-0.198
@@ -242,7 +242,7 @@
         L1053.779,609.307z"></path>
                 <text class="maptext" transform="matrix(1 0 0 1 1039.4102 653.001)" >Dhankuta</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="khotang"
                     class="mkhover prov1" d="M989.291,571.295c3.601-0.114,7.087,0.113,10.688-0.199c0.513,3.487,1.392,6.892,2.607,10.29
         c2.607,3.005,5.188,6.208,7.2,9.609c-1.39,4.706-6.889,5.188-10.688,6.889c0.396,2.607,1.7,4.988,2.692,7.398
@@ -256,7 +256,7 @@
         c2.495-0.195,5.103-0.195,7.598-0.396c4.595-0.907,8.106-4.195,12.305-5.896L989.291,571.295z"></path>
                 <text class="maptext" transform="matrix(1 0 0 1 955.7363 613.7861)" >Khotang</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="bhojpur"
                     class="mkhover prov1" d="M1013.074,570.699c6.293-0.198,12.188-3.997,18.51-3.09c-0.113,3.2-0.595,6.403,0.113,9.606
         c2.892,2.013,6.095,3.401,8.589,5.896c0.313,2.013-0.906,3.995-1.304,5.896c1.104,1.393,2.211,2.809,3.09,4.312
@@ -269,7 +269,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 1006.6504 614.6221)" >Bhojpur</text>
             </g>
 
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="taplejung"
                     class="mkhover prov1"
                     d="M1130.995,487.304c1.188,2.101,2.409,4.312,3.912,6.293c3.005-0.51,6.009-1.304,9.014-0.989
@@ -287,7 +287,7 @@
         c0-1.587-0.511-3.288,0.113-4.79c1.701-1.305,3.714-2.296,5.698-3.288c0.196-1.701,0.396-3.401,0.708-4.989L1130.995,487.304z"></path>
                 <text class="maptext" transform="matrix(1 0 0 1 1100.6211 556.2988)" >Taplejung</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="sankhuwasabha"
                     class="mkhover prov1" d="M1010.381,489.288c2.013,0,4.11-0.113,6.208,0.113c5.697,3.997,10.913,9.606,12.303,16.608
         c3.997,1.392,7.71,4.195,12.104,3.486c3.601,0.709,5.499-2.806,8.391-4.195c4.396-0.907,7.994,2.895,12.391,3.005
@@ -306,7 +306,7 @@
         z"></path>
                 <text class="maptext" transform="matrix(1 0 0 1 1018.2188 524.2002)" >Sankhuwasabha</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="panchthar"
                     class="mkhover prov1" d="M1157.499,584.504c1.899-3.486,2.409-7.396,3.912-11.111c0.113,2.015-0.198,4.109,0.198,6.097
         c0.794,1.39,2.098,2.605,3.203,3.912c-2.101,4.592-4.705,9.014-5.188,14.088c-1.899,5.414-0.794,11.509-3.401,16.693
@@ -320,7 +320,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 1100.1777 631.667)"
 >Panchthar</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="terhathum"
                     class="mkhover prov1" d="M1087.087,592.299c3.401,1.503,7.199,2.101,10.998,1.899c2.608-0.198,4.904,1.304,7.398,2.013
         c5.609,1.105,11.109,3.997,14.712,8.504c-1.701,1.19-3.486,2.409-5.414,3.603c-0.113,1.698-0.313,3.399-0.397,5.103
@@ -330,7 +330,7 @@
         C1082.381,598.677,1084.563,595.389,1087.087,592.299z"></path>
                 <text class="maptext" transform="matrix(1 0 0 1 1082.5977 611.3193)" >Terathum</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)">
+                   <g class="district">
                 <path id="solukhumbu"
                     class="mkhover prov1" d="M953.574,464.201c0.906,0,1.813,0,2.807-0.113c0.113,1.701,0.313,3.402,0.397,4.989
         c1.587,0.312,3.288,0.992,4.985,0.709c2.693-0.709,4.396-3.09,6.208-5.104c2.693,0.198,5.612-0.11,8.192,1.105
@@ -349,8 +349,8 @@
             </g>
         </g>
 
-        <g id="pradesh-2">
-                   <g class="district"  (click)="showDistrictforMap(this.$event)"  >
+        <g id="pradesh-2" (click)="showProvincedata(this.$event,2)" >
+                   <g class="district"  >
                 <path id="parsa"   class="mkhover prov2"
                     d="M669.09,563.104c2.409,0.112,4.904-0.111,7.313,0.396c2.689,0.992,4.394,4.309,7.512,3.912
         c6.095,0,12.614-2.409,18.396,0.198c6.296,4.309,13.808,6.604,19.814,11.311c1.701,3.401,1.304,7.597,2.893,11.111
@@ -362,7 +362,7 @@
         L669.09,563.104z"></path>
                 <text class="maptext"   transform="matrix(1 0 0 1 693.457 595.0039)">Parsa</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="bara"  class="mkhover prov2"
                     d="M724.479,579.005c5.414,0.313,10.803,0.907,16.217,0.198c2.098,4.507,5.188,8.391,7.598,12.699
         c1.389,2.406,4.11,3.483,6.406,4.705c-1.393,3.909-3.203,8.104-1.503,12.188c2.211,5.499,3.912,11.707,2.211,17.489
@@ -375,7 +375,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 727.998 621.167)"
 >Bara</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="saptari"
                     class="mkhover prov2" d="M948.388,657.411c0.598-0.113,1.7-0.113,2.296-0.198c2.607,6.009,7.313,11.396,6.891,18.313
         c2.605,1.304,5.414,2.406,7.711,4.309c2.296,2.211,0.51,5.612,0.51,8.391c3.486,1.701,6.293-1.304,9.1-3.09
@@ -391,7 +391,7 @@
 >Saptari</text>
             </g>
 
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="siraha"  class="mkhover prov2" d="M892.998,650.693c2.892,1.389,5.188,3.713,7.796,5.609c1.389,1.307,3.288,0,4.988-0.312
         c5.188-1.814,10.801-1.308,16.215-2.212c4.705-0.793,8.9,1.701,13.209,2.807c3.799,0.396,7.597-0.198,11.197,0.907
         c0.708,7.396-0.992,14.712-1.814,21.997c-2.494,6.688-2.692,13.89-1.896,20.891c0.709,2.895-1.589,5.188-2.692,7.6
@@ -402,7 +402,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 908.2598 675.2979)"
 >Siraha</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="dhanusa"
                     class="mkhover prov2" d="M864.481,624.303c1.503,3.401,1.503,8.394,5.695,9.811c7.2,1.104,14.91,1.188,21.288,5.414
         c5.414,3.398,11.111,6.488,15.987,10.602c-1.588,1.899-3.09,3.799-4.592,5.697c-3.487-2.409-6.293-6.491-10.914-6.406
@@ -415,7 +415,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 853.3027 679.3232)"
 >Dhanusha</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="sarlahi"
                     class="mkhover prov2" d="M831.486,608.4c4.706-0.794,9.015,1.896,13.21,3.713c-3.799,3.288-3.203,8.504-4.904,12.813
         c-0.709,2.608-3.09,4.312-4.507,6.604c-0.992,3.09-1.105,6.492-2.098,9.692c-0.907,3.203-3.401,5.697-4.11,8.9
@@ -427,7 +427,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 793.3301 643.0107)"
 >Sarlahi</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="rauthat"
                     class="mkhover prov2" d="M755.291,609.506c-1.7-4.109-0.992-8.703,1.588-12.188c1.587,0.11,3.288,0.11,4.988,0.312
         c1.896,0.907,3.399,2.608,5.5,3.487c11.111,0.51,21.203,6.009,30.5,11.707c-0.313,1.304-0.313,2.689-1.305,3.713
@@ -438,7 +438,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 756.207 624.3027)"
 >Rautahat</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="mahottari"
                     class="mkhover prov2" d="M843.789,615.912c0.907-1.105,2.098-1.899,3.203-2.693c1.389,1.503,2.807,3.09,4.309,4.507
         c1.814-0.51,3.486-1.304,5.414-1.389c2.211,0.907,4.989,1.701,6.095,3.997c0.113,2.893-0.396,5.697-0.11,8.589
@@ -455,8 +455,8 @@
 
         </g>
 
-        <g id="pradesh-3">
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+        <g id="pradesh-3" (click)="showProvincedata(this.$event,3)">
+                  <g class="district" >
                 <path id="nuwakot"
                     class="mkhover prov3" d="M743.188,467.093
         c3.008-1.188,6.098-1.813,9.216-2.211c-0.599,2.409-1.503,4.592-1.814,7.087c0.794,2.809,4.11,2.809,6.491,3.401
@@ -471,7 +471,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 745.9023 493.7383)"
 >Nuwakot</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="sindhupalchowk"
                     class="mkhover prov3" d="M841.691,451.899
         c1.587-0.907,2.807-2.409,4.107-3.717c1.813,1.591,3.997,2.693,5.697,4.312c2.098,3.09,2.892,6.804,5.301,9.606
@@ -488,7 +488,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 795.3213 501.3438)"
 >Sindhupalchowk</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="dhading"
                     class="mkhover prov3" d="M741.6,425.509
         c1.814-1.588,4.312-1.896,6.491-2.69c2.013,3.799,4.904,7.197,7.513,10.602c2.015,2.495,5.813,3.288,6.806,6.605
@@ -509,7 +509,7 @@
 >Dhading</text>
             </g>
 
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="rasuwa"  class="mkhover prov3"
                     d="M826.583,429.704
         c1.304-3.912,3.486-7.512,4.705-11.509c3.005,0.794,3.005,4.309,3.6,6.688c1.308,5.499,1.308,11.197,2.608,16.611
@@ -527,7 +527,7 @@
 >Rasuwa</text>
             </g>
 
-            <g class="district"  (click)="showDistrictforMap(this.$event)" onmouseover={show}>
+            <g class="district" >
                 <path id="chitwan" fill="#546555"  class="mkhover prov3" d="M674.192,496.602
         c3.911-0.904,7.001,1.814,9.014,4.791c-1.19,1.59-3.203,3.092-2.806,5.414c0.51,3.486-2.101,6.293-2.41,9.694
         c2.69,1.587,5.499,3.203,8.589,3.997c3.288,0.793,6.688-0.313,10.007-0.199c1.587,0.709,2.893,1.899,4.309,2.895
@@ -546,7 +546,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 633.3984 545.001)"
 >Chitwan</text>
             </g>
-            <g class="district"  (click)="showDistrictforMap(this.$event)" onmouseover={show}>
+            <g class="district" >
                 <path id="makwanpur"  class="mkhover prov3" d="M725.896,525.912
         c3.993-1.899,8.504-2.693,12.896-2.013c1.587,0.989,2.891,2.604,4.592,3.6c3.799,1.19,7.795,2.098,11.792,1.899
         c2.409-0.313,4.195,1.896,5.697,3.483c1.588,4.508,1.503,9.812,4.791,13.606c-1.304,3.912-3.005,8.189-1.587,12.303
@@ -561,7 +561,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 694.1191 561.458)"
 >Makwanpur</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="sindhuli"
                     class="mkhover prov3" d="M842.4,568.913
         c4.309-0.396,7.795,2.296,11.508,3.997c4.395,1.813,8.59,4.109,12.699,6.406c3.09,1.588,1.813,5.812,4.395,7.795
@@ -580,7 +580,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 827.4648 599.5703)"
 >Sindhuli</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="ramechhap"
                     class="mkhover prov3" d="M932.995,523.701
         c-0.992-5.301-1.814-12.813,3.997-15.704c2.892,0.907,5.414,2.892,7.2,5.301c2.098-0.596,4.192-1.104,6.293-1.503
@@ -597,7 +597,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 850.1191 571.0957)"
 >Ramechhap</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="dolkha"  class="mkhover prov3"
                     d="M890.192,465.393
         c2.296-3.994,5.811-7.002,8.702-10.485c1.188,2.494,2.604,4.985,4.192,7.196c-1.188,2.3-2.605,4.904-1.588,7.601
@@ -615,7 +615,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 886.1396 517.001)"
 >Dolkha</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="kavrepalanchowk"
                     class="mkhover prov3" d="M805.38,521.291
         c1.898-1.304,4.194-2.098,6.491-2.607c4.394,1.19,7.71,4.705,11.99,6.293c5.301,2.214,3.912,10.094,8.787,12.504
@@ -631,7 +631,7 @@
             </g>
 
 
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="lalitpur"
                     class="mkhover prov3" d="M774.481,528.689
         c5.896,0.596,8.7,6.488,13.21,9.691c-0.794,3.487-1.503,7.087-2.101,10.688c2.016,1.188,3.997,2.407,6.097,3.483
@@ -642,7 +642,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 772.5303 561.458)"
 >Lalitpur</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="kathmandu"
                     class="mkhover prov3" d="M770.684,513.609
         c1.19-2.211,2.692-4.11,4.195-6.098c5.301,1.393,10.688,0.992,15.987,1.307c3.483,1.188,6.406,3.799,9.298,6.095
@@ -654,7 +654,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 770.249 520.9629)"
 >Ktm</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="bhaktapur"
                     class="mkhover prov3" d="M783.496,530.985
         c1.813-3.798,5.499-6.292,9.496-7.397c3.398,0.708,6.803,1.105,10.29,0.595c-1.814,3.288-3.091,6.892-4.989,10.205
@@ -664,8 +664,8 @@
             </g>
         </g>
 
-        <g id="pradesh-4">
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+        <g id="pradesh-4" (click)="showProvincedata(this.$event,4)">
+                  <g class="district" >
                 <path id="mustang"
                     class="mkhover prov4" d="M581.188,264.699
         c3.603,0.312,7.09,0,10.604-0.595c1.899,1.502,2.807,3.912,4.11,5.896c1.813-0.198,3.6-0.794,5.414-0.198
@@ -687,7 +687,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 560.7349 318.1035)"
 > Mustang</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="manang"  class="mkhover prov4"
                     d="M613.984,334.998
         c2.807,0.596,5.301-1.389,8.104-1.587c2.894-0.198,5.813,0.312,8.589,0.794c2.809,1.587,5.303,4.705,8.9,4.309
@@ -704,7 +704,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 606.0054 366.459)"
 >Manang</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="myagdi"  class="mkhover prov4"
                     d="M509.074,351.893
         c4.309-0.904,8.787-1.587,12.896-3.2c3.288,0.196,6.293,1.813,9.017,3.714c-1.307,4.592-5.896,8.306-3.996,13.493
@@ -722,7 +722,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 487.3125 382.1953)"
 >Myagdi</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="kaski"  class="mkhover prov4"
                     d="M565.483,382.11
         c2.892-3.912,7.795-5.188,12.501-5.304c4.9,0.513,9.893,1.19,14.198,3.912c5.499,1.813,9.609,5.813,14.517,8.589
@@ -737,7 +737,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 578.9624 413.8018)"
 >Kaski</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="lamjung"
                     class="mkhover prov4" d="M651.685,396.794
         c1.308,0,2.693,0,3.997,0.198c2.297,1.502,3.912,3.799,5.698,5.896c3.798-0.904,7.795-1.813,11.396-3.714
@@ -749,7 +749,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 630.0762 432.001)"
 >Lamjung</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="baglung"
                     class="mkhover prov4 "
                     d="M545.479,435.844c-3.91,4.31-4.99,10.199-7.4,15.31c-1.9,2.21-3.99,4.11-5.89,6.29    c-3.09-2.49-6.61-4.79-10.61-5.61c-3.09,0.11-6.6,2.21-9.29-0.199c-2.7-1.19-3.09-4.311-4.11-6.801c-2.1-0.71-4.31-1.59-6.1-2.89    c-2.8-2.1-6.4-2.021-9.61-3.01c1.82-3.48,2.9-7.2,4.91-10.49c-0.65-0.36-2.61-1.021-3.29-1.271c-6.32-1.68-13.38,0.73-19.85-0.109    c-2.01-0.521-3.28,1.5-4.9,2.29c-1.19-0.391-2.41-0.79-3.6-1.19c-1.39-3.399-3.29-6.689-4.79-10.2c-5.81-0.31-9.61-4.79-14-8    c-1.7-3.28-4.11-6.29-5.19-9.81c-0.91-2.49-3.2-3.91-4.79-5.89c1.7-0.2,3.4-0.51,5.1-0.71c-1.1-2.01-2.49-3.8-4.11-5.41    c0.99-0.2,2.1-0.4,3.09-0.6c0.31-2.21,0.6-4.51,1.11-6.69c2.69,1.31,5.5,2.41,8.39,3.29c1.1-1.9,1.81-4.11,2.1-6.29    c-1.71-1.31-4.12-2.11-4.71-4.4c0.8-2.81,4.31-2.41,6.6-3.01c4.2,0.32,8.39,1.11,12.5-0.19c-1.7,7.71,3.72,14.2,3.92,21.6    c4.79,1.19,9.8,1.59,14.39-0.4c2.5,2.3,5.42,4.11,8.31,5.7c-1.1,2.1-3.8,4.2-2.61,6.8c1.59,3.011-0.19,6.3,0.12,9.5    c2.29,3.49,6.89-0.399,10.09,0.91c0.45,0.2,0.94,0.37,1.39,0.54c2.92,0.99,7.48,2.49,9.81,4.64c1.7,1.7,4.19,1.591,6.4,1.7    c1.81,0,3.2,1.391,4.9,1.9c2.1,0.189,4.2-0.601,6.41-0.4c1.9,0.601,3.48,1.9,5.1,2.9c2.41,1.39,2.02,5.1,4.4,6.49    C541.559,433.434,543.579,434.623,545.479,435.844z">
@@ -758,7 +758,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 481.2817 426.1602)"
 >Baglung</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="parbat"  class="mkhover prov4"
                     d="M549.298,410.995
         c2.494,1.503,6.406,2.605,6.208,6.208c-0.199,2.693,1.587,4.705,3.401,6.491c-0.794,1.104-1.393,2.211-2.101,3.288
@@ -772,7 +772,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 543.3247 432.001)"
 >Parbat</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="syangja"
                     class="mkhover prov4" d="M557.49,436.904
         c5.609,1.813,10.289,5.694,15.984,7.512c5.414,0.992,11.196,0.51,16.412,2.692c2.409,0.989,4.989,1.588,7.515,2.492
@@ -786,7 +786,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 548.7866 475.501)"
 >Syangja</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="tanahun"
                     class="mkhover prov4" d="M627.676,460.205
         c5.301,0.793,8.9-5.301,14.201-4.508c4.791,0.709,9.609,2.098,13.691,4.706c3.005,2.806,0.989,7.087,0.396,10.485
@@ -801,14 +801,14 @@
                 <text class="maptext" transform="matrix(1 0 0 1 602.4346 480.834)"
 >Tanahun</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="nawalparasieast"
                     class="mkhover prov4"
                     d="M593.291,496.913c4.706-0.113,9.496-1.502,14.004,0.511c6.094,2.409,12.897-0.511,18.708,2.494c2.013,0.907,4.312,0.396,6.491,0.596c0.709,5.697,0.794,13.099,6.491,16.188c2.212-1.814,4.192-3.799,6.01-5.896c5.812,1.393,6.804,11.112,0.907,12.898c-2.409-0.313-4.507-1.588-6.892-1.588c-4.192-0.513-6.206,3.912-9.691,5.188c-4.79,1.701-9.811,3.09-13.893,6.097c-3.483,3.201-5.103,8.19-9.606,10.287c-8.309,2.693-17.206,1.59-25.795,1.899c-0.06,0-0.113-0.028-0.17-0.028l-4.851-28.602c1.049,0.085,2.069,0.17,3.118,0.341c2.211,0.396,3.912-1.701,6.095-1.813c1.392-0.396,2.894-0.111,4.11-0.905c1.104-2.895,2.211-5.896,3.911-8.504c1.813-2.693,1.503-6.098,1.104-9.214L593.291,496.913z">
                 </path><text class="maptext" transform="matrix(1 0 0 1 552.2993 536.3115)"
  x="25" y="-10">Nawalparasi (E)</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="gorkha"  class="mkhover prov4"
                     d="M662.684,359.206
         c6.013-0.198,12.104,0.198,17.89,2.013c2.409,3.401,4.592,7.002,8.504,8.901c0.113,1.813,0.312,3.486,0.51,5.301
@@ -832,15 +832,15 @@
             </g>
         </g>
 
-        <g id="pradesh-5">
+        <g id="pradesh-5" (click)="showProvincedata(this.$event,5)" >
 
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
-                <path id="rukumeast"  onmouseover={show} class="mkhover prov5"
+                  <g class="district" >
+                <path id="rukumeast"  onmouseenter={show} class="mkhover prov5"
                     d="M422.221,340.129c2.271-0.595,4.507-1.389,6.774-1.729c2.296,0.312,4.394,2.012,6.804,1.188c3.603-0.907,7.795-1.588,11.196,0.396c5.103,3.997,11.594,5.609,17.802,7.002c0.907,1.699,1.701,3.483,2.494,5.188c1.588,0.113,3.203,0.313,4.791,0.396c0.113,2.098,0.312,4.192,0.198,6.403c0.312,2.298-2.016,3.603-3.005,5.414c-0.396,1.503-0.598,3.203-0.797,4.791c-6.688,1.19-13.604-0.989-20.098,1.19c-1.896,0.595-2.409,2.69-2.098,4.394c0,2.494,2.69,3.603,4.31,5.104c-0.313,0.708-1.104,2.098-1.503,2.689c-2.689-1.104-5.499-2.491-8.391-3.2c-0.708,2.211-1.19,4.593-1.502,6.889c-1.701,0.113-3.487,0.198-5.188,0.51c1.19,2.015,2.494,3.997,3.912,5.896c-2.212,0.595-4.395,2.689-6.688,1.502c-3.093-1.392-5.813-3.486-9.215-3.997c-2.297-0.368-4.139-2.186-6.265-3.004l6.491-47.059L422.221,340.129z">
                 </path><text class="maptext" transform="matrix(1 0 0 1 397.8335 366.459)"
  x="28">Rukum(E)</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="bardiya"
                     class="mkhover prov5" d="M201.6,368.589c4.507-3.6,9.212-7.313,12.302-12.303c1.502,2.297,2.495,5.415,5.301,6.407
         c5.698,2.012,10.687,6.009,14.003,11.108c1.389,1.814,3.487,2.607,5.301,3.799c9.695,5.612,15.988,15.593,25.795,21.007
@@ -855,7 +855,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 207.2104 401.4004)"
 >Bardia</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="banke"  class="mkhover prov5"
                     d="M262.091,410.4c2.608,0.11,4.989,0.51,7.512,0.903c0.595,1.191,1.19,2.41,1.701,3.714
         c4.904,0.513,8.589,3.912,13.011,5.697c2.296,0.794,3.997,2.693,5.301,4.706c1.389,2.211,4.592,1.813,6.491,3.603
@@ -868,7 +868,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 263.7778 449.6797)"
 >Banke</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="rolpa"  class="mkhover prov5"
                     d="M379.389,386.391c1.701-0.989,2.608-2.807,3.713-4.394c7.597,0.198,13.407,5.697,19.304,9.694
         c4.394,1.304,7.512-2.693,11.594-3.203c2.494,0.709,4.394,2.807,7.087,3.203c3.911,0.709,7.001,3.483,10.913,4.192
@@ -883,7 +883,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 381.2461 418.2354)"
 >Rolpa</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="dang"  class="mkhover prov5"
                     d="M324.397,426.303c2.608-0.709,4.791,1.392,6.888,2.607c5.697-3.005,11.792,1.813,17.801,0.312
         c2.807-0.793,3.912,2.495,5.698,3.997c3.09,2.296,6.208,4.507,9.609,6.406c2.807,1.588,3.798,4.904,5.811,7.313
@@ -900,7 +900,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 357.313 480.1582)"
 >Dang</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="kapilvastu"
                     class="mkhover prov5" d="M451.984,497.99c5.896-0.198,11.509,1.503,16.497,4.508c1.588,1.389,2.407,3.486,3.997,4.903
         c1.389,0.312,2.892,0.396,4.394,0.511c1.503,4.705,3.288,9.496,2.495,14.513c-0.596,3.09,0.312,6.208,0.312,9.411
@@ -914,7 +914,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 416.0698 527.8047)"
 >Kapilvastu</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="rupandehi"
                     class="mkhover prov5" d="M479.083,505.105c5.613,0.11,9.894,3.799,14.911,5.896c2.806,1.19,4.79,4.309,7.993,4.195
         c4.901-0.397,9.298,2.689,14.201,2.098c5.695-0.709,10.485,3.486,16.102,3.288c2.098-0.313,3.996-1.305,5.896-2.013
@@ -927,15 +927,15 @@
                 <text class="maptext" transform="matrix(1 0 0 1 478.5884 539.2344)"
 >Rupendehi</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
-                <path id="nawalparasiwest"  onmouseover={show} class="mkhover prov5"
+                  <g class="district" >
+                <path id="nawalparasiwest"  onmouseenter={show} class="mkhover prov5"
                     d="M578.551,545.754c-1.527,0.624-2.381,2.637-2.151,4.365c1.698,1.813,4.192,1.104,6.403,1.188c-3.398,2.809-2.494,7.798-5.896,10.688c-2.495-0.198-5.104-0.709-7.513,0.396c-1.392,2.101-1.813,5.304-0.396,7.515c1.39,1.188,3.005,2.098,4.593,3.09c-1.503,1.503-2.807,4.195-5.301,3.714c-1.588-0.709-2.807-1.896-4.11-2.892c-4.791-3.997-10.914-5.612-15.984-8.901c-4.706-3.004-9.896-4.903-14.517-7.908c-0.99-7.597-0.794-15.19-1.502-22.705c1.105-2.41,2.409-5.301,5.104-5.896c4.706-1.307,8.703-4.11,12.896-6.293c3.089-1.814,5.414-6.013,9.41-5.612c4.763,0.453,9.524,0.142,14.23,0.396L578.551,545.754z">
                 </path>
                 <text class="maptext" transform="matrix(1 0 0 1 552.2993 536.3115)"
  x="-40" y="16">Nawalparasi(W)</text>
             </g>
 
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="palpa"  class="mkhover prov5"
                     d="M501.478,480.501c2.409-1.503,3.603,2.409,5.813,2.692c2.892,0.196,5.697,0.511,8.589,1.104
         c5.813,0.992,11.707-1.7,17.49-0.595c3.203,0.396,4.705,3.6,6.888,5.612c2.296,0.11,4.11-1.899,6.01-3.093
@@ -949,7 +949,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 518.3711 506.9199)"
 >Palpa</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="arghakhanchi"
                     class="mkhover prov5" d="M447.789,462.104c0.709-2.012,2.013-3.798,3.09-5.609c4.592,2.807,9.809,4.706,15.108,5.896
         c3.714-0.11,7.2-1.698,10.8-2.296c3.203,1.7,4.508,5.414,5.812,8.504c1.392,4.312,7.398,5.414,7.6,10.204
@@ -962,7 +962,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 428.9727 493.7383)"
 >Arghakhanchi</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="pyuthan"
                     class="mkhover prov5" d="M443.396,416.494c1.104-1.502,3.09-1.813,4.592-2.692c3.005,3.203,6.804,5.612,11.194,6.208
         c1.392,3.486,4.396,6.689,3.801,10.8c-3.486,1.392-7.2,2.214-10.998,1.59c-1.588,2.492,0.709,4.508,1.587,6.688
@@ -977,7 +977,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 408.377 454.9043)"
 >Pyuthan</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="gulmi"  class="mkhover prov5"
                     d="M473.301,429.902c6.892-0.794,13.808-0.599,20.607-1.105c-0.793,3.486-1.898,7.087-3.996,10.006
         c0.198,0.599,0.708,1.814,0.992,2.41c5.609,0.396,10.289,3.09,15.105,5.813c1.307,2.013,1.814,4.592,3.912,6.01
@@ -993,8 +993,8 @@
             </g>
         </g>
 
-        <g id="pradesh-6">
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+        <g id="pradesh-6" (click)="showProvincedata(this.$event,6)" >
+                  <g class="district" >
                 <path id="dolpa"  class="mkhover prov6"
                     d="M435.799,202.507
         c4.507-0.396,8.787-2.494,13.407-2.098c0.511,1.899-0.198,4.507,1.39,5.896c3.203,0.992,6.689,0,10.006,0.51
@@ -1022,7 +1022,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 448.9585 288.4561)"
 > Dolpa</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="jumla"  class="mkhover prov6"
                     d="M362.296,228.813
         c3.402,1.19,6.803,3.005,10.488,2.41c1.814,2.693,2.608,8.504,6.803,7.597c2.608-2.211,4.791-4.904,7.795-6.69
@@ -1039,7 +1039,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 332.3496 269.2998)"
 >Jumla</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="mugu"  class="mkhover prov6"
                     d="M385.88,167.386
         c2.806-4.394,6.208-8.787,10.999-11.31c2.806,5.896,5.697,12.302,11.707,15.704c-1.104,2.013-2.013,3.997-3.005,6.01
@@ -1063,7 +1063,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 353.728 215.46)"
 >Mugu</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="humla"  class="mkhover prov6"
                     d="M274.479,76.11
         c3.402,1.502,7.2,1.899,10.205,4.11c2.494,1.389,4.394,3.798,7.001,4.989c4.791,0.793,9.808,1.502,14.4,2.806
@@ -1091,14 +1091,14 @@
                 <text class="maptext" transform="matrix(1 0 0 1 290.0229 148.9492)"
 >Humla</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="rukumwest"
                     class="mkhover prov6"
                     d="M392.287,313.2c4.791-0.397,9.411,1.304,14.088,1.389c2.296,4.11,2.891,9.018,6.491,12.388c-0.794,1.7-1.503,3.288-2.211,4.988c3.313,2.467,7.285,4.025,9.836,7.428l-6.321,47.366c-0.368-0.025-0.737-0.057-1.104,0c-2.895,0.709-5.304,2.693-8.192,3.604c-2.013,0.396-3.401-1.503-4.903-2.495c-3.399-3.09-7.909-4.592-11.509-7.398c-2.296-0.312-4.592-0.11-6.888-0.195c-0.907,1.588-1.899,3.285-2.892,4.901c-3.713,0.313-9.099,1.304-11.112-2.892c-1.389-4.11-4.394-8.589-9.212-8.787c-6.293-0.907-13.606-1.105-18-6.406c0.51-2.296,0.793-4.593,1.814-6.804c3.09-3.603,8.504-2.607,12.189-5.188c0.397-3.908-1.19-8.589,1.899-11.707c2.495-0.312,5.102,0,7.597-0.312c2.013-1.701,2.693-4.592,5.103-6.095c3.288-2.211,6.888-3.714,10.205-5.813c2.41-1.503,6.491-1.813,6.888-5.301c0.595-4.706,1.587-10.205,6.208-12.699L392.287,313.2z">
                 </path><text class="maptext" transform="matrix(1 0 0 1 397.8335 366.459)"
  x="-34">Rukum(W)</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="jajarkot"  class="mkhover prov6" d="M342.283,297.212
         c3.714-3.203,8.589-4.507,12.189-7.795c6.094,0.708,12.188,2.494,18.396,1.587c-0.595,2.012-1.502,3.912-1.304,6.009
         c0.198,3.487-0.992,6.803-1.389,10.29c2.892,1.588,5.896,3.714,9.411,3.487c2.211-1.305,3.997-4.396,7.001-3.402
@@ -1115,7 +1115,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 314.4785 338.4004)"
 >Jajarkot</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="kalikot"
                     class="mkhover prov6" d="M291.09,236.891
         c2.608-0.396,5.102-1.389,7.795-1.19c3.005,0.794,5.896,2.013,8.788,3.09c-0.595,4.904,0.199,9.893-0.595,14.797
@@ -1130,7 +1130,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 262.0142 281.6992)"
 >Kalikot</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="dailekh"
                     class="mkhover prov6" d="M245.48,289.389
         c4.195-1.106,7.994-3.289,11.707-5.613c-2.41,3.401-5.301,7.71-3.005,11.707c2.892,1.899,6.406,3.997,10.006,3.005
@@ -1144,7 +1144,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 257.9985 333.3672)"
 >Dailekh</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="salyan"  class="mkhover prov6"
                     d="M313.285,370.488
         c2.409-2.494,4.706-4.989,6.803-7.795c1.389,2.098,1.814,4.985,3.997,6.488c3.288,0.198,6.605-0.313,9.694,0.992
@@ -1161,7 +1161,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 317.6821 410.3721)"
 >Salyan</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="surkhet"
                     class="mkhover prov6" d="M173.282,309.09
         c4.195-2.494,9.213-3.6,14.088-2.494c4.904,3.401,8.504,9.102,14.712,10.402c4.592,0.709,9.496,0.511,13.89-1.389
@@ -1183,8 +1183,8 @@
             </g>
         </g>
 
-        <g id="pradesh-7">
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+        <g id="pradesh-7" (click)="showProvincedata(this.$event,7)">
+                  <g class="district" >
                 <path id="kailali"
                     class="mkhover prov7" d="M110.778,284.513c1.701,0,3.402-0.113,5.188,0c3.203,2.211,6.009,5.103,8.306,8.192
         c1.19,1.899,3.6,1.701,5.499,2.296c2.892,0.907,5.811,1.814,8.703,2.608c2.098,2.211,4.507,3.997,6.689,6.208
@@ -1204,7 +1204,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 128.3203 342.001)"
 >Kailali</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="kanchanpur"
                     class="mkhover prov7" d="M54,280.999c1.105-3.6,4.195-5.811,6.491-8.504c1.587,2.806,2.211,6.094,2.608,9.297
         c0.113,2.013,2.098,2.693,3.6,3.402c3.487,1.701,7.398,0.708,11.112,1.304c3.912,0.794,8.192,0.794,11.792,2.806
@@ -1219,7 +1219,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 42.6006 310.001)"
 >Kanchanpur</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="doti"  class="mkhover prov7"
                     d="M159.477,234.595c2.098-1.389,4.394-2.608,6.69-3.912c0.51,2.296,0.992,4.592,1.587,6.888
         c4.904,0.312,9.496-1.304,14.202-2.296c6.094,1.502,11.905,4.11,18.312,4.309c-1.105,4.195-2.806,8.192-4.309,12.303
@@ -1236,7 +1236,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 143.3164 274.001)"
 >Doti</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="achham"  class="mkhover prov7"
                     d="M201.997,240.69c2.211,3.401,5.896,4.791,9.609,5.697c0.595,2.693,1.389,5.5,2.409,8.107
         c2.608-0.114,4.791-1.191,7.001-2.495c1.899,1.701,3.487,3.713,5.613,5.188c4.195,0.992,8.504,1.899,12.897,2.409
@@ -1252,7 +1252,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 197.9937 281.6992)"
 >Achham</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="dadeldhura"
                     class="mkhover prov7" d="M103.776,232.81c3.713-1.587,6.604,1.899,10.205,1.814c3.6,0.113,7.087,0.708,10.687,0.708
         c3.289-1.701,6.407-4.309,10.29-3.798c5.301-0.113,8.391,4.592,12.5,7.2c-1.587,0.992-3.486,1.814-4.195,3.713
@@ -1267,7 +1267,7 @@
                 <text class="maptext" transform="matrix(1 0 0 1 78.8989 262.001)"
 >Dadeldura</text>
             </g>
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="bajura"  class="mkhover prov7"
                     d="M270.68,155.707c2.608-0.595,5.301-0.51,7.994-0.51c1.389,1.701,2.608,3.487,4.309,4.904
             c2.892,1.304,6.208,1.389,9.298,2.098c0.397,3.005-0.113,6.01-1.587,8.589c-1.701,0.396-3.401,0.595-4.989,0.907
@@ -1287,7 +1287,7 @@
             </g>
 
 
-                   <g class="district"  (click)="showDistrictforMap(this.$event)" >
+                  <g class="district" >
                 <path id="baitadi"
                     class="mkhover prov7"
                     d="M110.693,196.895c3.09-4.989,8.901-6.491,13.493-9.808c3.6,0.199,7.086,1.814,10.8,1.701
@@ -1302,8 +1302,8 @@
                 <text class="maptext" transform="matrix(1 0 0 1 106.7822 212.001)"
 >Baitadi</text>
             </g>
-            <g class="district"  (click)="showDistrictforMap(this.$event)"(mouseover)="showStats(this.$event)"  (mouseout)="removeStats() ">
-                <path id="darchula" (click)="showDistrictforMap(this.$event) "
+            <g class="district" >
+                <path id="darchula"
                     class="mkhover prov7" d="M177.392,102.387c3.6-0.396,7.398-0.312,10.999,0.199c2.098,2.494,2.296,6.009,3.09,9.014
         c1.304,2.891,3.6,5.102,4.791,7.909c0.312,3.09,0.595,6.208,2.608,8.589c-0.596,1.304-1.191,2.693-1.899,3.912
         c-2.41,2.892-6.888,3.798-8.306,7.597c-1.899,3.713-3.713,7.398-4.904,11.395c0.198,2.608,2.892,4.394,3.288,7.087
@@ -1318,7 +1318,7 @@
         c-0.113-2.806-2.098-5.896-0.113-8.391c2.296-3.288,3.713-7.994,8.107-9.014L177.392,102.387z"></path>
                 <text class="maptext" transform="matrix(1 0 0 1 132.9424 165.001)">Darchula</text>
             </g>
-            <g class="district"  (click)="showDistrictforMap(this.$event)" >
+           <g class="district" >
                 <path id="bajhang"
                     class="mkhover prov7" d="M190.885,138.897c1.588-2.012,3.997-3.09,6.095-4.592c3.203,3.288,6.888,7.086,11.905,6.406
         c3.09-0.709,6.01,0.51,8.986,1.304c1.105-1.814,2.012-3.713,3.004-5.612c3.6,1.502,7.313,2.806,10.602,5.102
@@ -1347,14 +1347,17 @@
 
 </div>
 
-<!--<div id="selectIt"  style="display: none" >-->
-<!--  <div class="card" >-->
-<!--    <div class="card-body">-->
-<!--      <p class="card-text">{{District}}</p>-->
-<!--      <p class="card-text">{{HospitalName}}</p>-->
-<!--      <p class="card-text">{{Type}}</p>-->
-<!--      <p class="card-text">{{Number}}</p>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
+<div id="selectIt"  style="display: none" (mouseleave)="hideme(this.$event)">
+  <div class="card" >
+    <h2>{{this.provinceName}}</h2>
+    <div class="card-body">
+      <p class="card-text">Total tested:{{this.total_tested}}</p>
+      <p class="card-text">Total Negative:{{this.total_negative}}</p>
+      <p class="card-text">Total in Isolation:{{this.total_in_isolation}}</p>
+      <p class="card-text">Total Positive:{{this.total_positive}}</p>
+      <p class="card-text">Total Isolation bed:{{this.num_of_isolation_bed}}</p>
+      <p class="card-text">Occupied Isolation bed:{{this.occupied_isolation_bed}}</p>
+    </div>
+  </div>
+</div>
 

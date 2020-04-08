@@ -13,11 +13,12 @@
     font-size: 1rem;
     color: #2E4053;
 }
+.card{
+    background-color: lightsalmon;
+}
 .card.text-center.mb-3.w-100{
-margin: 0 auto; /* Added */
-float: none; /* Added */
-background-color: lightsalmon;;
-
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
 }
 .card-header.text-white{
     font-size: 15px;
@@ -26,6 +27,12 @@ background-color: lightsalmon;;
 font-size: 0.9em;
 }
 
-@media only screen and (max-width: 768px){
-
+@media only screen and (max-width: 767px){
+    .card-header.text-white{
+       text-align: left;
+    }
+    .list-group.list-group-flush .list-group-item{
+        text-align: left;
+    }
+    
 }

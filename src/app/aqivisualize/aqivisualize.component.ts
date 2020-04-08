@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild, ViewChildren} from '@angular/core';
 import {HttpBackend, HttpClient} from '@angular/common/http';
 import {NotificationService} from '../core/notification/notification.service';
 import AQIdata = Authentication.AQIdata;
 import {timeout} from 'rxjs/operators';
+import {GoogleChartComponent, GoogleChartsModule} from 'angular-google-charts';
 
 @Component({
   selector: 'app-aqivisualize',
@@ -10,6 +11,9 @@ import {timeout} from 'rxjs/operators';
   styleUrls: ['./aqivisualize.component.css']
 })
 export class AQIvisualizeComponent implements OnInit {
+
+  @ViewChild('chart', {static: false})
+  private chart: GoogleChartComponent;
   url = '';
   PM10AqiData: AQIdata[];
   PM25AqiData: AQIdata[];
@@ -49,8 +53,6 @@ export class AQIvisualizeComponent implements OnInit {
   ];
   columnNames = ['Month', 'PM25', 'PM10'];
   options = {
-    width: 800,
-    height: 440,
     legend: {
       position: 'top'},
     hAxis: {
@@ -61,7 +63,9 @@ export class AQIvisualizeComponent implements OnInit {
     },
   };
 
-
+onResize(event) {
+this.chart.ngOnChanges();
+}
 
   ngOnInit() {
 
