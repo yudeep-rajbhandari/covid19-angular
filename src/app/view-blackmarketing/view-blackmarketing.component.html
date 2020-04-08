@@ -1,5 +1,5 @@
-
-<div class="blackmarketing-container">
+<div>
+<div class="blackmarketing-container" *ngIf="marketing">
   <div class=" text-center p-3"   *ngFor = "let prod of blackMarketings; let i=index" style="position: unset">
     <div class="card-body blackmarketing-div" >
       <h5 class="card-text text-left blackmarketing-div-title">ProductName: {{prod.productName}}</h5>
@@ -9,5 +9,9 @@
       <h5 class="card-text text-left blackmarketing-div-text">{{prod.comments}}</h5>
       <p class=" text-muted text-left blackmarketing-div-time">{{prod.created_date}}</p>
     </div>
+  </div>
+</div>
+  <div *ngIf="!marketing">
+    <div class="loading">Loading&#8230;</div>
   </div>
 </div>

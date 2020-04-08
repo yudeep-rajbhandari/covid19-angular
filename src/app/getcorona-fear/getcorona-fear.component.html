@@ -1,4 +1,5 @@
-<div class="suspected-container">
+<div>
+<div class="suspected-container" *ngIf="marketing">
   <div class="text-center p-3"   *ngFor = "let prod of coronaFeardata; let i=index">
     <div class="card-body suspected-div " >
       <h6 class="card-text text-left suspected-div-title">Location: <span class="suspected-div-text">{{prod.location}}</span></h6>
@@ -12,4 +13,9 @@
       </div>
     </div>
   </div>
+
+</div>
+<div *ngIf="!marketing">
+  <div class="loading">Loading&#8230;</div>
+</div>
 </div>
