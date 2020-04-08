@@ -1,3 +1,20 @@
+.container h3{
+  margin-top: 20px;
+  color: #2E4053;
+  font-size:1.35rem ;
+  font-style: normal;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+.d-flex.justify-content-center.align-items-center{
+  width: 100%;
+}
+.table-responsive-sm{
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  line-height: 1.35rem;
+}
+
 .loading {
   position: fixed;
   z-index: 999;
