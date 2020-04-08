@@ -1,29 +1,36 @@
-<div class="table-responsive">
-<table class="table">
-  <thead>
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">Hospital Name</th>
-    <th scope="col">District</th>
-    <th scope="col">Municipality</th>
-    <th scope="col">Contact Number</th>
-    <th scope="col">Category</th>
-  </tr>
-  </thead>
-  <ng-container *ngIf="databool" >
-  <tbody *ngFor="let hos of Hospitals;let i=index" >
-  <tr>
-    <th scope="row">{{i+1}}</th>
-    <td>{{hos.name}}</td>
-    <td>{{hos.district_name}}</td>
-    <td>{{hos.municipality_name}}</td>
-    <td>{{hos.contact_num=='nan'?'N/A':hos.contact_num}}</td>
-    <td>{{hos.category_name}}</td>
-  </tr>
-  </tbody>
-  </ng-container>
-  <div *ngIf="!databool">
-    <div class="loading">Loading&#8230;</div>
+<div class="container">
+  <h3>Hospital List of Each District</h3>
+  <div class="d-flex justify-content-center">
+    <div class="table-responsive-sm">
+      <table class="table table-bordered">
+        <thead class="thead-class">
+          <tr class="tr-class">
+            <th scope="col">SN</th>
+            <th scope="col">Hospital Name</th>
+            <th scope="col">District</th>
+            <th scope="col">Municipality</th>
+            <th scope="col">Contact Number</th>
+            <th scope="col">Category</th>
+          </tr>
+        </thead>
+        <ng-container *ngIf="databool" >
+          <tbody *ngFor="let hos of Hospitals;let i=index" >
+            <tr>
+              <th scope="row">{{i+1}}</th>
+              <td>{{hos.name}}</td>
+              <td>{{hos.district_name}}</td>
+              <td>{{hos.municipality_name}}</td>
+              <td>{{hos.contact_num=='nan'?'N/A':hos.contact_num}}</td>
+              <td>{{hos.category_name}}</td>
+            </tr>
+          </tbody>
+        </ng-container>
+        <div *ngIf="!databool">
+          <div class="loading">
+            Loading&#8230;
+          </div>
+        </div>
+      </table>
+    </div>
   </div>
-</table>
 </div>

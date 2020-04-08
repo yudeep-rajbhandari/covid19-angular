@@ -10,19 +10,21 @@ import blackMarketing = Authentication.blackMarketing;
 export class ViewBlackmarketingComponent implements OnInit {
   blackMarketings: blackMarketing[];
   colorbox: string[];
-  textbox:string[];
+  textbox: string[];
+  marketing: boolean;
 
   constructor(private apicall: AuthenticationService) {
     this.apicall.showblackmarketing().subscribe(data => {
       console.log(data);
       this.blackMarketings = data;
       if (this.blackMarketings.length < 3) {
-        this.colorbox = ['dark', 'light', 'dark', 'light']
+        this.colorbox = ['dark', 'light', 'dark', 'light'];
         this.textbox =  ['white', 'black', 'white', 'black'];
       } else {
-        this.colorbox= ['dark', 'dark', 'light', 'light'];
+        this.colorbox = ['dark', 'dark', 'light', 'light'];
         this.textbox =  ['white', 'white', 'black', 'black'];
       }
+      this.marketing = true;
       console.log(this.blackMarketings);
     });
 
