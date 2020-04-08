@@ -11,6 +11,7 @@ export class GetcoronaFearComponent implements OnInit {
   coronaFeardata: coronaFear[];
   colorbox: string[];
   textbox:string[];
+  marketing:boolean;
 
   constructor(private apicall: AuthenticationService) {
     this.apicall.getCoronaFear().subscribe(data => {
@@ -23,6 +24,7 @@ export class GetcoronaFearComponent implements OnInit {
         this.colorbox= ['dark', 'dark', 'light', 'light'];
         this.textbox =  ['white', 'white', 'black', 'black'];
       }
+      this.marketing = true;
       console.log(this.coronaFeardata);
     });
 

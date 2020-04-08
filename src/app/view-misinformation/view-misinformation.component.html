@@ -1,4 +1,5 @@
-<div class="misinformation-container">
+<div>
+<div class="misinformation-container" *ngIf="marketing">
 <div class=" text-center p-3"   *ngFor = "let prod of misinformation; let i=index" >
   <div class="card-body misinformation-div"  >
     <h4 class="card-text misinformation-div-title" >Source:{{prod.source}}</h4>
@@ -8,6 +9,11 @@
     </div>
     <p class=" text-muted misinformation-div-time " >{{prod.created_date}}</p>
   </div>
+</div>
+</div>
+
+<div *ngIf="!marketing">
+  <div class="loading">Loading&#8230;</div>
 </div>
 </div>
 
