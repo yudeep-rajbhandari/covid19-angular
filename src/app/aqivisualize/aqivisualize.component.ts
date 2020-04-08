@@ -1,9 +1,9 @@
 import {Component, OnInit, ViewChild, ViewChildren} from '@angular/core';
 import {HttpBackend, HttpClient} from '@angular/common/http';
 import {NotificationService} from '../core/notification/notification.service';
-import AQIdata = Authentication.AQIdata;
 import {timeout} from 'rxjs/operators';
 import {GoogleChartComponent, GoogleChartsModule} from 'angular-google-charts';
+import data1 = Authentication.data1;
 
 @Component({
   selector: 'app-aqivisualize',
@@ -15,8 +15,9 @@ export class AQIvisualizeComponent implements OnInit {
   @ViewChild('chart', {static: false})
   private chart: GoogleChartComponent;
   url = '';
-  PM10AqiData: AQIdata[];
-  PM25AqiData: AQIdata[];
+  PM10AqiData: data1;
+  currentAQI: number;
+  currentPM10: number;
   enddate: string;
   startdate: string;
   ready: boolean;
@@ -25,18 +26,16 @@ export class AQIvisualizeComponent implements OnInit {
   constructor(handler: HttpBackend, private ns: NotificationService, private httpClient: HttpClient) {
     // this.enddate = new Date().toISOString().split('.')[0];
     // this.startdate = this.enddate.split('T')[0] + 'T00:00:00';
-    // this.httpClient = new HttpClient(handler);
-    // this.httpClient.get<AQIdata[]>('http://pollution.gov.np/gss/api/observation?series_id=523&date_from=' + this.startdate + '&date_to=' + this.enddate).subscribe(data => {
-    //   console.log(data);
-    //   this.PM10AqiData = data;
-    //   this.httpClient.get<AQIdata[]>('http://pollution.gov.np/gss/api/observation?series_id=525&date_from=' + this.startdate + '&date_to=' + this.enddate).subscribe(data => {
-    //     console.log(data);
-    //     this.PM25AqiData = data;
-    //     this.ready = true;
-    //     this.data.push(['Today', this.PM25AqiData[this.PM25AqiData.length-1].value, this.PM10AqiData[this.PM10AqiData.length-1].value]);
-    //     console.log(this.PM25AqiData[this.PM25AqiData.length-1].value, this.PM10AqiData[this.PM10AqiData.length-1].value)
-    //   });
-    // });
+    this.httpClient = new HttpClient(handler);
+    this.httpClient.get<data1>('https://api.airvisual.com/v2/city?city=Kathmandu&state=Central%20Region&country=Nepal&key=cc48213a-38d8-430f-81a3-5973c871d7b4').subscribe(data => {
+      console.log(data.data.current.pollution.aqius);
+      this.currentAQI = data.data.current.pollution.aqius;
+      this.currentPM10 = data.data.current.pollution.aqicn;
+      this.data.push(['Now', this.currentAQI, this.currentPM10]);
+      this.chart.ngOnChanges();
+
+
+    });
 
   }
   title = 'AQI of Kathmandu';

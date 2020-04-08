@@ -28,9 +28,20 @@ declare namespace Authentication {
     created_date: string;
   }
 
-  export interface AQIdata {
-    value: string;
-    datetime: string;
+  export interface data1 {
+    data: data;
+  }
+  export  interface data {
+    current:current;
+  }
+
+  // tslint:disable-next-line:class-name
+  export interface current {
+   pollution:pollution;
+  }
+  export  interface pollution{
+    aqius:number;
+    aqicn:number;
   }
   export interface coronaFear {
     location: string;

@@ -118,3 +118,9 @@
     transform: rotate(360deg);
   }
 }
+
+.table-responsive-sm {
+  max-height:600px;
+  max-width: 600px;
+  overflow-x:auto;
+}
