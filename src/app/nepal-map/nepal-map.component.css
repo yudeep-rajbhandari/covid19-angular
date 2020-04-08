@@ -23,6 +23,18 @@
   border-radius: 17%;
   width: 30%;
 }
+.card{
+  z-index: 99999999;
+  background-color:#FFFFE0 ;
+  width: 170px;
+}
+.card-header{
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+.list-group.list-group-flush{
+  font-size: 0.75rem;
+}
 
 /*Responsive*/
 @media only screen and (max-width:767px){
@@ -33,6 +45,9 @@
   .nepalmap p{
     width: 100%;
     
+  }
+  .card{
+    justify-content: center;
   }
 }
 /* line 1, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
@@ -101,7 +116,7 @@ body {
   font:normal 12px/1.5 Arial, sans-serif;
 }
 
-.field-tip {
+/* .field-tip {
   position:relative;
   cursor:help;
 }
@@ -135,7 +150,7 @@ body {
   margin-top:-8px;
   border:8px solid transparent;
   border-right-color:#333;
-}
+} */
 .loading {
   position: fixed;
   z-index: 999;

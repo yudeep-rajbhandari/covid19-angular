@@ -1348,16 +1348,27 @@
 </div>
 
 <div id="selectIt"  style="display: none" (mouseleave)="hideme(this.$event)">
-  <div class="card" >
+  <!-- <div class="card" >
     <h2>{{this.provinceName}}</h2>
     <div class="card-body">
       <p class="card-text">Total tested:{{this.total_tested}}</p>
+      <p class="card-text">Total Positive:{{this.total_positive}}</p>
       <p class="card-text">Total Negative:{{this.total_negative}}</p>
       <p class="card-text">Total in Isolation:{{this.total_in_isolation}}</p>
-      <p class="card-text">Total Positive:{{this.total_positive}}</p>
       <p class="card-text">Total Isolation bed:{{this.num_of_isolation_bed}}</p>
       <p class="card-text">Occupied Isolation bed:{{this.occupied_isolation_bed}}</p>
     </div>
+  </div> -->
+  <div class="card">
+    <div class="card-header">
+      {{this.provinceName}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Total tested:{{this.total_tested}}</li>
+      <li class="list-group-item">Total Positive:{{this.total_positive}}</li>
+      <li class="list-group-item">Total Negative:{{this.total_negative}}</li>
+      <li class="list-group-item">Total in Isolation:{{this.total_in_isolation}}</li>
+    </ul>
   </div>
 </div>
 
