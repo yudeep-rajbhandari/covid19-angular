@@ -1,53 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 
-
+.container-fluid{
+  min-height: 100vh;
+}
+.head-text h3{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.75rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #2E4053;
+}
+.head-text p{
+  padding: 0 150px 0 150px;
+  font-size: 1rem;
+  text-align: center;
+}
 .blackmarketing-container{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 1fr;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  overflow-x: hidden;
 }
-
+/* .card-body.blackmarketing-div{
+  font-size: 1.45rem;
+}
+.blackmarketing-div-text{
+  font-size: 1rem;
+} */
+.card-css{
+  width: 1000px;
+}
+@media only screen and (max-width:1365px){
+  .blackmarketing-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 @media only screen and (max-width: 768px) {
-	.blackmarketing-container {
-        grid-template-columns: 1fr 1fr;
-	}
+  .head-text h3{
+    margin-top: 30px;
+    text-align: left;
+    font-size: 1.35rem;
+  }
+  .head-text p{
+    text-align: left;
+    padding: 0;
+    font-size: 1rem;
+  }  
+  .card-text.text-left.blackmarketing-div-title{
+    font-size: 0.84rem;
+  }
+  .blackmarketing-div-text{
+    font-size: 0.77rem;
+  }
+  /* .blackmarketing-container{
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+	} */
 }
-
+@media only screen and (max-width:767px){
+  .head-text h3{
+    margin-top: 30px;
+    text-align: left;
+    font-size: 1.35rem;
+  }
+  .head-text p{
+    text-align: left;
+    padding: 0;
+    font-size: 1rem;
+  }
+}
 @media only screen and (max-width: 576px) {
-	.blackmarketing-container {
-        grid-template-columns: 1fr;
+  .blackmarketing-container{
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
 	}
+  .head-text h3{
+    margin-top: 30px;
+    text-align: left;
+  }
+  .head-text p{
+    text-align: left;
+  }
 }
 
 .blackmarketing-div{
-    background-color: white;
-    box-shadow: 0px 2px 5px 0px #c7c7c7;
-    border-radius: 4px;
-    transition: 0.4s;
-    height:100%;
-    position:relative
+  background-color: white;
+  box-shadow: 0px 2px 5px 0px #c7c7c7;
+  border-radius: 4px;
+  transition: 0.4s;
+  height:100%;
+  position:relative
 }
 
 .blackmarketing-div:hover{
-    background-color: white;
-    box-shadow: 0px 10px 15px 0px #c7c7c7;
-    border-radius: 4px;
+  background-color: white;
+  box-shadow: 0px 10px 15px 0px #c7c7c7;
+  border-radius: 4px;
 }
 
 .blackmarketing-div-title{
-    font-family: AvertaSemiBold;
+  font-family: AvertaSemiBold;
 }
 
 .blackmarketing-div-text{
-    font-family: AvertaLight;
+  font-family: AvertaLight;
 }
 
 .footer{
-    position: absolute;
-    bottom:0;
+  position: absolute;
+  bottom:0;
 }
 
 .blackmarketing-div-time{
-    font-family: AvertaLight;
+  font-family: AvertaLight;
 }
 
 .loading {

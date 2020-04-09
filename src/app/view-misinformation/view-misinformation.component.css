@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+.container-fluid{
+  min-height: 100vh;
+}
 .content-front{
   z-index: 1;
   padding-top: 200px;
 }
-
+.card-text.misinformation-div-title{
+  font-size: 0.95rem;
+}
+.card-text.misinformation-div-text{
+  font-size: 0.85rem;
+}
+.card-link.misinformation-div-goto{
+  font-size: 0.80rem;
+}
+.text-muted.misinformation-div-time{
+  font-size: 0.60rem;
+}
 .text-center{
   text-align: center;
 }

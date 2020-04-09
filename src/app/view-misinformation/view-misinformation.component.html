@@ -1,4 +1,4 @@
-<div>
+<div class="container-fluid">
 <div class="misinformation-container" *ngIf="marketing">
 <div class=" text-center p-3"   *ngFor = "let prod of misinformation; let i=index" >
   <div class="card-body misinformation-div"  >
@@ -7,7 +7,7 @@
     <div class="card-body ">
       <a (click)="gotoUrl(prod.link)" class="card-link misinformation-div-goto" >Go to link</a>
     </div>
-    <p class=" text-muted misinformation-div-time " >{{prod.created_date}}</p>
+    <p class="text-muted misinformation-div-time" >{{prod.created_date}}</p>
   </div>
 </div>
 </div>

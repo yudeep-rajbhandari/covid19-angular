@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
-/* .container-fluid{
-  overflow: hidden;
-} */
+
 .head-text h3{
   margin-top: 30px;
   text-align: center;
@@ -14,16 +12,6 @@
   font-size: 1rem;
   text-align: center;
 }
-
-/* .content-front{
-  z-index: 1;
-  padding-top: 200px;
-} */
-
-/* .text-center{
-  text-align: center;
-} */
-
 .suspected-container{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -33,7 +21,6 @@
 @media only screen and (max-width:1365px){
   .suspected-container {
     grid-template-columns: 1fr 1fr;
-    /* overflow-x: hidden; */
   }
 }
 
