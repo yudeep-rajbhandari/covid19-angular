@@ -15,7 +15,6 @@ export class ViewSuspectedcasesComponent implements OnInit {
 
   constructor(private apicall: AuthenticationService) {
     this.apicall.showSuspectablecases().subscribe(data => {
-      console.log(data);
       this.suspectedcases = data;
       if (this.suspectedcases.length < 3) {
         this.colorbox = ['dark', 'light', 'dark', 'light']
@@ -24,7 +23,6 @@ export class ViewSuspectedcasesComponent implements OnInit {
         this.colorbox = ['dark', 'dark', 'light', 'light'];
         this.textbox =  ['white', 'white', 'black', 'black'];
       }
-      console.log(this.suspectedcases);
     });
 
   }

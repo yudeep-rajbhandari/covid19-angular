@@ -1,21 +1,25 @@
-<div>
-<div class="suspected-container" *ngIf="marketing">
-  <div class="text-center p-3"   *ngFor = "let prod of coronaFeardata; let i=index">
-    <div class="card-body suspected-div " >
-      <h6 class="card-text text-left suspected-div-title">Location: <span class="suspected-div-text">{{prod.location}}</span></h6>
-      <h6 class="card-text text-left suspected-div-title">Age: <span class="suspected-div-text">{{prod.age}}</span></h6>
-      <h6 class="card-text text-left suspected-div-title">Gender: <span class="suspected-div-text">{{prod.gender}}</span></h6>
-      <h6 class="card-text text-left suspected-div-title">Referred Hospital(s): <span class="suspected-div-text">{{prod.responsibleHospital}}</span></h6>
-      <h6 class="card-text text-left suspected-div-title">Description: <span class="suspected-div-text">{{prod.description}}</span></h6>
-      <h6 class="card-text text-left suspected-div-title">Status now: <span class="suspected-div-text">{{prod.statuses}}</span></h6>
-      <div class="footer">
-        <div class=" text-muted suspected-div-time">{{prod.created_date}}</div>
+<div class="container-fluid">
+  <div class="head-text">
+    <h3>Corona Fear Cases:</h3>
+    <p>The cases mentioned below are those cases which are highly affected due to corona fear.
+      Those patients were neglected by the hospital authority for further treatment resulting in even deaths of the victims.</p>
+  </div>
+  <div class="suspected-container" *ngIf="marketing">
+    <div class="text-center p-3"   *ngFor = "let prod of coronaFeardata; let i=index">
+      <div class="card-body suspected-div">
+        <h6 class="card-text text-left suspected-div-title">Location: <span class="suspected-div-text">{{prod.location}}</span></h6>
+        <h6 class="card-text text-left suspected-div-title">Age: <span class="suspected-div-text">{{prod.age}}</span></h6>
+        <h6 class="card-text text-left suspected-div-title">Gender: <span class="suspected-div-text">{{prod.gender}}</span></h6>
+        <h6 class="card-text text-left suspected-div-title">Referred Hospital(s): <span class="suspected-div-text">{{prod.responsibleHospital}}</span></h6>
+        <h6 class="card-text text-left suspected-div-title">Description: <span class="suspected-div-text">{{prod.description}}</span></h6>
+        <h6 class="card-text text-left suspected-div-title">Status now: <span class="suspected-div-text">{{prod.statuses}}</span></h6>
+        <div class="footer">
+          <div class=" text-muted suspected-div-time">{{prod.created_date}}</div>
+        </div>
       </div>
     </div>
   </div>
-
-</div>
-<div *ngIf="!marketing">
-  <div class="loading">Loading&#8230;</div>
-</div>
+  <div *ngIf="!marketing">
+    <div class="loading">Loading&#8230;</div>
+  </div>
 </div>

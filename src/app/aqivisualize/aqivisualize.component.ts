@@ -28,10 +28,9 @@ export class AQIvisualizeComponent implements OnInit {
     // this.startdate = this.enddate.split('T')[0] + 'T00:00:00';
     this.httpClient = new HttpClient(handler);
     this.httpClient.get<data1>('https://api.airvisual.com/v2/city?city=Kathmandu&state=Central%20Region&country=Nepal&key=cc48213a-38d8-430f-81a3-5973c871d7b4').subscribe(data => {
-      console.log(data.data.current.pollution.aqius);
       this.currentAQI = data.data.current.pollution.aqius;
       this.currentPM10 = data.data.current.pollution.aqicn;
-      this.data.push(['Now', this.currentAQI, this.currentPM10]);
+      this.data.push(['Now(Live)', this.currentAQI, this.currentPM10]);
       this.chart.ngOnChanges();
 
 
@@ -44,11 +43,11 @@ export class AQIvisualizeComponent implements OnInit {
     ['Jan 1',  152, 72],
       ['Feb 7',  161, 96],
     ['Mar 7',  100,  49],
-    ['Apr 1',  106, 37],
     ['Apr 2',  87, 43],
     ['Apr 3',  96, 47],
     ['Apr 4',  113, 43],
-    ['Apr 5', 125, 53]
+    ['Apr 5', 125, 53],
+    ['Apr 8', 142, 72]
   ];
   columnNames = ['Month', 'PM25', 'PM10'];
   options = {

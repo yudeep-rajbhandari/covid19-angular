@@ -1,9 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+.container-fluid{
+  min-height: 100vh;
+}
+.head-text h3{
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.75rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #2E4053;
+}
+.head-text p{
+  padding: 0 150px 0 150px;
+  font-size: 1rem;
+  text-align: center;
+}
 .content-front{
   z-index: 1;
   padding-top: 200px;
 }
-
+.card-text.misinformation-div-title{
+  font-size: 0.95rem;
+}
+.card-text.misinformation-div-text{
+  font-size: 0.85rem;
+}
+.card-link.misinformation-div-goto{
+  font-size: 0.80rem;
+}
+.text-muted.misinformation-div-time{
+  font-size: 0.60rem;
+}
 .text-center{
   text-align: center;
 }
@@ -13,12 +39,41 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 @media only screen and (max-width: 768px) {
+  .head-text h3{
+    margin-top: 30px;
+    text-align: left;
+    font-size: 1.35rem;
+  }
+  .head-text p{
+    text-align: left;
+    padding: 0;
+    font-size: 1rem;
+  }  
 	.misinformation-container {
         grid-template-columns: 1fr 1fr;
 	}
 }
+@media only screen and (max-width:767px){
+  .head-text h3{
+    margin-top: 30px;
+    text-align: left;
+    font-size: 1.35rem;
+  }
+  .head-text p{
+    text-align: left;
+    padding: 0;
+    font-size: 1rem;
+  }
+}
 
 @media only screen and (max-width: 576px) {
+  .head-text h3{
+    margin-top: 30px;
+    text-align: left;
+  }
+  .head-text p{
+    text-align: left;
+  }
 	.misinformation-container {
         grid-template-columns: 1fr;
 	}
