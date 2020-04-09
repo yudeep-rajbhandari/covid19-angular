@@ -21,15 +21,7 @@
   grid-auto-rows: 1fr;
   overflow-x: hidden;
 }
-/* .card-body.blackmarketing-div{
-  font-size: 1.45rem;
-}
-.blackmarketing-div-text{
-  font-size: 1rem;
-} */
-.card-css{
-  width: 1000px;
-}
+
 @media only screen and (max-width:1365px){
   .blackmarketing-container {
     grid-template-columns: 1fr 1fr;

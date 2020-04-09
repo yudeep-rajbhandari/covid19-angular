@@ -1,20 +1,27 @@
 <div class="container-fluid">
-<div class="misinformation-container" *ngIf="marketing">
-<div class=" text-center p-3"   *ngFor = "let prod of misinformation; let i=index" >
-  <div class="card-body misinformation-div"  >
-    <h4 class="card-text misinformation-div-title" >Source:{{prod.source}}</h4>
-    <h5 class="card-text misinformation-div-text" >{{prod.mInformation}}</h5>
-    <div class="card-body ">
-      <a (click)="gotoUrl(prod.link)" class="card-link misinformation-div-goto" >Go to link</a>
-    </div>
-    <p class="text-muted misinformation-div-time" >{{prod.created_date}}</p>
+  <div class="head-text">
+    <h3>Misinformation Cases:</h3>
+    <p>Over the past few weeks, misinformation about the new coronavirus pandemic has been
+      spreading across social media at an alarming rate.The sheer number of false and
+      sometimes dangerous claims is worrying, as is the way people are unintentionally 
+      spreading them in ever wider circles.</p>
   </div>
-</div>
-</div>
+    <div class="misinformation-container" *ngIf="marketing">
+    <div class=" text-center p-3"   *ngFor = "let prod of misinformation; let i=index" >
+      <div class="card-body misinformation-div"  >
+        <h4 class="card-text misinformation-div-title" >Source:{{prod.source}}</h4>
+        <h5 class="card-text misinformation-div-text" >{{prod.mInformation}}</h5>
+        <div class="card-body ">
+          <a (click)="gotoUrl(prod.link)" class="card-link misinformation-div-goto" >Go to link</a>
+        </div>
+        <p class="text-muted misinformation-div-time" >{{prod.created_date}}</p>
+      </div>
+    </div>
+    </div>
 
-<div *ngIf="!marketing">
-  <div class="loading">Loading&#8230;</div>
-</div>
+    <div *ngIf="!marketing">
+      <div class="loading">Loading&#8230;</div>
+    </div>
 </div>
 
 
