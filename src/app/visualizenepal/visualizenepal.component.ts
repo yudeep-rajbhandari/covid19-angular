@@ -63,7 +63,6 @@ export class VisualizenepalComponent implements OnInit {
 
     this.httpClient = new HttpClient(handler);
     this.httpClient.get<nepaldata>('https://covidapi.mohp.gov.np/api/v1/stats/?format=json').subscribe(data => {
-      console.log(data);
       this.data = data;
       this.recovered = data.total_recovered;
       this.positive = data.confirmed;
@@ -74,7 +73,6 @@ export class VisualizenepalComponent implements OnInit {
       this.mydata1.push(['Total Tested', parseInt(String(data.tested), 10)]);
       this.mydata1.push(['Positive', this.positive]);
       this.mydata1.push(['Negative', this.negative]);
-      console.log('mydata', this.mydata);
       this.isDataAvailable = true;
     });
     // this.apicall.getNepalLivedata().subscribe(data => {

@@ -37,7 +37,6 @@ export class SuspectedcaseComponent implements OnInit {
       )
       .subscribe(
         (user: Authentication.User) => {
-          console.log(user);
           this.router.navigate(['/homepage']);
           this.ns.success('Upload successful');
         },

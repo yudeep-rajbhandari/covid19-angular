@@ -49,14 +49,12 @@ export class VisualizeCoronaFearComponent implements OnInit {
 
     this.httpClient = new HttpClient(handler);
     this.httpClient.get<nepaldata>('https://covidapi.mohp.gov.np/api/v1/stats/?format=json').subscribe(data => {
-      console.log(data);
       this.nepaldata = data;
       this.Cdeath = this.nepaldata.death;
       this.mydata.unshift(['Death due to Corona', parseInt(String(this.Cdeath), 10)]);
       this.thisdata = true;
     });
     this.apicall.getCoronaFear().subscribe(data => {
-      console.log(data);
 
       // tslint:disable-next-line:no-shadowed-variable
       data.map(element => {
@@ -77,7 +75,6 @@ export class VisualizeCoronaFearComponent implements OnInit {
       this.isDataAvailable = true;
 
       // this.mydata = [['Total Tested', data.Total_Samples_Tested], ['Positive', data.Positive], ['Negative', data.Negative]];
-      console.log('mydata', this.mydata);
 
     });
 

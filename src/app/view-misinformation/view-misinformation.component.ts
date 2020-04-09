@@ -13,15 +13,13 @@ import misinformation = Authentication.misinformation;
 export class ViewMisinformationComponent implements OnInit {
   misinformation: misinformation[];
   colorbox: string[] = ['dark', 'dark', 'light', 'light'];
-  textbox:string[]=['white','white','black','black'];
-  marketing:boolean
+  textbox: string[] = ['white', 'white', 'black', 'black'];
+  marketing: boolean;
 
   constructor(private apicall: AuthenticationService) {
    this.apicall.showmisinformation().subscribe(data => {
-     console.log(data);
      this.misinformation = data;
      this.marketing = true;
-     console.log(this.misinformation);
    });
 
    }

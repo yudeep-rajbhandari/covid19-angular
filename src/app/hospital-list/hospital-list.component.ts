@@ -31,11 +31,8 @@ search(text: string, pipe: PipeTransform): hospitals[] {
   constructor(handler: HttpBackend, private ns: NotificationService, private httpClient: HttpClient) {
     this.httpClient = new HttpClient(handler);
     this.httpClient.get<DataPayload>('https://covidapi.mohp.gov.np/api/v1/health-facility2/').subscribe(data => {
-      console.log(data);
       this.data = data;
       this.Hospitals = this.data.results;
-      // this.data.results = this.filter.valueChanges.pipe();
-      console.log(this.Hospitals);
       this.databool = true;
     });
   }
