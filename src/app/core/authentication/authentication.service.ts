@@ -104,10 +104,8 @@ export class AuthenticationService {
   }
 
   getMisinformation(): Observable<Authentication.misinformation[]> {
-    console.log("<<<<<<<<<")
     return this.httpClient.get('/misinformation').pipe(
       map((body: Authentication.misinformation[]) => {
-        console.log("<<<<<<<<<<<<<<")
         return body;
       })
     );

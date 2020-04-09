@@ -18,7 +18,6 @@ export class ErrorMessageService {
       type: type,
       serviceUrl: serviceUrl
     });
-    console.log(this._errors);
     this.errors$.emit(this._errors);
   }
 

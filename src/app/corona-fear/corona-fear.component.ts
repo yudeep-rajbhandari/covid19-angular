@@ -26,7 +26,6 @@ export class CoronaFearComponent implements OnInit {
 
   signup() {
     this.isLoading = true;
-    console.log(this.signupForm.value);
     this.authenticationService
       .saveCoronaFear(this.signupForm.value)
       .pipe(
@@ -37,12 +36,10 @@ export class CoronaFearComponent implements OnInit {
       )
       .subscribe(
         (user: Authentication.User) => {
-          console.log(user);
           this.router.navigate(['/homepage']);
           this.ns.success('Upload successful');
         },
         (error: any) => {
-          console.log(`Signup error: ${error}`);
           this.ns.error('Oops something went wrong!');
         }
       );

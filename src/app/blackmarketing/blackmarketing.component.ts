@@ -42,8 +42,6 @@ export class BlackmarketingComponent implements OnInit {
         },
         (error: any) => {
           this.ns.error('Oops! something went wrong');
-
-          console.log(`Signup error: ${error}`);
         }
       );
   }

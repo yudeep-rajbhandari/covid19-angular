@@ -50,7 +50,6 @@ public mydiv: ElementRef;
   constructor(handler: HttpBackend, private ns: NotificationService, private apicall: AuthenticationService) {
     this.apicall.getProvinceData().subscribe(data => {
       this.provinceData = data;
-      console.log(this.provinceData);
       this.showstuff = true;
     });
     // this.httpClient = new HttpClient(handler);
@@ -75,7 +74,6 @@ public mydiv: ElementRef;
        if (papa.id.includes('pradesh')) {
          const pradesh = papa.id;
          const provinceNum = pradesh.split('-')[1];
-         console.log(provinceNum);
          const provData1 = this.provinceData.filter(elem => elem.province_id == provinceNum);
          this.provData = provData1[0];
 
@@ -95,7 +93,6 @@ public mydiv: ElementRef;
            myelem.style.left = mouse.pageX + 'px';
            myelem.style.top = mouse.pageY + 'px';
            myelem.style.display = 'block';
-           console.log('inside');
          }
        }
 
@@ -105,7 +102,6 @@ public mydiv: ElementRef;
 
    });
  } else if ((document.activeElement === document.getElementById('nepalmapAnchor'))) {
-      console.log("out of focuse")
       const myelem = document.getElementById('selectIt');
       myelem.style.display = 'none';
     }
