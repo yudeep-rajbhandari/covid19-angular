@@ -7,12 +7,12 @@
           <a href="javascript:void(0)" class="text-center db logo-container">
           </a>
           <h3 class="box-title">Report Here</h3>
-          <small>Please report if you know some misinformation</small>
+          <small>Please report here if you know some misinformation about corona in you locality.</small>
           <div></div>
           <div class="form-group">
             <div class="col-sm-12">
               <app-form-error-wrapper [control]="signupForm.controls['mInformation']" [controlName]="'mInformation'" [apiErrorType]="'mInformation'">
-                <input class="form-control" type="text" formControlName="mInformation" placeholder="What is the information?">
+                <textarea class="form-control" rows="2" formControlName="mInformation" placeholder="What is the information?"></textarea>
               </app-form-error-wrapper>
             </div>
           </div>

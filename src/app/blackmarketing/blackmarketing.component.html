@@ -7,7 +7,7 @@
         <a href="javascript:void(0)" class="text-center db logo-container">
         </a>
         <h3 class="box-title m-t-40 m-b-0">Report Now</h3>
-        <small>Whats going in your sorrounding?</small>
+        <small>Please report here if any black marketing cases are found within your locality.</small>
         <div class="form-group m-t-20">
           <div class="col-xs-12">
             <app-form-error-wrapper [control]="signupForm.controls['productName']" [controlName]="'productName'" [apiErrorType]="'productName'">
@@ -39,7 +39,7 @@
         <div class="form-group ">
           <div class="col-xs-12">
             <app-form-error-wrapper [control]="signupForm.controls['comments']" [controlName]="'comments'" [apiErrorType]="'comments'">
-              <input class="form-control" type="text" formControlName="comments" placeholder="AnyComments?">
+              <textarea class="form-control" rows="2" formControlName="comments" placeholder="AnyComments?"></textarea>
             </app-form-error-wrapper>
           </div>
         </div>
