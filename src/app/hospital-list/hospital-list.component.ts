@@ -15,7 +15,7 @@ const $: any = jQuery;
   styleUrls: ['./hospital-list.component.css']
 })
 export class HospitalListComponent implements OnInit {
-
+  filtertext = '';
   databool: boolean;
   Hospitals: hospitals[];
   data: DataPayload;
@@ -38,7 +38,6 @@ search(text: string, pipe: PipeTransform): hospitals[] {
   }
 
   ngOnInit() {
-
   }
 
 }
