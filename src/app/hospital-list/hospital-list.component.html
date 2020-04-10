@@ -1,5 +1,6 @@
 <div class="container">
   <h3>Hospital List of Each District</h3>
+  <input class="form-control" id="myInput" type="text" [(ngModel)]="filtertext" placeholder="Serach any fields" placeholder="Search..">
   <div class="d-flex justify-content-center">
     <div class="table-responsive-sm">
       <table class="table table-bordered">
@@ -14,7 +15,7 @@
           </tr>
         </thead>
         <ng-container *ngIf="databool" >
-          <tbody *ngFor="let hos of Hospitals;let i=index" >
+          <tbody *ngFor="let hos of Hospitals | hospitalFilter:filtertext ;let i=index" >
             <tr>
               <th scope="row">{{i+1}}</th>
               <td>{{hos.name}}</td>
