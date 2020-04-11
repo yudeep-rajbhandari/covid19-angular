@@ -30,5 +30,4 @@ export class HospitalListComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
