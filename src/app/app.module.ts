@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MisinformationComponent } from './misinformation/misinformation.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { ViewMisinformationComponent } from './view-misinformation/view-misinformation.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SuspectedcaseComponent } from './suspectedcase/suspectedcase.component';
@@ -27,10 +26,12 @@ import { GetcoronaFearComponent } from './getcorona-fear/getcorona-fear.componen
 import { VisualizeCoronaFearComponent } from './visualize-corona-fear/visualize-corona-fear.component';
 import { HospitalListComponent } from './hospital-list/hospital-list.component';
 import { AQIvisualizeComponent } from './aqivisualize/aqivisualize.component';
-import {FooterComponent} from './footer/footer.component'
+import {FooterComponent} from './footer/footer.component';
+import {SearchPipe} from './hospital-list/search.pipe';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 @NgModule({
-    declarations: [AppComponent, MisinformationComponent, ViewMisinformationComponent,
+    declarations: [AppComponent, MisinformationComponent,SearchPipe, ViewMisinformationComponent,
       LandingPageComponent, SuspectedcaseComponent, BlackmarketingComponent,
       ViewSuspectedcasesComponent, ViewBlackmarketingComponent,
       VisualizenepalComponent, HomepageComponent,FooterComponent, NavbarComponent, NepalMapComponent, CoronaFearComponent, GetcoronaFearComponent, VisualizeCoronaFearComponent, HospitalListComponent, AQIvisualizeComponent],

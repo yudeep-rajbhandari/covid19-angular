@@ -19,15 +19,15 @@ export class HospitalListComponent implements OnInit {
   databool: boolean;
   Hospitals: hospitals[];
   data: DataPayload;
-  filter = new FormControl('');
-search(text: string, pipe: PipeTransform): hospitals[] {
-  return this.Hospitals.filter(hos => {
-    const term = text.toLocaleLowerCase();
-    return hos.name.toLocaleLowerCase().includes(term)
-    || pipe.transform(hos.district_name.toLocaleLowerCase()).includes(term)
-    || pipe.transform(hos.municipality_name.toLocaleLowerCase()).includes(term);
-  });
-}
+  // filter = new FormControl('');
+// search(text: string, pipe: PipeTransform): hospitals[] {
+//   return this.Hospitals.filter(hos => {
+//     const term = text.toLocaleLowerCase();
+//     return hos.name.toLocaleLowerCase().includes(term)
+//     || pipe.transform(hos.district_name.toLocaleLowerCase()).includes(term)
+//     || pipe.transform(hos.municipality_name.toLocaleLowerCase()).includes(term);
+//   });
+// }
   constructor(handler: HttpBackend, private ns: NotificationService, private httpClient: HttpClient) {
     this.httpClient = new HttpClient(handler);
     this.httpClient.get<DataPayload>('https://covidapi.mohp.gov.np/api/v1/health-facility2/').subscribe(data => {
