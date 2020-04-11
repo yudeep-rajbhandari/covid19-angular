@@ -16,11 +16,7 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-RUN npm run build
 
-
-
-#COPY --from=build  /usr/src/app/dist/covid19-angular
 
 EXPOSE 3000
 CMD [ "node", "server.js" ]
