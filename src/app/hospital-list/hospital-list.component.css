@@ -9,9 +9,9 @@
 .d-flex.justify-content-center.align-items-center{
   width: 100%;
 }
-.table-responsive-md{
-  height: 700px;
-  overflow-y: auto;
+.table-responsive-sm{
+  /* height: 700px;
+  overflow-y: auto; */
   font-size: 0.75rem;
   letter-spacing: 0;
   line-height: 1.35rem;

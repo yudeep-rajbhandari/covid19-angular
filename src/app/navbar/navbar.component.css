@@ -186,6 +186,7 @@ li > a:only-child:after { content: ''; } */
 	/* Stylinf the toggle lable */
 	.toggle {
 		display: block;
+		float:right;
 		/* background-color: #254441; */
 		padding: 20px 20px;	
 		color:#F5B041;

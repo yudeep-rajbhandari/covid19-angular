@@ -8,7 +8,7 @@ form:before {
     position: absolute;
     top: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.05);
+    background-color: #FCF3CF;
     z-index: -1;
     border-radius: 10px;
 }
@@ -17,5 +17,11 @@ form:before {
   float: none;
   text-align: center;
 }
+.btn.btn-info.btn-lg.btn-block.btn-rounded.btn-default.text-uppercase.waves-effect.waves-light{
+  background-color: #F7DC6F ;
+  border: none;
+}
+
+
 
   
