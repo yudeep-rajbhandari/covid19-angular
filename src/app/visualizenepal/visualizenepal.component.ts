@@ -70,7 +70,7 @@ export class VisualizenepalComponent implements OnInit {
       this.mydata.push(['Total Positive', parseInt(String(data.confirmed), 10)]);
       this.mydata.push(['Recovered', this.recovered]);
       this.mydata.push(['Isolation', parseInt(String(data.isolation), 10)]);
-      this.mydata1.push(['Total Tested', parseInt(String(data.tested), 10)]);
+//      this.mydata1.push(['Total Tested', parseInt(String(data.tested), 10)]);
       this.mydata1.push(['Positive', this.positive]);
       this.mydata1.push(['Negative', this.negative]);
       this.isDataAvailable = true;
