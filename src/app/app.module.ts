@@ -27,6 +27,17 @@ import { GetcoronaFearComponent } from './getcorona-fear/getcorona-fear.componen
 import { VisualizeCoronaFearComponent } from './visualize-corona-fear/visualize-corona-fear.component';
 import { HospitalListComponent } from './hospital-list/hospital-list.component';
 import { AQIvisualizeComponent } from './aqivisualize/aqivisualize.component';
+<<<<<<< HEAD
+import {FooterComponent} from './footer/footer.component';
+import {SearchPipe} from './hospital-list/search.pipe';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+
+@NgModule({
+    declarations: [AppComponent, MisinformationComponent,SearchPipe, ViewMisinformationComponent,
+      LandingPageComponent, SuspectedcaseComponent, BlackmarketingComponent,
+      ViewSuspectedcasesComponent, ViewBlackmarketingComponent,
+      VisualizenepalComponent, HomepageComponent,FooterComponent, NavbarComponent, NepalMapComponent, CoronaFearComponent, GetcoronaFearComponent, VisualizeCoronaFearComponent, HospitalListComponent, AQIvisualizeComponent],
+=======
 import {FooterComponent} from './footer/footer.component'
 import {SearchPipe} from './hospital-list/search.pipe';
 
@@ -36,6 +47,7 @@ import {SearchPipe} from './hospital-list/search.pipe';
         LandingPageComponent, SuspectedcaseComponent, BlackmarketingComponent,
         ViewSuspectedcasesComponent, ViewBlackmarketingComponent,
         VisualizenepalComponent, HomepageComponent, FooterComponent, NavbarComponent, NepalMapComponent, CoronaFearComponent, GetcoronaFearComponent, VisualizeCoronaFearComponent, HospitalListComponent, AQIvisualizeComponent, SearchPipe],
+>>>>>>> d48c778bcea9054882cddf1a52d0e8bfd8232ebf
   imports: [
     CommonModule,
     BrowserAnimationsModule,
