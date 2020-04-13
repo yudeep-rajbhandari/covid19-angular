@@ -10,13 +10,13 @@
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="w-80" *ngIf="isDataAvailable">
-        <google-chart [title]="chart.title1" [type]="chart.type" [data]="chart.data1" [options]="chart.options">
+        <google-chart #graph1 [title]="chart.title1" [type]="chart.type" [data]="chart.data1" [options]="chart.options">
         </google-chart>
-  
+
         <div class="card">
           <div class="card-header text-white">Nepal Statics</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Total tested:{{data.tested}}</li>
+            <li class="list-group-item">Total tested:{{data.nepal.samples_tested}}</li>
             <li class="list-group-item">Positive:{{this.positive}}</li>
             <li class="list-group-item">Negative:{{this.negative}}</li>
           </ul>
@@ -27,7 +27,7 @@
 
     <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="w-80" *ngIf="isSAARCDataAvailable">
-        <google-chart [title]="chart.title2" [type]="chart.type2" [data]="chart.data2" [columnNames]="chart.column2"
+        <google-chart #graph2 [title]="chart.title2" [type]="chart.type2" [data]="chart.data2" [columnNames]="chart.column2"
           [options]="chart.options2">
         </google-chart>
 
@@ -47,7 +47,7 @@
 
     <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="w-80" *ngIf="isDataAvailable">
-        <google-chart [title]="chart.title" [type]="chart.type" [data]="chart.data" [options]="chart.options">
+        <google-chart #graph3 [title]="chart.title" [type]="chart.type" [data]="chart.data" [options]="chart.options">
         </google-chart>
 
         <div class="card">
@@ -55,7 +55,7 @@
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Total positive:{{this.positive}}</li>
             <li class="list-group-item">Recovered:{{this.recovered}}</li>
-            <li class="list-group-item">Isolation:{{data.isolation}}</li>
+            <li class="list-group-item">Isolation:{{this.positive - this.recovered}}</li>
           </ul>
         </div>
 

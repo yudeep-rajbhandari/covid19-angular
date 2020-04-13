@@ -77,6 +77,7 @@ declare namespace Authentication {
   }
 
   export interface nepaldata {
+    nepal:nepal;
     recovered: number;
     confirmed: number;
     tested: number;
@@ -84,6 +85,17 @@ declare namespace Authentication {
     isolation: number;
     death: number;
     total_recovered: number;
+
+  }
+
+  export interface nepal {
+    samples_tested:string;
+    negative:string;
+    positive:string;
+    deaths:string;
+    extra1:string;
+    extra2:string;
+
 
   }
   export interface SAARCdata {
