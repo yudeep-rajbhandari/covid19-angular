@@ -1,0 +1,36 @@
+.card{
+    min-height: 40vh;
+}
+.suspected-container h2{
+    margin-top: 30px;
+    text-align: left;
+    font-size: 1.75rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #2E4053;
+}
+
+.card-text.text-left.suspected-div-title{
+    font-size: 0.93rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2E4053;
+}
+.suspected-div-text{
+    font-size: 0.85rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+}
+.essentials-div{
+    background-color: white;
+    box-shadow: 0px 2px 5px 0px #c7c7c7;
+    border-radius: 4px;
+    line-height: 20px;
+    transition: 0.4s;
+    height:100%;
+    position:relative;
+}
+.essentials-div:hover{
+    background-color: white;
+    box-shadow: 0px 10px 15px 0px #c7c7c7;
+    border-radius: 4px;
+  }
