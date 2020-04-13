@@ -158,6 +158,8 @@
 h2 {
   text-align:center;
   font-size:60px;
-  color: #D35400;
-  font-family: 'Bree Serif', 'serif';
+}
+
+a {
+  color: #f5b041;
 }
