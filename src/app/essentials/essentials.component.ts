@@ -27,9 +27,9 @@ export class EssentialsComponent implements OnInit {
       this.essentials = data;
       console.log(this.essentials);
       this.grocery = this.essentials.filter(val => val.Category.toString() === 'Grocery and essential items');
-      this.grocery.forEach(ess => {
+      this.essentials.forEach(ess => {
         ess.arraylocation.forEach(loc => {
-          if (!this.locations1.includes(loc)) {
+          if (!this.locations1.includes(loc.trim())) {
             this.locations1.push(loc.trim());
           }
 
