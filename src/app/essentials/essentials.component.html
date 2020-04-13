@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+
+      <div class="suspected-container" *ngIf="ready">
+        <h2>Grocery</h2>
+
+        <div class="card"   *ngFor = "let prod of essentials | essentialFilter:'Grocery and essential items'; let i=index">
+          <div class="card-body">
+            <h6 class="card-text text-left suspected-div-title">Company: <span class="suspected-div-text">{{prod.Company}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Category: <span class="suspected-div-text">{{prod.Category}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Minimum Order: <span class="suspected-div-text">{{prod.minimum_order}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Delivery Locations: <span class="suspected-div-text">{{prod.arraylocation.toString()}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Link: <span class="suspected-div-text">{{prod.link}}</span></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="suspected-container" *ngIf="ready">
+        <h2>Fruits</h2>
+        <div class="card"   *ngFor = "let prod of essentials | essentialFilter:'Vegetables, fruits, & poultry'; let i=index">
+          <div class="card-body">
+            <h6 class="card-text text-left suspected-div-title">Company: <span class="suspected-div-text">{{prod.Company}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Category: <span class="suspected-div-text">{{prod.Category}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Minimum Order: <span class="suspected-div-text">{{prod.minimum_order}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Delivery Locations: <span class="suspected-div-text">{{prod.arraylocation.toString()}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Link: <span class="suspected-div-text">{{prod.link}}</span></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="suspected-container" *ngIf="ready">
+        <h2>Medicines</h2>
+        <div class="card"   *ngFor = "let prod of essentials | essentialFilter:'Medicinal supplies'; let i=index">
+          <div class="card-body">
+            <h6 class="card-text text-left suspected-div-title">Company: <span class="suspected-div-text">{{prod.Company}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Category: <span class="suspected-div-text">{{prod.Category}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Minimum Order: <span class="suspected-div-text">{{prod.minimum_order}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Delivery Locations: <span class="suspected-div-text">{{prod.arraylocation.toString()}}</span></h6>
+            <h6 class="card-text text-left suspected-div-title">Link: <span class="suspected-div-text">{{prod.link}}</span></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
