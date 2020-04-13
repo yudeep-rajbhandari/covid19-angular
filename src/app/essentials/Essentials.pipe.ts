@@ -10,10 +10,9 @@ export class Essentials implements PipeTransform {
       return value;
     }
     return value.filter((val) => {
-      debugger;
-      let rVal = (val.Category.includes(args.toLocaleString()));
+      let rVal = (val.arraylocation.toString().toLocaleLowerCase().includes(args.toLocaleString().toLocaleLowerCase()));
       return rVal;
-    });
+      })
 
   }
 
