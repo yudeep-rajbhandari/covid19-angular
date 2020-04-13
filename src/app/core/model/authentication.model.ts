@@ -106,6 +106,14 @@ declare namespace Authentication {
     DIn1M: number;
 
   }
+  export interface Essentials {
+    Company: string;
+    Category: string;
+    link: string;
+    minimum_order:string
+    arraylocation: string[];
+
+  }
 
   export interface misinformation {
     mInformation: string;

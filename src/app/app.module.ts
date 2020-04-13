@@ -29,13 +29,17 @@ import { HospitalListComponent } from './hospital-list/hospital-list.component';
 import { AQIvisualizeComponent } from './aqivisualize/aqivisualize.component';
 import {FooterComponent} from './footer/footer.component'
 import {SearchPipe} from './hospital-list/search.pipe';
+import { EssentialsComponent } from './essentials/essentials.component';
+import {Essentials} from './essentials/Essentials.pipe';
+// import {MatSelectModule} from '@angular/material/select';
+
 
 
 @NgModule({
-    declarations: [AppComponent, MisinformationComponent, ViewMisinformationComponent,
-        LandingPageComponent, SuspectedcaseComponent, BlackmarketingComponent,
-        ViewSuspectedcasesComponent, ViewBlackmarketingComponent,
-        VisualizenepalComponent, HomepageComponent, FooterComponent, NavbarComponent, NepalMapComponent, CoronaFearComponent, GetcoronaFearComponent, VisualizeCoronaFearComponent, HospitalListComponent, AQIvisualizeComponent, SearchPipe],
+  declarations: [AppComponent, MisinformationComponent, ViewMisinformationComponent,
+    LandingPageComponent, SuspectedcaseComponent, BlackmarketingComponent,
+    ViewSuspectedcasesComponent, ViewBlackmarketingComponent,
+    VisualizenepalComponent, HomepageComponent, FooterComponent, NavbarComponent, NepalMapComponent, CoronaFearComponent, GetcoronaFearComponent, VisualizeCoronaFearComponent, HospitalListComponent, AQIvisualizeComponent, SearchPipe, EssentialsComponent, Essentials],
   imports: [
     CommonModule,
     BrowserAnimationsModule,
@@ -48,7 +52,8 @@ import {SearchPipe} from './hospital-list/search.pipe';
     FormsModule,
     NgbModule,
     CoreModule,
-    SharedModule],
+    SharedModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
