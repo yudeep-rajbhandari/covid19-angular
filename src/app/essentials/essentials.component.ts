@@ -9,6 +9,7 @@ import Essentials = Authentication.Essentials;
 })
 export class EssentialsComponent implements OnInit {
   essentials: Essentials[];
+  showstuff: boolean;
   locations1: string[] = [];
   locations2: string[] = [];
   locations3: string[] = [];
@@ -56,6 +57,7 @@ export class EssentialsComponent implements OnInit {
 
 
       this.ready = true;
+      this.showstuff = true;
     });
   }
 

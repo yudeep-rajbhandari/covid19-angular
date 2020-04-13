@@ -31,7 +31,7 @@ import {FooterComponent} from './footer/footer.component'
 import {SearchPipe} from './hospital-list/search.pipe';
 import { EssentialsComponent } from './essentials/essentials.component';
 import {Essentials} from './essentials/Essentials.pipe';
-import {MatSelectModule} from '@angular/material/select';
+// import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -53,7 +53,7 @@ import {MatSelectModule} from '@angular/material/select';
     NgbModule,
     CoreModule,
     SharedModule,
-  MatSelectModule],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
