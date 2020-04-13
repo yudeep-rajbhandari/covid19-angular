@@ -25,7 +25,6 @@ export class EssentialsComponent implements OnInit {
   constructor(private apicall: AuthenticationService) {
     this.apicall.getEssentials().subscribe(data => {
       this.essentials = data;
-      console.log(this.essentials);
       this.grocery = this.essentials.filter(val => val.Category.toString() === 'Grocery and essential items');
       this.essentials.forEach(ess => {
         ess.arraylocation.forEach(loc => {
