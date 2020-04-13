@@ -4,9 +4,18 @@
 
       <div class="suspected-container" *ngIf="ready">
         <h2>Grocery</h2>
+<<<<<<< HEAD
 
         <div class="card" *ngFor = "let prod of essentials | essentialFilter:'Grocery and essential items'; let i=index">
           <div class="card-body essentials-div">
+=======
+        <input  class="form-control" list="age1"  type="email" [(ngModel)]="local1" placeholder="Location . . "/>
+        <datalist id="age1">
+          <option *ngFor="let local of locations1" [value]="local"> </option>
+        </datalist>
+        <div class="card"   *ngFor = "let prod of grocery | essentialFilter:local1; let i=index">
+          <div class="card-body">
+>>>>>>> 31b5de29d984a3b4956417444aa5100cdba02320
             <h6 class="card-text text-left suspected-div-title">Company: <span class="suspected-div-text">{{prod.Company}}</span></h6>
             <h6 class="card-text text-left suspected-div-title">Category: <span class="suspected-div-text">{{prod.Category}}</span></h6>
             <h6 class="card-text text-left suspected-div-title">Minimum Order: <span class="suspected-div-text">{{prod.minimum_order}}</span></h6>
@@ -19,7 +28,11 @@
     <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="suspected-container" *ngIf="ready">
         <h2>Fruits</h2>
-        <div class="card"   *ngFor = "let prod of essentials | essentialFilter:'Vegetables, fruits, & poultry'; let i=index">
+        <input class="form-control" list="age2"  type="email"  placeholder="Location . ." [(ngModel)]="local2"/>
+        <datalist id="age2">
+          <option *ngFor="let local of locations2" [value]="local" ></option>
+        </datalist>
+        <div class="card"   *ngFor = "let prod of fruits | essentialFilter:local2; let i=index">
           <div class="card-body">
             <h6 class="card-text text-left suspected-div-title">Company: <span class="suspected-div-text">{{prod.Company}}</span></h6>
             <h6 class="card-text text-left suspected-div-title">Category: <span class="suspected-div-text">{{prod.Category}}</span></h6>
@@ -33,7 +46,11 @@
     <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="suspected-container" *ngIf="ready">
         <h2>Medicines</h2>
-        <div class="card"   *ngFor = "let prod of essentials | essentialFilter:'Medicinal supplies'; let i=index">
+        <input class="form-control" list="age3"  type="email"  placeholder="Location . ." [(ngModel)]="local3"/>
+        <datalist id="age3">
+          <option *ngFor="let local of locations3" [value]="local" ></option>
+        </datalist>
+        <div class="card"   *ngFor = "let prod of medicine |essentialFilter:local3; let i=index">
           <div class="card-body">
             <h6 class="card-text text-left suspected-div-title">Company: <span class="suspected-div-text">{{prod.Company}}</span></h6>
             <h6 class="card-text text-left suspected-div-title">Category: <span class="suspected-div-text">{{prod.Category}}</span></h6>

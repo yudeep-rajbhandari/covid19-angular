@@ -31,6 +31,8 @@ import {FooterComponent} from './footer/footer.component'
 import {SearchPipe} from './hospital-list/search.pipe';
 import { EssentialsComponent } from './essentials/essentials.component';
 import {Essentials} from './essentials/Essentials.pipe';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 @NgModule({
@@ -50,7 +52,8 @@ import {Essentials} from './essentials/Essentials.pipe';
     FormsModule,
     NgbModule,
     CoreModule,
-    SharedModule],
+    SharedModule,
+  MatSelectModule],
   providers: [],
   bootstrap: [AppComponent]
 })
