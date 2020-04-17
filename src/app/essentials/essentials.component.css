@@ -1,8 +1,8 @@
 .card{
-  margin-top: 10px;
-    min-height: 40vh;
+    margin-top: 10px;
+    min-height: 37vh;
 }
-.suspected-container h2{
+.essentials-container h2{
     margin-top: 30px;
     text-align: left;
     font-size: 1.35rem;
@@ -10,13 +10,13 @@
     color: #2E4053;
 }
 
-.card-text.text-left.suspected-div-title{
+.card-text.text-left.essentials-div-title{
     font-size: 0.93rem;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #2E4053;
 }
-.suspected-div-text{
+.essentials-div-text{
     font-size: 0.85rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: normal;
