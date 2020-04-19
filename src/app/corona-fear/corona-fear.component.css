@@ -1,32 +1,26 @@
 
-  #cover {
-    /* background: #F4F6F6  url('../../assets/images/corona.jpg') center center no-repeat; */
-    background-size: cover;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding-bottom: 150px;
+.container-fluid{
+  background-image: url("../../assets/images/other_bg.svg");
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
 }
-
-#cover-caption {
-    width: 100%;
-    position: relative;
-    z-index: 1;
+form{
+  background-color: #FCF3CF ;
+  border-radius: 10px;
+  padding: 17px 12px 13px 17px;
 }
-
 /* only used for background overlay not needed for centering */
 form:before {
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: #FCF3CF;
-    z-index: -1;
-    border-radius: 10px;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #FCF3CF;
+  z-index: -1;
+  border-radius: 10px;
 }
   
 .form-control{

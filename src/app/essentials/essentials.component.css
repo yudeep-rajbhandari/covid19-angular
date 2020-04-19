@@ -1,3 +1,9 @@
+.container-fluid{
+  background-image: url("../../assets/images/other_bg.svg");
+  margin-top: 25px;
+  width: 100%;
+  overflow: hidden;
+}
 .card{
     margin-top: 10px;
     min-height: 37vh;
@@ -6,8 +12,8 @@
     margin-top: 30px;
     text-align: left;
     font-size: 1.35rem;
-    font-family: 'Times New Roman', Times, serif;
-    color: #2E4053;
+    font-family: Montserrat;
+    color:#2F3D74;
 }
 
 .card-text.text-left.essentials-div-title{

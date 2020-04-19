@@ -12,7 +12,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	}
 
-h1 {
+/* h1 {
 	font-size: 60px;
 	text-align: center;
 	color: #FFF;
@@ -31,7 +31,7 @@ h3 a {
 
 a {
 	color: #FFF;
-}
+} */
 
 h1 {
 	margin-top: 100px;
@@ -63,14 +63,10 @@ nav {
 	/* background-color: #254441; */
 }
 
-#logo a {
+#logo img{
 	display: block;
-	padding: 0 30px;
+	padding: 0 197px;
 	float: left;
-	font-size:20px;
-  line-height: 60px;
-  color: #D35400;  
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Since we'll have the "ul li" "float:left"
@@ -94,12 +90,11 @@ nav ul {
 	
 /* Positioning the navigation items inline */
 nav ul li {
-	margin: 0px;
+	margin: 10px 0px 0px 0px;
 	display:inline-block;
-  float: left;
-  text-align: center;
-  /* background-color:#F5B041; */
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	text-align: center;
+	/* background-color:#F5B041; */
+	font-family: Montserrat;
 
 	}
 
@@ -107,7 +102,8 @@ nav ul li {
 nav a {
 	display:block;
 	padding:14px 20px;	
-	color:#F5B041;
+	color:#2F3D74;
+	font-weight: bold;
 	font-size:17px;
 	text-decoration:none;
 }
@@ -117,9 +113,11 @@ nav ul li ul li:hover { background: #000000; }
 
 /* Background color change on Hover */
 nav a:hover { 
-	background-color: #FAD7A0; 
+	color: #FB7820; 
 }
-
+.menu li a img{
+	width: 170px;
+}
 /* Hide Dropdowns by Default
  * and giving it a position of absolute */
 nav ul ul {
@@ -166,10 +164,13 @@ li > a:only-child:after { content: ''; } */
 
 	#logo {
 		display: block;
-		padding: 0;
 		width: 100%;
 		text-align: center;
 		float: none;
+	}
+	#logo img {
+		float: left;
+		padding: 0;
 	}
 
 	nav {
@@ -183,21 +184,16 @@ li > a:only-child:after { content: ''; } */
 		display: none;
   }
   
-
-	/* Stylinf the toggle lable */
-	.toggle {
+/* Stylinf the toggle lable */
+	.toggle{
 		display: block;
-		float:right;
-		/* background-color: #254441; */
-		padding: 20px 20px;	
-		color:#F5B041;
-		font-size:17px;
-		text-decoration:none;
-		border:none;
+		float: right;
+		/* width: 30%; */
+		padding-top: 27px;
 	}
 
 	.toggle:hover {
-		background-color: #FAD7A0;
+		color: #FAD7A0;
 	}
 
 	/* Display Dropdown when clicked on Parent Lable */
@@ -222,7 +218,7 @@ li > a:only-child:after { content: ''; } */
 
 	nav a:hover,
  	nav ul ul ul a {
-		/* background-color: #000000; */
+		background-color: #000000;
 	}
   
 	nav ul li ul li .toggle,

@@ -23,3 +23,20 @@
 [data-notify="container"][class*="alert-pastel-"] > [data-notify="message"] {
   font-weight: 400;
 }
+.container-fluid{
+  background-image: url("../assets/images/l.svg");
+  position : absolute;  
+  width: 100%;
+  height: fit-content;
+
+}
+
+@media only screen and (max-width: 767px){
+  .container-fluid{
+    background-image: url("../assets/images/iPhone.svg");
+    background-repeat: no-repeat;
+    position : absolute;  
+    width: 100%;
+    height: fit-content;  
+  }
+}

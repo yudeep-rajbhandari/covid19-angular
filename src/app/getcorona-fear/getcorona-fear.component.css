@@ -1,21 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
-
+.container-fluid{
+  background-image: url("../../assets/images/other_bg.svg");
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+}
 .head-text h3{
   margin-top: 30px;
   text-align: center;
   font-size: 1.75rem;
-  font-family: 'Times New Roman', Times, serif;
-  color: #2E4053;
+  color: #162C69;
+  font-family:Montserrat;
 }
 .head-text p{
   padding: 0 150px 0 150px;
   font-size: 1rem;
   text-align: center;
+  color: #162C69;
 }
 .suspected-container{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   overflow-x: hidden;
+  color: #162C69;
 
 }
 @media only screen and (max-width:1365px){
