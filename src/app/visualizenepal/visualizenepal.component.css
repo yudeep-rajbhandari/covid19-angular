@@ -49,6 +49,15 @@
     display: grid;
     grid-template-columns:repeat(1, auto)
   }
+  .googlechart h3{
+    font-size: 1.35rem;
+    text-align: left;
+  }
+  .googlechart p{
+    font-size: 1rem;
+    text-align: left;
+    
+  } 
   .card-header.text-white{
     text-align: left;
   }

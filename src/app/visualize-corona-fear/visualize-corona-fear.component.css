@@ -31,6 +31,14 @@ font-size: 0.9em;
 }
 
 @media only screen and (max-width: 767px){
+    .visualize h3{
+        font-size: 1.35rem;
+        text-align: left;
+    }
+    .visualize p{
+        font-size: 1rem;
+        text-align: left;
+    }
     .card-header.text-white{
        text-align: left;
     }
