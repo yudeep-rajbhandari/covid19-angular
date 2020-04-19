@@ -1,7 +1,7 @@
 
 /* only used for background overlay not needed for centering */
 .container-fluid{
-  background-image: url("../../assets/images/other_bg.svg");
+  background-image: url("../../assets/images/bg_other.svg");
   width: 100%;
   overflow: hidden;
   min-height: 100vh;

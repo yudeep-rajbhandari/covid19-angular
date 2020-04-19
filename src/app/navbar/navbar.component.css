@@ -12,7 +12,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	}
 
-/* h1 {
+h1 {
 	font-size: 60px;
 	text-align: center;
 	color: #FFF;
@@ -31,7 +31,7 @@ h3 a {
 
 a {
 	color: #FFF;
-} */
+}
 
 h1 {
 	margin-top: 100px;
@@ -159,7 +159,14 @@ li > a:only-child:after { content: ''; } */
 
 /* Media Queries
 --------------------------------------------- */
+@media all and (max-width : 330px) {
 
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+}
 @media all and (max-width : 767px) {
 
 	#logo {
@@ -188,7 +195,6 @@ li > a:only-child:after { content: ''; } */
 	.toggle{
 		display: block;
 		float: right;
-		/* width: 30%; */
 		padding-top: 27px;
 	}
 
@@ -199,6 +205,9 @@ li > a:only-child:after { content: ''; } */
 	/* Display Dropdown when clicked on Parent Lable */
 	[id^=drop]:checked + ul {
 		display: block;
+		width: 100%;
+		background-color: white;
+		z-index: 999999;
 	}
 
 	/* Change menu item's width to 100% */
@@ -218,7 +227,7 @@ li > a:only-child:after { content: ''; } */
 
 	nav a:hover,
  	nav ul ul ul a {
-		background-color: #000000;
+		/* background-color: #000000; */
 	}
   
 	nav ul li ul li .toggle,
@@ -263,11 +272,20 @@ li > a:only-child:after { content: ''; } */
 
 }
 
-@media all and (max-width : 330px) {
+@media only screen and (max-width: 1023px){
 
-	nav ul li {
-		display:block;
-		width: 94%;
+	#logo img {
+		display: block;
+		padding: 0 16px;
+		float: left;
+	}
+}
+@media only screen and (min-width:1024px) and (max-width: 1365px){
+
+	#logo img {
+		display: block;
+		padding: 0 105px;
+		float: left;
 	}
 
 }

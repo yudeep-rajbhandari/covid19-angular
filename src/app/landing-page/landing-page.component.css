@@ -27,9 +27,41 @@
 }
 img{
   padding: 3px 5px 3px 5px;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 567px) {
+  .container{
+    padding-top: 500px;    
+    text-align: left;
+    position: relative;
+  }
+  .corona{
+    padding: 0px;
+  }
+  .corona h1{
+    font-size: 1.35rem;
+    text-align: left;
+  }
+  .corona h6{
+    font-style: italic;
+    text-align: left;
+    font-size: 0.90rem;
+  }
+  .corona-text p{
+    text-align: left;
+    font-size: 0.90rem;
+    position: relative;
+
+  }
+  img{
+    padding: 2px 3px 2px 3px;
+    width: 75px;
+    height: 30px;
+  }
+} 
+
+@media only screen and (min-width: 568px) and (max-width: 767px) {
   .container{
     padding-top: 600px;    
     text-align: left;
@@ -60,3 +92,65 @@ img{
   }
 } 
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .container{  
+    text-align: left;
+    position: relative;
+  }
+  .corona{
+    padding: 10px 0px 24px 320px;
+    float: right;
+    text-align: left;
+  } 
+  .corona h1{
+    font-size: 1.35rem;
+    text-align: left;
+  }
+  .corona h6{
+    font-style: italic;
+    text-align: left;
+    font-size: 0.90rem;
+  }
+  .corona-text p{
+    text-align: left;
+    font-size: 0.90rem;
+    position: relative;
+
+  }
+  img{
+    padding: 2px 3px 2px 3px;
+    width: 75px;
+    height: 30px;
+  }
+} 
+@media only screen and (min-width: 1024px) and (max-width: 1365px) {
+  .container{  
+    text-align: left;
+    position: relative;
+  }
+  .corona{
+    padding: 42px 0px 173px 415px;
+    float: right;
+    text-align: left;
+  } 
+  .corona h1{
+    font-size: 1.35rem;
+    text-align: left;
+  }
+  .corona h6{
+    font-style: italic;
+    text-align: left;
+    font-size: 0.90rem;
+  }
+  .corona-text p{
+    text-align: left;
+    font-size: 0.90rem;
+    position: relative;
+
+  }
+  img{
+    padding: 2px 3px 2px 3px;
+    width: 75px;
+    height: 30px;
+  }
+} 
