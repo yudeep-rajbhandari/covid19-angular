@@ -3,6 +3,10 @@
   background-repeat: no-repeat;
   width: 100%;
   overflow: hidden;
+  min-height: 100vh;
+}
+.justify-content-center{
+  margin-top: 22px;
 }
 .card{
     margin-top: 10px;
