@@ -1,11 +1,10 @@
 
 .nepalmap-head{
-  padding: 160px 0px 0px 605px;
-  float: left;
-  position: relative;
+  margin-top: 629px;
+  text-align: center;
 }
 .nepalmap-head h4{
-  font-size:2rem ;
+  font-size:1.65rem ;
   color: #162C69;
   font-family:Montserrat;
 }
@@ -16,11 +15,11 @@
   color: #162C69;
 
 }
-.nepalmap-head h6{
+/* .nepalmap-head h6{
   font-family: sans-serif;
   color: #FB7820; 
   font-style: italic;
-}
+} */
 /* .nepalmap svg{
   padding: 160px 0px 0px 605px;
   position: absolute;

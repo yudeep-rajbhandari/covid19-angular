@@ -5,11 +5,11 @@
   position: relative;
 }
 .corona{
-  padding: 50px 20px 0 550px;
+  padding: 102px 0px 0px 574px;
   float: right;
   text-align: left;
 } 
-.corona h1{
+.corona h2{
   font-family: Montserrat;
   color: #162C69;
 }
@@ -17,18 +17,71 @@
   font-family: sans-serif;
   color: #FB7820; 
   font-style: italic;
+  margin-top: 20px;
 }
 .corona-text p{
   text-align: left;
   font-family: sans-serif;
   font-size: 1rem;
   color: #162C69;
-
 }
-img{
+/* img{
   padding: 3px 5px 3px 5px;
   cursor: pointer;
+} */
+.button{
+  margin-top: 14px;
 }
+.corona .map-btn {
+  color: #fff;
+  border: 1.5px solid #fff;
+  padding: 5px 15px;
+  background-color: #C8C6E2;
+  border-radius: 55px;
+  font-weight: 500;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+.corona .country-btn {
+  color: #fff;
+  border: 1.5px solid #fff;
+  padding: 5px 15px;
+  background-color: #AEABD6;
+  border-radius: 55px;
+  font-weight: 500;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+.corona .coronafear-btn {
+  color: #fff;
+  border: 1.5px solid #fff;
+  padding: 5px 15px;
+  background-color: #ACAAD3;
+  border-radius: 55px;
+  font-weight: 500;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+.corona .aqi-btn {
+  color: #fff;
+  border: 1.5px solid #fff;
+  padding: 5px 15px;
+  background-color: #9694C6;
+  border-radius: 55px;
+  font-weight: 500;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+.corona a:hover {
+  color: #162C69;
+  text-decoration: none;
+  background-color: #AEABD6;
+}
+
 
 @media only screen and (max-width: 567px) {
   .container{
@@ -39,7 +92,7 @@ img{
   .corona{
     padding: 0px;
   }
-  .corona h1{
+  .corona h2{
     font-size: 1.35rem;
     text-align: left;
   }
@@ -70,7 +123,7 @@ img{
   .corona{
     padding: 0px;
   }
-  .corona h1{
+  .corona h2{
     font-size: 1.35rem;
     text-align: left;
   }
@@ -98,11 +151,11 @@ img{
     position: relative;
   }
   .corona{
-    padding: 10px 0px 24px 320px;
+    padding: 45px 0px 34px 352px;
     float: right;
     text-align: left;
   } 
-  .corona h1{
+  .corona h2{
     font-size: 1.35rem;
     text-align: left;
   }
@@ -129,11 +182,12 @@ img{
     position: relative;
   }
   .corona{
-    padding: 42px 0px 173px 415px;
+    /* padding: 102px 0px 125px 460px; */
+    padding:155px 8px 222px 555px;;
     float: right;
     text-align: left;
   } 
-  .corona h1{
+  .corona h2{
     font-size: 1.35rem;
     text-align: left;
   }
