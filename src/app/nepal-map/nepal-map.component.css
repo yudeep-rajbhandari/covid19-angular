@@ -1,31 +1,33 @@
 
-.nepalmap-head h2{
-  margin-top: 20px;
-  color: #2E4053;
-  font-size:2rem ;
-  font-style: normal;
-  font-family: 'Times New Roman', Times, serif;
+.nepalmap-head{
+  margin-top: 629px;
   text-align: center;
+}
+.nepalmap-head h4{
+  font-size:1.65rem ;
+  color: #162C69;
+  font-family:Montserrat;
 }
 .nepalmap-head p{
-  padding: 20px 150px 0 150px;
-  text-align: center;
+  text-align: left;
   font-family: sans-serif;
-  color: #515A5A;
+  font-size: 1rem;
+  color: #162C69;
+
 }
-.nepalmap p{
-  margin: 0 auto;
-  text-align: center;
+/* .nepalmap-head h6{
   font-family: sans-serif;
-  color: #515A5A;
-  position: relative;
-  background-color:#FFFFE0;
-  border-radius: 17%;
-  width: 30%;
-}
+  color: #FB7820; 
+  font-style: italic;
+} */
+/* .nepalmap svg{
+  padding: 160px 0px 0px 605px;
+  position: absolute;
+  
+} */
 .card{
   z-index: 99999999;
-  background-color:#FFFFE0 ;
+  background-color:#C8C6E2 ;
   width: 170px;
 }
 .card-header{
@@ -38,9 +40,28 @@
 
 /*Responsive*/
 @media only screen and (max-width:767px){
+  .nepalmap-head{
+    margin-top: 20px;
+    padding:0px;
+    float: left;
+    position: relative;
+  }
+  .nepalmap-head h4{
+    font-size:1.35rem ;
+    color: #162C69;
+    font-family:Montserrat;
+  }
   .nepalmap-head p{
-    padding: 0px;
     text-align: left;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #162C69;
+  
+  }
+  .nepalmap-head h6{
+    font-family: sans-serif;
+    color: #FB7820; 
+    font-style: italic;
   }
   .nepalmap p{
     width: 100%;
@@ -50,6 +71,59 @@
     justify-content: center;
   }
 }
+@media only screen and (max-width:1023px){
+  .nepalmap-head{
+    margin-top: 50px;
+    padding:0px;
+    float: left;
+    position: relative;
+  }
+  .nepalmap-head h4{
+    font-size:1.35rem ;
+    color: #162C69;
+    font-family:Montserrat;
+  }
+  .nepalmap-head p{
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #162C69;
+  
+  }
+  .nepalmap-head h6{
+    font-family: sans-serif;
+    color: #FB7820; 
+    font-style: italic;
+  }
+
+}
+@media only screen and (min-width:1024px) and (max-width:1365px){
+  .nepalmap-head{
+    margin-top: 50px;
+    padding:0px;
+    float: left;
+    position: relative;
+  }
+  .nepalmap-head h4{
+    font-size:1.35rem ;
+    color: #162C69;
+    font-family:Montserrat;
+  }
+  .nepalmap-head p{
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 1rem;
+    color: #162C69;
+  
+  }
+  .nepalmap-head h6{
+    font-family: sans-serif;
+    color: #FB7820; 
+    font-style: italic;
+  }
+
+}
+
 /* line 1, ../../Documents/styling-app/src/styles/scss/Layout/_nepalmap.scss */
 .district {
     cursor: pointer;

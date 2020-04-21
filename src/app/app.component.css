@@ -23,3 +23,63 @@
 [data-notify="container"][class*="alert-pastel-"] > [data-notify="message"] {
   font-weight: 400;
 }
+.container-fluid{
+  background-image: url("../assets/images/l.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position : absolute;  
+  width: 100%;
+  height: fit-content;
+
+}
+
+@media only screen and (max-width: 767px){
+  .container-fluid{
+    background-image: url("../assets/images/iPhone.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position : absolute;  
+    width: 100%;
+    height: fit-content;  
+  }
+}
+@media only screen and (max-width: 1023px){
+  .container-fluid{
+    background-image: url("../assets/images/ipad_new.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position : absolute;  
+    width: 100%;
+    height: fit-content;  
+  }
+}
+@media only screen and (min-width:1024px) and (max-width: 1365px){
+  .container-fluid{
+    background-image: url("../assets/images/ipadpro_new.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position : absolute;  
+    width: 100%;
+    height: fit-content;  
+  }
+}
+/* @media only screen and (max-width:1440px){
+  .container-fluid{
+    background-image: url("../assets/images/mdiscreen.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position : absolute;  
+    width: 100%;
+    height: fit-content;  
+  }
+} */
+@media only screen and (min-width:1600px) and (max-width: 1920px){
+  .container-fluid{
+    background-image: url("../assets/images/mdiscreen.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position : absolute;  
+    width: 100%;
+    height: fit-content;  
+  }
+}

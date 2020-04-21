@@ -2,6 +2,18 @@
 /* #cover{
   background-color: #FEF9E7;
 } */
+.container-fluid{
+  background-image: url("../../assets/images/reportbg.svg");
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+}
+form{
+  background-color: #FCF3CF ;
+  border-radius: 10px;
+  padding: 17px 12px 13px 17px;
+  align-content: center;
+}
 form:before {
   content: '';
   height: 100%;

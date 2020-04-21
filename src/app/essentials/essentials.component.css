@@ -1,13 +1,35 @@
+.container-fluid{
+  background-image: url("../../assets/images/other_bg.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+}
+.justify-content-center{
+  margin-top: 22px;
+}
 .card{
     margin-top: 10px;
     min-height: 37vh;
+}
+@media only screen  and (max-width:1023px){
+  .card{
+    margin-top: 10px;
+    min-height: 18vh;
+  }
+}
+@media only screen and (min-width:1024px) and (max-width:1365px){
+  .card{
+    margin-top: 10px;
+    min-height: 18vh;
+  }
 }
 .essentials-container h2{
     margin-top: 30px;
     text-align: left;
     font-size: 1.35rem;
-    font-family: 'Times New Roman', Times, serif;
-    color: #2E4053;
+    font-family: Montserrat;
+    color:#2F3D74;
 }
 
 .card-text.text-left.essentials-div-title{
