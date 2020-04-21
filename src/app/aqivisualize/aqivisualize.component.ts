@@ -44,10 +44,10 @@ export class AQIvisualizeComponent implements OnInit {
       ['Feb 7',  161, 96],
     ['Mar 7',  100,  49],
     ['Apr 3',  96, 47],
-    ['Apr 4',  113, 43],
     ['Apr 5', 125, 53],
     ['Apr 8', 142, 72],
-    ['Apr 12', 160, 64]
+    ['Apr 12', 160, 64],
+    ['Apr 19', 69, 27]
   ];
   columnNames = ['Month', 'PM25', 'PM10'];
   options = {
