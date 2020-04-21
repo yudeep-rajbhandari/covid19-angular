@@ -3126,7 +3126,7 @@ var FormErrorWrapperComponent = /** @class */ (function () {
 /*!*********************************!*\
   !*** ./src/app/shared/index.ts ***!
   \*********************************/
-/*! exports provided: SharedModule, SpinnerComponent, BreadcrumbComponent, BlankComponent, FullComponent, ButtonLoaderComponent */
+/*! exports provided: SharedModule, SpinnerComponent, BreadcrumbComponent, FullComponent, BlankComponent, ButtonLoaderComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3144,9 +3144,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ButtonLoaderComponent", function() { return _button_loader__WEBPACK_IMPORTED_MODULE_3__["ButtonLoaderComponent"]; });
 
 /* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layouts */ "./src/app/shared/layouts/index.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BlankComponent", function() { return _layouts__WEBPACK_IMPORTED_MODULE_4__["BlankComponent"]; });
-
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FullComponent", function() { return _layouts__WEBPACK_IMPORTED_MODULE_4__["FullComponent"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BlankComponent", function() { return _layouts__WEBPACK_IMPORTED_MODULE_4__["BlankComponent"]; });
 
 /* harmony import */ var _layouts_blank__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./layouts/blank */ "./src/app/shared/layouts/blank/index.ts");
 /* empty/unused harmony star reexport *//* harmony import */ var _layouts_full__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./layouts/full */ "./src/app/shared/layouts/full/index.ts");
@@ -3289,7 +3289,7 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************!*\
   !*** ./src/app/shared/layouts/index.ts ***!
   \*****************************************/
-/*! exports provided: BlankComponent, FullComponent */
+/*! exports provided: FullComponent, BlankComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4028,8 +4028,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 var environment = {
     production: false,
-    serverBaseUrl: 'http://13.92.124.37:8080/',
-    serverUrl: 'http://13.92.124.37:8080/',
+    serverBaseUrl: 'http://13.92.124.37:8089/',
+    serverUrl: 'http://13.92.124.37:8089/',
 };
 /*
  * For easier debugging in development mode, you can import the following file
