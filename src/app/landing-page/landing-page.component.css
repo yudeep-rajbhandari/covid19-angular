@@ -11,7 +11,7 @@
   /* float: right; */
   text-align: center;
   align-content: center;
-  margin: 90px auto;
+  margin: 31px auto;
 } 
 .corona h2{
   font-family: Montserrat;
@@ -24,7 +24,7 @@
   margin-top: 20px;
 }
 .corona-text p{
-  text-align: center;
+  text-align: left;
   font-family: sans-serif;
   font-size: 1rem;
   color: #162C69;
@@ -32,6 +32,7 @@
 
 img {
   width: 100%;
+  margin-top: -50px;
 }
 
 .button{
@@ -189,6 +190,8 @@ img {
     /* padding: 45px 0px 34px 352px; */
     /* float: left; */
     text-align: left;
+    margin-top: 58px;
+
   } 
   .corona h2{
     font-size: 1.35rem;
@@ -220,7 +223,7 @@ img {
     /* padding:155px 8px 222px 555px; */
     float: right;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 62px;
   } 
   .corona h2{
     font-size: 1.5rem;
