@@ -1,13 +1,18 @@
+.container{
+  margin-top: 50px;
+}
 .container h3{
-  margin-top: 20px;
-  color: #2E4053;
-  font-size:1.35rem ;
-  font-style: normal;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Montserrat;
+  color: #162C69;
+  font-size:1.60rem ;
+  font-weight: bold;
   text-align: center;
 }
 .d-flex.justify-content-center.align-items-center{
   width: 100%;
+}
+.tr-class{
+  background-color: #ACAAD3
 }
 .table-responsive-md{
   height: 700px;
@@ -16,7 +21,12 @@
   letter-spacing: 0;
   line-height: 1.35rem;
 }
-
+@media only screen and (max-width:767px){
+.container h3{
+  font-size:1.25rem ;
+  text-align: left;
+}  
+}
 .loading {
   position: fixed;
   z-index: 999;

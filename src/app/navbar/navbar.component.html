@@ -1,12 +1,14 @@
-<nav>
+<nav class="nav">
   <div id="logo" href="#">
-    <a href="#">CoronaNepal</a>
+    <img src="../../assets/images/coronalogo.png">
+    <label for="drop" class="toggle"><img src="../../assets/images/menu.svg"></label>
   </div>
 
-  <label for="drop" class="toggle" >Menu</label>
+ 
   <input type="checkbox" id="drop" />
       <ul class="menu">
           <li><a href="#">Home</a></li>
+          <!-- <li><a href="/hospitalList" class="hospitalnav-btn">Hospital List</a></li> -->
                   <!-- Dropdown -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -14,7 +16,7 @@
           </a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="/misinformation">Misinformation</a>
-            <a class="dropdown-item" href="/blackmarketing">Blackmarking</a>
+            <a class="dropdown-item" href="/blackmarketing">Blackmarketing</a>
             <a class="dropdown-item" href="/coronaCases">CoronaCases</a>
           </div>
         </li>
@@ -24,13 +26,13 @@
           </a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="/getmisinformation">Misinformation</a>
-            <a class="dropdown-item" href="/getblackmarketing">Blackmarking</a>
+            <a class="dropdown-item" href="/getblackmarketing">Blackmarketing</a>
             <a class="dropdown-item" href="/getcoronaCases">CoronaCases</a>
           </div>
         </li>
           <!-- <li><a href="/hospitalList">Hospital List</a></li> -->
           <!-- <li><a href="/AQIVisualize">AQI</a></li> -->
-          <li><a href="#">Contact Us</a></li>
+          <li id="hoveressentials"><a href="/essentials" id="essentials-btn">Buy Essentials</a></li>
           <!-- <li><a href="#">About</a></li> -->
       </ul>
-  </nav><hr>
+  </nav>

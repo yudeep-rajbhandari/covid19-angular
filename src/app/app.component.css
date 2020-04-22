@@ -23,3 +23,12 @@
 [data-notify="container"][class*="alert-pastel-"] > [data-notify="message"] {
   font-weight: 400;
 }
+.container-fluid{
+  background-image: url("../assets/images/ipd.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position : absolute;  
+  width: 100%;
+  height: fit-content;
+
+}

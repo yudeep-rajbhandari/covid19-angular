@@ -14,7 +14,16 @@
     position: relative;
     z-index: 1;
 }
-
+.container-fluid{
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+}
+form{
+  background-color: #FCF3CF ;
+  border-radius: 10px;
+  padding: 17px 12px 13px 17px;
+}
 /* only used for background overlay not needed for centering */
 form:before {
     content: '';

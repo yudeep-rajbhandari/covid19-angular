@@ -1,8 +1,8 @@
 /* CSS Document */
-
+/* 
 
 body {
-	/* background: #212121; */
+	background: #212121;
 	font-size:22px;
 	line-height: 32px;
 	color: #ffffff;
@@ -48,8 +48,55 @@ h1 {
 
 p {
 	text-align: center;
+} */
+/* .nav {
+    position: absolute;
+    height: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+    z-index: 999999;
 }
 
+.nav {
+    position: relative;
+    background-color: transparent!important;
+    background-image: none;
+    overflow: visible;
+}
+.nav{
+	position: fixed;    
+	background-color: #ffffff;
+	box-shadow: 0px 2px 5px 0px #c7c7c7;
+	z-index: ;
+	width: 100%;
+	min-height: 13vh;
+    border-radius: 4px;
+    line-height: 20px;
+    transition: 0.4s;
+} */
+#essentials-btn{
+	color: #fff;
+	border: 1.5px solid #fff;
+	padding: 6px 25px;
+	background-color: #3A88EC;
+	border-radius: 55px;
+	font-weight: 500;
+	max-width: 200px;
+	margin: 0 auto;
+}
+#hoveressentials a:hover { 
+	color: #fff; 
+	background-color: #FBC983;
+}
+/* #essentials:hover{
+	color: #FB7820;
+	text-decoration: none;
+	background-color: transparent;
+  } */
 .toggle,
 [id^=drop] {
 	display: none;
@@ -59,17 +106,14 @@ p {
 nav { 
 	margin:0;
 	padding: 0;
+	height: 44px;
 	/* background-color: #254441; */
 }
 
-#logo a {
+#logo img{
 	display: block;
-	padding: 0 30px;
+	padding: 0 197px;
 	float: left;
-	font-size:20px;
-  line-height: 60px;
-  color: #D35400;  
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Since we'll have the "ul li" "float:left"
@@ -93,12 +137,11 @@ nav ul {
 	
 /* Positioning the navigation items inline */
 nav ul li {
-	margin: 0px;
+	margin: 10px 0px 0px 0px;
 	display:inline-block;
-  float: left;
-  text-align: center;
-  /* background-color:#F5B041; */
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	text-align: center;
+	/* background-color:#F5B041; */
+	font-family: Montserrat;
 
 	}
 
@@ -106,9 +149,11 @@ nav ul li {
 nav a {
 	display:block;
 	padding:14px 20px;	
-	color:#F5B041;
+	color:#2F3D74;
+	font-weight: bold;
 	font-size:17px;
 	text-decoration:none;
+	background-color: transparent;
 }
 
 
@@ -116,9 +161,11 @@ nav ul li ul li:hover { background: #000000; }
 
 /* Background color change on Hover */
 nav a:hover { 
-	background-color: #FAD7A0; 
+	color: #FB7820; 
 }
-
+.menu li a img{
+	width: 170px;
+}
 /* Hide Dropdowns by Default
  * and giving it a position of absolute */
 nav ul ul {
@@ -160,20 +207,34 @@ li > a:only-child:after { content: ''; } */
 
 /* Media Queries
 --------------------------------------------- */
+@media all and (max-width : 330px) {
 
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+}
 @media all and (max-width : 767px) {
 
 	#logo {
 		display: block;
-		padding: 0;
 		width: 100%;
 		text-align: center;
 		float: none;
 	}
+	#logo img {
+		float: left;
+		padding: 0;
+	}
 
 	nav {
-		margin: 0;
+		margin: 0 auto;
 	}
+	/* .hospitalnav-btn{
+		visibility: hidden;
+		text-indent: 100%;
+	} */
 
 	/* Hide the navigation menu by default */
 	/* Also hide the  */
@@ -182,25 +243,23 @@ li > a:only-child:after { content: ''; } */
 		display: none;
   }
   
-
-	/* Stylinf the toggle lable */
-	.toggle {
+/* Stylinf the toggle lable */
+	.toggle{
 		display: block;
-		/* background-color: #254441; */
-		padding: 20px 20px;	
-		color:#F5B041;
-		font-size:17px;
-		text-decoration:none;
-		border:none;
+		float: right;
+		padding-top: 27px;
 	}
 
 	.toggle:hover {
-		background-color: #FAD7A0;
+		color: #FAD7A0;
 	}
 
 	/* Display Dropdown when clicked on Parent Lable */
 	[id^=drop]:checked + ul {
 		display: block;
+		width: 100%;
+		background-color: white;
+		z-index: 999999;
 	}
 
 	/* Change menu item's width to 100% */
@@ -265,11 +324,38 @@ li > a:only-child:after { content: ''; } */
 
 }
 
-@media all and (max-width : 330px) {
+@media only screen and (max-width: 1023px){
 
-	nav ul li {
-		display:block;
-		width: 94%;
+	#logo img {
+		display: block;
+		padding: 0 16px;
+		float: left;
+	}
+	nav a:hover { 
+		color: #FB7820; 
+	}
+}
+@media only screen and (min-width:1024px) and (max-width: 1365px){
+
+	#logo img {
+		display: block;
+		padding: 0 105px;
+		float: left;
+	}
+	nav a:hover { 
+		color: #FB7820; 
 	}
 
 }
+@media only screen and (min-width:1441px) and (max-width: 1920px){
+
+	#logo img {
+		display: block;
+		padding: 0 359px;
+		float: left;
+	}
+	nav a:hover { 
+		color: #FB7820; 
+	}
+
+}	

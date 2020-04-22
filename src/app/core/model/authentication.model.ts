@@ -77,6 +77,7 @@ declare namespace Authentication {
   }
 
   export interface nepaldata {
+    nepal:nepal;
     recovered: number;
     confirmed: number;
     tested: number;
@@ -86,12 +87,31 @@ declare namespace Authentication {
     total_recovered: number;
 
   }
+
+  export interface nepal {
+    samples_tested:string;
+    negative:string;
+    positive:string;
+    deaths:string;
+    extra1:string;
+    extra2:string;
+
+
+  }
   export interface SAARCdata {
     country: string;
     Active_Cases: number;
     Total_Deaths: number;
     TotIn1M: number;
     DIn1M: number;
+
+  }
+  export interface Essentials {
+    Company: string;
+    Category: string;
+    link: string;
+    minimum_order:string
+    arraylocation: string[];
 
   }
 

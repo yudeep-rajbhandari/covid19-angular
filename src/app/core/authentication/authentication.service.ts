@@ -126,6 +126,9 @@ export class AuthenticationService {
   getWorldData() {
     return this.httpClient.get<Authentication.SAARCdata[]>('update/SAARC');
   }
+  getEssentials() {
+    return this.httpClient.get<Authentication.Essentials[]>('getBulkEssential');
+  }
 
   /**
    * Logs out the user and clear credentials.

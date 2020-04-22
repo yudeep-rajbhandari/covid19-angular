@@ -1,11 +1,12 @@
 <div class="container">
     <div class="nepalmap-head">
-      <strong><h2>Coronavirus Map: Tracking Nepal</h2></strong>
-      <p> Between January and March, Nepal took steps to prevent a widespread outbreak of the disease.
-        A country-wide lockdown came into effect on 24 March, and is scheduled to end as per the health condition of the country.</p>
-    </div>
+      <h4><strong>Coronavirus Map:Tracking Nepal</strong></h4>
+      <p>Between January and March, a country-wide lockdown came into effect on 24th March, and is scheduled to end as per the health condition of the country.
+        <span style="  font-family: sans-serif; color: #FB7820; 
+        font-style: italic;">Hover or Click over the map for more information</span></p>
+      </div>
+
 <div class="nepalmap" id="nepalmapAnchor" *ngIf="showstuff">
-    <p>Hover on the province for more information</p>
     <svg (mousemove)="showProvincedata1(this.$event)" version="1.1" id="Layer_1" x="0px" y="0px" width="90%" viewBox="0 0 1224.992 817.002"
         enable-background="new 0 0 1224.992 817.002">
 
@@ -1348,17 +1349,6 @@
 </div>
 
 <div id="selectIt"  style="display: none" (mouseleave)="hideme(this.$event)">
-  <!-- <div class="card" >
-    <h2>{{this.provinceName}}</h2>
-    <div class="card-body">
-      <p class="card-text">Total tested:{{this.total_tested}}</p>
-      <p class="card-text">Total Positive:{{this.total_positive}}</p>
-      <p class="card-text">Total Negative:{{this.total_negative}}</p>
-      <p class="card-text">Total in Isolation:{{this.total_in_isolation}}</p>
-      <p class="card-text">Total Isolation bed:{{this.num_of_isolation_bed}}</p>
-      <p class="card-text">Occupied Isolation bed:{{this.occupied_isolation_bed}}</p>
-    </div>
-  </div> -->
   <div class="card">
     <div class="card-header">
       {{this.provinceName}}

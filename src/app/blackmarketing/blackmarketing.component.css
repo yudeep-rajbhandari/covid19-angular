@@ -1,4 +1,18 @@
 /* only used for background overlay not needed for centering */
+/* #cover{
+  background-color: #FEF9E7;
+} */
+.container-fluid{
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  margin-top: 40px;
+}
+form{
+  background-color: #FCF3CF ;
+  border-radius: 10px;
+  padding: 17px 12px 13px 17px;
+}
 form:before {
   content: '';
   height: 100%;
@@ -6,11 +20,51 @@ form:before {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: rgba(0,0,0,0.05);
+  background-color: #FCF3CF ;
   z-index: -1;
   border-radius: 10px;
 }
 .form-control{
   float: none;
   text-align: center;
+}
+.btn.btn-info.btn-lg.btn-block.btn-rounded.btn-default.text-uppercase.waves-effect.waves-light{
+  background-color: #F7DC6F ;
+  border: none;
+}
+@media only screen and (max-width: 767px){
+  /* form{
+    padding: 53px 15px 57px 15px;
+  
+  } */
+  /* .container-fluid{
+     margin-top: 40px;
+  } */
+}
+@media only screen and (min-width: 768px) and (max-width:1023px){
+  form{
+    padding: 53px 15px 57px 15px;
+  
+  }
+  .container-fluid{
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width:1365px){
+  form{
+    padding: 53px 15px 57px 15px;
+  
+  }
+  .container-fluid{
+    margin-top: 186px;
+  }
+}
+@media only screen and (min-width: 1366px) and (max-width:1920px){
+  form{
+    padding: 53px 15px 57px 15px;
+  
+  }
+  .container-fluid{
+    margin-top: 100px;
+  }
 }

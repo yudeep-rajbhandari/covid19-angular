@@ -24,3 +24,6 @@
     src: url('../src/assets/fonts/Rumpelstiltskin-EPdj.ttf');
     font-family: Rumpelstiltskin;
 }
+
+html, body { height: 100%; }
+body { margin:0 auto; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -3,8 +3,6 @@ import hospitals = Authentication.hospitals;
 import {HttpBackend, HttpClient} from '@angular/common/http';
 import {NotificationService} from '../core/notification/notification.service';
 import DataPayload = Authentication.DataPayload;
-import {Observable} from 'rxjs';
-import {FormControl} from '@angular/forms';
 import * as jQuery from 'jquery';
 import 'bootstrap-notify';
 const $: any = jQuery;
@@ -30,5 +28,4 @@ export class HospitalListComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

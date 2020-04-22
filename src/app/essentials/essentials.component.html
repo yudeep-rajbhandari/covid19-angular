@@ -1,0 +1,71 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-center">
+    <input  class="form-control" list="age1"  style = "max-width: 400px" type="text" [(ngModel)]="local1" placeholder="Type a Location . . "/>
+    <datalist id="age1">
+      <option *ngFor="let local of locations1" [value]="local"> </option>
+    </datalist>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+
+      <div class="essentials-container" *ngIf="ready">
+        <h2>Order Grocery Products</h2>
+<!--        <input  class="form-control" list="age1"  type="email" [(ngModel)]="local1" placeholder="Location . . "/>-->
+
+        <div class="card"   *ngFor = "let prod of grocery | essentialFilter:local1; let i=index">
+          <div class="card-body essentials-div">
+            <h6 class="card-text text-left essentials-div-title">Company: <span class="essentials-div-text">{{prod.Company}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Category: <span class="essentials-div-text">{{prod.Category}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Minimum Order: <span class="essentials-div-text">{{prod.minimum_order}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Delivery Locations: <span class="essentials-div-text">{{prod.arraylocation.toString()}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Link: <a href={{prod.link}} >{{prod.Company}}</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="essentials-container" *ngIf="ready">
+        <h2>Order Fruit Products</h2>
+<!--        <input class="form-control" list="age2"  type="email"  placeholder="Location . ." [(ngModel)]="local2"/>-->
+<!--        <datalist id="age2">-->
+<!--          <option *ngFor="let local of locations2" [value]="local" ></option>-->
+<!--        </datalist>-->
+        <div class="card"   *ngFor = "let prod of fruits | essentialFilter:local1; let i=index">
+          <div class="card-body essentials-div">
+            <h6 class="card-text text-left essentials-div-title">Company: <span class="essentials-div-text">{{prod.Company}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Category: <span class="essentials-div-text">{{prod.Category}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Minimum Order: <span class="essentials-div-text">{{prod.minimum_order}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Delivery Locations: <span class="essentials-div-text">{{prod.arraylocation.toString()}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Link: <a href={{prod.link}}>{{prod.Company}}</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="essentials-container" *ngIf="ready">
+        <h2>Order Medicines</h2>
+<!--        <input class="form-control" list="age3"  type="email"  placeholder="Location . ." [(ngModel)]="local3"/>-->
+<!--        <datalist id="age3">-->
+<!--          <option *ngFor="let local of locations3" [value]="local" ></option>-->
+<!--        </datalist>-->
+        <div class="card"   *ngFor = "let prod of medicine |essentialFilter:local1; let i=index">
+          <div class="card-body essentials-div">
+            <h6 class="card-text text-left essentials-div-title">Company: <span class="essentials-div-text">{{prod.Company}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Category: <span class="essentials-div-text">{{prod.Category}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Minimum Order: <span class="essentials-div-text">{{prod.minimum_order}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Delivery Locations: <span class="essentials-div-text">{{prod.arraylocation.toString()}}</span></h6>
+            <h6 class="card-text text-left essentials-div-title">Link: <a href={{prod.link}} >{{prod.Company}}</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!showstuff">
+    <div class="loading">Loading&#8230;</div>
+  </div>
+</div>
+
+
+
+
+
