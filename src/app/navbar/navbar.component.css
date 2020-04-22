@@ -49,6 +49,35 @@ h1 {
 p {
 	text-align: center;
 } */
+/* .nav {
+    position: absolute;
+    height: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+    z-index: 999999;
+}
+
+.nav {
+    position: relative;
+    background-color: transparent!important;
+    background-image: none;
+    overflow: visible;
+}
+.nav{
+	position: fixed;    
+	background-color: #ffffff;
+	box-shadow: 0px 2px 5px 0px #c7c7c7;
+	z-index: ;
+	width: 100%;
+	min-height: 13vh;
+    border-radius: 4px;
+    line-height: 20px;
+    transition: 0.4s;
+} */
 #essentials-btn{
 	color: #fff;
 	border: 1.5px solid #fff;
@@ -200,8 +229,12 @@ li > a:only-child:after { content: ''; } */
 	}
 
 	nav {
-		margin: 0;
+		margin: 0 auto;
 	}
+	/* .hospitalnav-btn{
+		visibility: hidden;
+		text-indent: 100%;
+	} */
 
 	/* Hide the navigation menu by default */
 	/* Also hide the  */
@@ -298,6 +331,9 @@ li > a:only-child:after { content: ''; } */
 		padding: 0 16px;
 		float: left;
 	}
+	nav a:hover { 
+		color: #FB7820; 
+	}
 }
 @media only screen and (min-width:1024px) and (max-width: 1365px){
 
@@ -306,5 +342,20 @@ li > a:only-child:after { content: ''; } */
 		padding: 0 105px;
 		float: left;
 	}
+	nav a:hover { 
+		color: #FB7820; 
+	}
 
 }
+@media only screen and (min-width:1441px) and (max-width: 1920px){
+
+	#logo img {
+		display: block;
+		padding: 0 359px;
+		float: left;
+	}
+	nav a:hover { 
+		color: #FB7820; 
+	}
+
+}	

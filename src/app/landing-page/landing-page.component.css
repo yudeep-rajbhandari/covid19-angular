@@ -3,11 +3,15 @@
 }
 .container{ 
   position: relative;
+  overflow: hidden;
+  margin-top: 80px;
 }
 .corona{
-  padding: 102px 0px 0px 574px;
-  float: right;
-  text-align: left;
+  /* padding: 102px 0px 0px 574px; */
+  /* float: right; */
+  text-align: center;
+  align-content: center;
+  margin: 90px auto;
 } 
 .corona h2{
   font-family: Montserrat;
@@ -25,10 +29,11 @@
   font-size: 1rem;
   color: #162C69;
 }
-/* img{
-  padding: 3px 5px 3px 5px;
-  cursor: pointer;
-} */
+
+img {
+  width: 100%;
+}
+
 .button{
   margin-top: 14px;
 }
@@ -86,12 +91,12 @@
 
 @media only screen and (max-width: 567px) {
   .container{
-    padding-top: 500px;    
+    /* padding-top: 500px;     */
     text-align: left;
     position: relative;
   }
   .corona{
-    padding: 0px;
+    margin: 0 auto;
   }
   .corona h2{
     font-size: 1.35rem;
@@ -108,21 +113,36 @@
     position: relative;
 
   }
-  img{
-    padding: 2px 3px 2px 3px;
-    width: 75px;
-    height: 30px;
+  img {
+    display: none;
   }
+  .button{
+    text-align: left;
+  }
+  .corona .map-btn {
+    padding: 1px 8px;
+  }
+  .corona .country-btn {
+    padding: 1px 8px;
+  }
+  .corona .coronafear-btn {
+    padding: 1px 8px;
+  }
+  .corona .aqi-btn {
+    padding: 1px 8px;
+  }
+
 } 
 
 @media only screen and (min-width: 568px) and (max-width: 767px) {
   .container{
-    padding-top: 600px;    
+    /* padding-top: 600px;     */
     text-align: left;
     position: relative;
+    margin-top: 0px;
   }
   .corona{
-    padding: 0px;
+    margin: 42px auto;
   }
   .corona h2{
     font-size: 1.35rem;
@@ -139,21 +159,35 @@
     position: relative;
 
   }
-  img{
-    padding: 2px 3px 2px 3px;
-    width: 75px;
-    height: 30px;
+  img {
+    display: none;
   }
+  .button{
+    text-align: left;
+  }
+  .corona .map-btn {
+    padding: 1px 8px;
+  }
+  .corona .country-btn {
+    padding: 1px 8px;
+  }
+  .corona .coronafear-btn {
+    padding: 1px 8px;
+  }
+  .corona .aqi-btn {
+    padding: 1px 8px;
+  }
+
 } 
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .container{  
-    text-align: left;
     position: relative;
+    margin-top: 0px;
   }
   .corona{
-    padding: 45px 0px 34px 352px;
-    float: right;
+    /* padding: 45px 0px 34px 352px; */
+    /* float: left; */
     text-align: left;
   } 
   .corona h2{
@@ -172,9 +206,8 @@
 
   }
   img{
-    padding: 2px 3px 2px 3px;
-    width: 75px;
-    height: 30px;
+    width: 100%;
+    height: 40vh;
   }
 } 
 @media only screen and (min-width: 1024px) and (max-width: 1365px) {
@@ -184,22 +217,51 @@
   }
   .corona{
     /* padding: 102px 0px 125px 460px; */
-    padding:155px 8px 222px 555px;;
+    /* padding:155px 8px 222px 555px; */
+    float: right;
+    text-align: center;
+    margin-top: 120px;
+  } 
+  .corona h2{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .corona h6{
+    font-style: italic;
+    text-align: center;
+    font-size: 0.90rem;
+  }
+  .corona-text p{
+    text-align: center;
+    font-size: 0.90rem;
+    position: relative;
+
+  }
+
+} 
+/* 
+@media only screen and (min-width: 1366px) and (max-width: 1920px) {
+  .container-fluid{  
+    text-align: left;
+    position: relative;
+  }
+  .corona{
+    padding:245px 317px 559px 950px;
     float: right;
     text-align: left;
   } 
   .corona h2{
-    font-size: 1.35rem;
+    font-size: 1.65rem;
     text-align: left;
   }
   .corona h6{
     font-style: italic;
     text-align: left;
-    font-size: 0.90rem;
+    font-size: 0.95rem;
   }
   .corona-text p{
     text-align: left;
-    font-size: 0.90rem;
+    font-size: 0.95rem;
     position: relative;
 
   }
@@ -208,4 +270,4 @@
     width: 75px;
     height: 30px;
   }
-} 
+}  */
