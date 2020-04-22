@@ -1,24 +1,24 @@
 <div class="container">
-  <div class="corona">
-    <h2><strong>The Coronavirus <br>Outbreak in Nepal</strong></h2>
-  <div class="corona-text">
-    <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered Coronavirus.The Corona pandemic has sickened more than one million people around the globe according
-      to the official counts.The global COVID-19 coronavirus pandemic was confirmed to have spread to Nepal when its first case was confirmed in Kathmandu on 24 January 2020.</p>
-    <h6>Updated Date: {{this.date}}</h6>
-  </div>
-  <div class="button">
-    <a class="map-btn" (click)="gotoMap()">Map</a>
-    <a class="country-btn" (click)="gotoVisualize()">Country</a>
-    <a class="coronafear-btn" (click)="gotoCoronaFear()">CoronaFear</a>
-    <a class="aqi-btn" (click)="gotoAqi()">AQI</a>
-  </div>
-			
-	
-		
-    <!-- <img src="../../assets/images/map.png" (click)="gotoMap()">
-    <img src="../../assets/images/country.png" (click)="gotoVisualize()">
-    <img src="../../assets/images/coronafear.png" (click)="gotoCoronaFear()">
-    <img src="../../assets/images/aqi.png" (click)="gotoAqi()"> -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="corona">
+        <h2><strong>The Coronavirus <br>Outbreak in Nepal</strong></h2>
+        <div class="corona-text">
+          <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered Coronavirus.The Corona pandemic has sickened more than one million people around the globe according
+            to the official counts.The global COVID-19 coronavirus pandemic was confirmed to have spread to Nepal when its first case was confirmed in Kathmandu on 24 January 2020.</p>
+          <h6>Updated Date: {{this.date}}</h6>
+        </div>
+        <div class="button">
+          <a class="map-btn" (click)="gotoMap()">Map</a>
+          <a class="country-btn" (click)="gotoVisualize()">Country</a>
+          <a class="coronafear-btn" (click)="gotoCoronaFear()">CoronaFear</a>
+          <a class="aqi-btn" (click)="gotoAqi()">AQI</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="../../assets/images/girl.svg">
+    </div>
   </div>
 </div>
 

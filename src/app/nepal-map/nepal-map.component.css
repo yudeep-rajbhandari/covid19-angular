@@ -1,6 +1,6 @@
 
 .nepalmap-head{
-  margin-top: 629px;
+  margin-top: 80px;
   text-align: center;
 }
 .nepalmap-head h4{
@@ -48,6 +48,7 @@
   }
   .nepalmap-head h4{
     font-size:1.35rem ;
+    text-align:left;
     color: #162C69;
     font-family:Montserrat;
   }
