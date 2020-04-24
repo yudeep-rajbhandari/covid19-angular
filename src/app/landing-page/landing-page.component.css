@@ -209,7 +209,9 @@ img {
     text-align: left;
   }
   .text h6{
-    text-align:left;
+    text-align:left;  
+    font-family: Montserrat;
+    color: #162C69;
   }
 
 } 
@@ -263,6 +265,8 @@ img {
   }
   .text h6{
     text-align:left;
+    font-family: Montserrat;
+    color: #162C69;
   }
 
 
