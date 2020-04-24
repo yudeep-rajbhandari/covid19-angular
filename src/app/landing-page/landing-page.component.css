@@ -4,7 +4,7 @@
 .container{ 
   position: relative;
   overflow: hidden;
-  margin-top: 80px;
+  margin-top: 95px;
 }
 .corona{
   /* padding: 102px 0px 0px 574px; */
@@ -159,9 +159,10 @@ img {
     /* padding-top: 500px;     */
     text-align: left;
     position: relative;
+    margin-top: 17px;
   }
   .corona{
-    margin: 0 auto;
+    margin: 42px auto;
   }
   .corona h2{
     font-size: 1.35rem;
@@ -195,6 +196,17 @@ img {
   }
   .corona .aqi-btn {
     padding: 1px 8px;
+  }
+  /* .row {
+    display: flex;
+    flex-wrap: wrap;
+  }  */
+  .number .row .col-sm-6{
+    width: 50%;
+    text-align: left;
+  }
+  .text h6{
+    text-align:left;
   }
 
 } 
@@ -242,6 +254,14 @@ img {
   .corona .aqi-btn {
     padding: 1px 8px;
   }
+  .number .row .col-sm-6{
+    width: 50%;
+    text-align: left;
+  }
+  .text h6{
+    text-align:left;
+  }
+
 
 } 
 
@@ -254,7 +274,7 @@ img {
     /* padding: 45px 0px 34px 352px; */
     /* float: left; */
     text-align: left;
-    margin-top: 58px;
+    margin-top: 85px;
 
   } 
   .corona h2{
