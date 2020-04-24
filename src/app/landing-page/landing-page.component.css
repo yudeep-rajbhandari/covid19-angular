@@ -28,7 +28,7 @@
   color: #162C69;
 }
 .number h4{
-  font-family: Modern No. 20;
+  font-family: 'Times New Roman', Times, serif;
 }
 #yellow h4{
   color: #F28F0C;
@@ -96,7 +96,10 @@ img {
   margin-top: -50px;
 }
 .text h6{
+  font-family: Montserrat;
+  color: #162C69;
   margin-top: 17px;
+  text-align: center;
 }
 
 .button{
