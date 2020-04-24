@@ -3,7 +3,7 @@ import { AuthenticationService } from '../core';
 import nepaldata = Authentication.nepaldata;
 import SAARCdata = Authentication.SAARCdata;
 import { HttpClient, HttpBackend } from '@angular/common/http';
-import { style } from '@angular/animations';
+import {DataService} from  '../core/service/data.service';
 import {GoogleChartComponent} from 'angular-google-charts';
 
 
@@ -66,20 +66,21 @@ export class VisualizenepalComponent implements OnInit {
   }};
 
 
-  constructor(private apicall: AuthenticationService, private handler: HttpBackend,  private httpClient: HttpClient) {
+  constructor(private apicall: AuthenticationService, private handler: HttpBackend,  private httpClient: HttpClient, private dataService: DataService) {
+
 
     this.httpClient = new HttpClient(handler);
-    this.httpClient.get<nepaldata>('https://covid19.mohp.gov.np/covid/api/confirmedcases/?format=json').subscribe(data => {
+    this.dataService.fetchData().subscribe(data => {
       this.data = data;
       this.recovered = data.nepal.extra1;
       this.positive = data.nepal.positive;
       this.negative = data.nepal.negative;
       this.mydata.push(['Total Positive', parseInt(String(data.nepal.positive), 10)]);
-      this.mydata.push(['Recovered', parseInt(String(data.nepal.extra1),10)]);
-      this.mydata.push(['Isolation', parseInt(String(data.nepal.positive), 10)-parseInt(String(data.nepal.extra1), 10)]);
+      this.mydata.push(['Recovered', parseInt(String(data.nepal.extra1), 10)]);
+      this.mydata.push(['Isolation', parseInt(String(data.nepal.positive), 10) - parseInt(String(data.nepal.extra1), 10)]);
 //      this.mydata1.push(['Total Tested', parseInt(String(data.nepal.samples_tested), 10)]);
-      this.mydata1.push(['Negative', parseInt(String(data.nepal.negative),10)]);
-      this.mydata1.push(['Positive', parseInt(String(data.nepal.positive),10)]);
+      this.mydata1.push(['Negative', parseInt(String(data.nepal.negative), 10)]);
+      this.mydata1.push(['Positive', parseInt(String(data.nepal.positive), 10)]);
 
       this.isDataAvailable = true;
 
