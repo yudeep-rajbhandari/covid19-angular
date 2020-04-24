@@ -1,19 +1,29 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import nepaldata = Authentication.nepaldata;
-import hospitals = Authentication.hospitals;
+import {HttpBackend, HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class DataService {
-sharedData: hospitals[];
 
-  private messageSource = new BehaviorSubject('default message');
-  currentMessage = this.messageSource.asObservable();
+  private apiData = new BehaviorSubject<nepaldata>(null);
+  public apiData$ = this.apiData.asObservable();
 
-  constructor() { }
+  constructor(private handler: HttpBackend,  private httpClient: HttpClient) {
 
-  changeMessage(message: string) {
-    this.messageSource.next(message);
+    }
+
+    fetchData() {
+      this.httpClient = new HttpClient(this.handler);
+      return this.httpClient.get<nepaldata>('https://covid19.mohp.gov.np/covid/api/confirmedcases/?format=json').pipe(data => {
+       return data;
+      });
+
+  }
+  setdata(data){
+    this.apiData.next(data);
   }
 
+
 }
+
