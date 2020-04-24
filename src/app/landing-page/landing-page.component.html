@@ -3,17 +3,43 @@
     <div class="col-md-6">
       <div class="corona">
         <h2><strong>The Coronavirus <br>Outbreak in Nepal</strong></h2>
-        <div class="corona-text">
-          <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered Coronavirus.The Corona pandemic has sickened more than one million people around the globe according
-            to the official counts.The global COVID-19 coronavirus pandemic was confirmed to have spread to Nepal when its first case was confirmed in Kathmandu on 24 January 2020.</p>
-          <h6>Updated Date: {{this.date}}</h6>
-        </div>
-        <div class="button">
-          <a class="map-btn" (click)="gotoMap()">Map</a>
-          <a class="country-btn" (click)="gotoVisualize()">Country</a>
-          <a class="coronafear-btn" (click)="gotoCoronaFear()">CoronaFear</a>
-          <a class="aqi-btn" (click)="gotoAqi()">AQI</a>
-        </div>
+                  <!-- <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered Coronavirus.The Corona pandemic has sickened more than one million people around the globe according
+            to the official counts.The global COVID-19 coronavirus pandemic was confirmed to have spread to Nepal when its first case was confirmed in Kathmandu on 24 January 2020.</p> -->
+          <p>Updated Date: {{this.date}}</p>
+          <div class="number">
+            <div class="row">
+              <div class="col-md-3" id="yellow">
+                <h6>Tested</h6>
+                <span class="count"><h4>9011</h4></span>
+                <!-- <h4>9011</h4> -->
+              </div>
+              <div class="col-md-3" id="blue">
+                <h6>Positive</h6>
+                <span class="count"><h4>48</h4></span>
+                <!-- <h4>48</h4> -->
+              </div>
+              <div class="col-md-3" id="pink">
+                <h6>Recovered</h6>
+                <span class="count"><h4>01</h4></span>
+                <!-- <h4>01</h4> -->
+              </div>
+              <div class="col-md-3" id="green">
+                <h6>Death</h6>
+                <span class="count"><h4>00</h4></span>
+                <!-- <h4>00</h4> -->
+              </div>
+            </div>            
+          </div>
+          <div class="text">
+            <h6>Find more info for COVID-19</h6>        
+            <div class="button">
+              <a class="map-btn" (click)="gotoMap()">Map</a>
+              <a class="country-btn" (click)="gotoVisualize()">Country</a>
+              <a class="coronafear-btn" (click)="gotoCoronaFear()">CoronaFear</a>
+              <a class="aqi-btn" (click)="gotoAqi()">AQI</a>
+            </div>
+          </div>
+        
       </div>
     </div>
     <div class="col-md-6">

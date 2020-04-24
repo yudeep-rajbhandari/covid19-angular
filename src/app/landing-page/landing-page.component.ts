@@ -3,6 +3,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import {NepalMapComponent} from '../nepal-map/nepal-map.component';
 import { ViewportScroller } from '@angular/common';
+// require('landing-page.component.js');
+// require('./landing-page.component.js');
+
 
 
 @Component({
