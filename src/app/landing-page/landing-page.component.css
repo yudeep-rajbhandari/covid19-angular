@@ -96,10 +96,10 @@ img {
   margin-top: -50px;
 }
 .text h6{
-  font-family: sans-serif;
-  color: #F6CA90;
-  font-style: italic;
-  margin-top: 0px;
+  font-family: Montserrat;
+  color: #162C69;
+  margin-top: 17px;
+  text-align: center;
 }
 
 .button{
@@ -208,11 +208,9 @@ img {
     width: 50%;
     text-align: left;
   }
-  .text h6{
-    text-align:left;
-    font-family: Montserrat;
-    color: #162C69;
-  }
+ .text {
+   text-align: left;
+ }
 
 }
 
