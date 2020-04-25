@@ -4,6 +4,7 @@
   width: 100%;
   overflow: hidden;
   min-height: 100vh;
+  margin-top: 35px ;
 }
 .justify-content-center{
   margin-top: 22px;
