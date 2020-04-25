@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-.container{ 
+.container{
   position: relative;
   overflow: hidden;
   margin-top: 95px;
@@ -12,14 +12,14 @@
   text-align: center;
   align-content: center;
   margin: 45px auto;
-} 
+}
 .corona h2{
   font-family: Montserrat;
   color: #162C69;
 }
 .corona p{
   font-family: sans-serif;
-  color: #F6CA90; 
+  color: #F6CA90;
   font-style: italic;
   margin-top: 0px;
 }
@@ -208,13 +208,11 @@ img {
     width: 50%;
     text-align: left;
   }
-  .text h6{
-    text-align:left;  
-    font-family: Montserrat;
-    color: #162C69;
-  }
+ .text {
+   text-align: left;
+ }
 
-} 
+}
 
 @media only screen and (min-width: 568px) and (max-width: 767px) {
   .container{
@@ -270,10 +268,10 @@ img {
   }
 
 
-} 
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .container{  
+  .container{
     position: relative;
     margin-top: 0px;
   }
@@ -283,7 +281,7 @@ img {
     text-align: left;
     margin-top: 85px;
 
-  } 
+  }
   .corona h2{
     font-size: 1.35rem;
     text-align: left;
@@ -309,9 +307,9 @@ img {
     margin-top: 17px;
     text-align: center;
   }
-} 
+}
 @media only screen and (min-width: 1024px) and (max-width: 1365px) {
-  .container{  
+  .container{
     text-align: left;
     position: relative;
   }
@@ -321,7 +319,7 @@ img {
     float: right;
     text-align: center;
     margin-top: 60px;
-  } 
+  }
   .corona h2{
     font-size: 1.5rem;
     text-align: center;
@@ -344,10 +342,10 @@ img {
 
   } */
 
-} 
-/* 
+}
+/*
 @media only screen and (min-width: 1366px) and (max-width: 1920px) {
-  .container-fluid{  
+  .container-fluid{
     text-align: left;
     position: relative;
   }
@@ -355,7 +353,7 @@ img {
     padding:245px 317px 559px 950px;
     float: right;
     text-align: left;
-  } 
+  }
   .corona h2{
     font-size: 1.65rem;
     text-align: left;
