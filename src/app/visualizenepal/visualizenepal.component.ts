@@ -25,6 +25,7 @@ export class VisualizenepalComponent implements OnInit {
   positive: string;
   negative: string;
   recovered: string;
+  death: string;
 
 
   data: nepaldata;
@@ -75,12 +76,14 @@ export class VisualizenepalComponent implements OnInit {
       this.recovered = data.nepal.extra1;
       this.positive = data.nepal.positive;
       this.negative = data.nepal.negative;
+      this.death = data.nepal.deaths;
       // this.mydata.push(['Total Positive', parseInt(String(data.nepal.positive), 10)]);
       this.mydata.push(['Recovered', parseInt(String(data.nepal.extra1), 10)]);
       this.mydata.push(['Active Cases', parseInt(String(data.nepal.positive), 10) - parseInt(String(data.nepal.extra1), 10)]);
 //      this.mydata1.push(['Total Tested', parseInt(String(data.nepal.samples_tested), 10)]);
       this.mydata1.push(['Negative', parseInt(String(data.nepal.negative), 10)]);
       this.mydata1.push(['Positive', parseInt(String(data.nepal.positive), 10)]);
+      this.mydata.push(['Death', parseInt(String(data.nepal.deaths), 10)]);
 
       this.isDataAvailable = true;
 

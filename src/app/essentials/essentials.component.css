@@ -11,7 +11,7 @@
 }
 .card{
     margin-top: 10px;
-    min-height: 37vh;
+    min-height: 20vh;
 }
 @media only screen  and (max-width:1023px){
   .card{

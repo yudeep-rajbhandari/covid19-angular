@@ -21,7 +21,6 @@ export class LandingPageComponent implements OnInit {
   constructor(private modal: NgbModal, private router: Router, private viewportScroller: ViewportScroller, private dataService: DataService) {
     dataService.fetchData().subscribe(data => {
       this.data = data;
-      console.log(data);
       this.getdata = true;
       // this.call();
     });
