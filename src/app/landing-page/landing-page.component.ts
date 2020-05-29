@@ -22,7 +22,6 @@ export class LandingPageComponent implements OnInit {
     dataService.fetchData().subscribe(data => {
       this.data = data;
       this.getdata = true;
-      // this.call();
     });
   }
   @ViewChild('content', {static: false})
