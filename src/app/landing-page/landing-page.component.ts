@@ -40,8 +40,14 @@ export class LandingPageComponent implements OnInit {
   //   this.counter('count3', 0, this.data.nepal.extra1, 1000, 1);
   // }
   getLockdownday() {
-    const d1 = new Date();
+    const d1 = new Date('2020/06/15');
     const d2 = new Date('2020/03/24');
+    const diff = Math.abs(d1.getTime() - d2.getTime());
+    return Math.ceil(diff / (1000 * 3600 * 24));
+  }
+  getRestrictedday() {
+    const d1 = new Date('2020/06/15');
+    const d2 = new Date();
     const diff = Math.abs(d1.getTime() - d2.getTime());
     return Math.ceil(diff / (1000 * 3600 * 24));
   }
