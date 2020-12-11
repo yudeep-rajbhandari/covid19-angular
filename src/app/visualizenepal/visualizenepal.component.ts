@@ -40,7 +40,7 @@ export class VisualizenepalComponent implements OnInit {
   chart = { title: 'COVID-19 Positive Cases in Nepal',
             type: 'PieChart', data: this.mydata,
             title1: 'COVID-19 Testing and Results in Nepal',
-            title2: 'COVID-19 affected cases one in million in SAARC',
+            title2: 'COVID-19 death cases one in million in SAARC',
             data1: this.mydata1, type2: 'ColumnChart',
             data2: this.mydata2, column2: ['Country', 'Cases'],
     options: {
@@ -107,7 +107,7 @@ export class VisualizenepalComponent implements OnInit {
       this.totalDeaths = this.totalDeaths || [];
       this.SAARCdata = data;
       this.SAARCdata.map(elem => {
-    this.mydata2.push([elem.country, parseFloat(String(elem.TotIn1M))]);
+    this.mydata2.push([elem.country, parseFloat(String(elem.DIn1M))]);
       });
       this.isSAARCDataAvailable = true;
     });
