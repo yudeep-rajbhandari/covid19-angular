@@ -14,7 +14,7 @@
         </google-chart>
 
         <div class="card">
-          <div class="card-header text-white">Nepal Statics</div>
+          <div class="card-header text-white">Nepal Statistics</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Total tested:{{data.nepal.samples_tested}}</li>
             <li class="list-group-item">Positive:{{this.positive}}</li>
@@ -32,7 +32,7 @@
         </google-chart>
 
         <div class="card">
-          <div class="card-header text-white">SAARC Country Statics</div>
+          <div class="card-header text-white">SAARC Country Statistics</div>
           <ul class="list-group list-group-flush" *ngFor="let s of SAARCdata">
             <li class="list-group-item">{{s.country}}, {{s.Active_Cases}} Active
               cases,{{s.Total_Deaths==""?0:s.Total_Deaths}} Deaths </li>
@@ -51,7 +51,7 @@
         </google-chart>
 
         <div class="card">
-          <div class="card-header text-white">Nepal Statics</div>
+          <div class="card-header text-white">Nepal Statistics</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Recovered:{{this.recovered}}</li>
             <li class="list-group-item">Active Cases:{{this.positive - this.recovered}}</li>
