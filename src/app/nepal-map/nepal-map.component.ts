@@ -50,6 +50,7 @@ public mydiv: ElementRef;
   constructor(handler: HttpBackend, private ns: NotificationService, private apicall: AuthenticationService) {
     this.apicall.getProvinceData().subscribe(data => {
       this.provinceData = data;
+      console.log(this.provinceData);
       this.showstuff = true;
     });
     // this.httpClient = new HttpClient(handler);
