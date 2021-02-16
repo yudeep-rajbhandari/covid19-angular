@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  serverBaseUrl: 'http://localhost:8085/',
-  serverUrl: 'http://localhost:8085/',
+  serverBaseUrl: 'https://covidnepalapi.herokuapp.com/',
+  serverUrl: 'https://covidnepalapi.herokuapp.com/',
 };
 
 /*
