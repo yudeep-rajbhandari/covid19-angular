@@ -107,15 +107,64 @@ export class VisualizenepalComponent implements OnInit {
     //   console.log('mydata', this.mydata);
     //   this.isDataAvailable = true;
     // });
-    this.apicall.getWorldData().subscribe(data => {
-      this.acitveCases = this.acitveCases || [];
-      this.totalDeaths = this.totalDeaths || [];
-      this.SAARCdata = data;
-      this.SAARCdata.map(elem => {
-    this.mydata2.push([elem.country, parseFloat(String(elem.TotIn1M))]);
-      });
-      this.isSAARCDataAvailable = true;
+    this.SAARCdata = [
+      {
+        TotIn1M: 31988,
+        country: 'India',
+        Total_Deaths: 531918,
+        DIn1M: 378,
+        Active_Cases: 1574,
+      },
+      {
+        TotIn1M: 33197,
+        country: 'Nepal',
+        Total_Deaths: 12031,
+        DIn1M: 398,
+        Active_Cases: 43,
+      },
+      {
+        TotIn1M: 6891,
+        country: 'Pakistan',
+        Total_Deaths: 30661,
+        DIn1M: 134,
+        Active_Cases: 11954,
+      },
+      {
+        TotIn1M: 12178,
+        country: 'Bangladesh',
+        Total_Deaths: 29473,
+        DIn1M: 176,
+        Active_Cases: 16611,
+      },
+      {
+        TotIn1M: 31172,
+        country: 'Sri Lanka',
+        Total_Deaths: 16882,
+        DIn1M: 782,
+        Active_Cases: 5,
+      },
+      {
+        TotIn1M: 79563,
+        country: 'Bhutan',
+        Total_Deaths: 21,
+        DIn1M: 27,
+        Active_Cases: 1106,
+      }
+    ];
+    this.SAARCdata.map(elem => {
+      this.mydata2.push([elem.country, parseFloat(String(elem.TotIn1M))]);
     });
+    this.isSAARCDataAvailable = true;
+    // this.apicall.getWorldData().subscribe(data => {
+    //   this.acitveCases = this.acitveCases || [];
+    //   this.totalDeaths = this.totalDeaths || [];
+    //   this.SAARCdata = data;
+    //   console.log('saarc',data);
+    //   this.SAARCdata.map(elem => {
+    // this.mydata2.push([elem.country, parseFloat(String(elem.TotIn1M))]);
+    //   });
+    //   this.isSAARCDataAvailable = true;
+    // });
 
 
 
