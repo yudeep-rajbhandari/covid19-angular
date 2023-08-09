@@ -17,10 +17,106 @@ declare var $: any;
   styleUrls: ['./nepal-map.component.css']
 })
 export class NepalMapComponent implements OnInit {
+
+  provinceData = [ {
+    province_id: '1',
+    total_tested: 333,
+    total_negative: 444,
+    total_in_isolation: 555,
+    provinceName: 'Koshi',
+    total_death: 555,
+    total_recovered: 555,
+    total_positive: 129566,
+    num_of_isolation_bed: 555,
+    occupied_isolation_bed: 555,
+    facility_count: 555
+  },
+    {
+      province_id: '2',
+      total_tested: 5555,
+      total_negative: 444,
+      total_in_isolation: 555,
+      provinceName: 'Madhesh',
+      total_death: 555,
+      total_recovered: 555,
+      total_positive: 53894,
+      num_of_isolation_bed: 555,
+      occupied_isolation_bed: 555,
+      facility_count: 555
+    },
+    {
+      province_id: '3',
+      total_tested: 333,
+      total_negative: 444,
+      total_in_isolation: 555,
+      provinceName: 'Bagmati',
+      total_death: 555,
+      total_recovered: 555,
+      total_positive: 542832,
+      num_of_isolation_bed: 555,
+      occupied_isolation_bed: 555,
+      facility_count: 555
+    },
+    {
+      province_id: '4',
+      total_tested: 333,
+      total_negative: 444,
+      total_in_isolation: 555,
+      provinceName: 'Gandaki',
+      total_death: 555,
+      total_recovered: 555,
+      total_positive: 95369,
+      num_of_isolation_bed: 555,
+      occupied_isolation_bed: 555,
+      facility_count: 555
+    },
+    {
+      province_id: '5',
+      total_tested: 333,
+      total_negative: 444,
+      total_in_isolation: 555,
+      provinceName: 'Lumbini',
+      total_death: 555,
+      total_recovered: 555,
+      total_positive: 110506,
+      num_of_isolation_bed: 555,
+      occupied_isolation_bed: 555,
+      facility_count: 555
+    },
+    {
+      province_id: '6',
+      total_tested: 333,
+      total_negative: 444,
+      total_in_isolation: 555,
+      provinceName: 'Karnali',
+      total_death: 555,
+      total_recovered: 555,
+      total_positive: 24023,
+      num_of_isolation_bed: 555,
+      occupied_isolation_bed: 555,
+      facility_count: 555
+    },
+    {
+      province_id: '7',
+      total_tested: 333,
+      total_negative: 444,
+      total_in_isolation: 555,
+      provinceName: 'Sudurpashchim',
+      total_death: 555,
+      total_recovered: 555,
+      total_positive: 44953,
+      num_of_isolation_bed: 555,
+      occupied_isolation_bed: 555,
+      facility_count: 555
+    }
+  ];
 dataentry: boolean;
 showstuff: boolean;
   private httpClient: HttpClient;
-  provData: ProvinceData;
+  // provData: {
+  //   occupied_isolation_bed: number; total_death: number; num_of_isolation_bed: number; province_id: string;
+  //   total_tested: number; total_in_isolation: number; provinceName: number; total_recovered: number;
+  //   facility_count: number; total_negative: number; total_positive: number };
   data: DataPayload;
   Hospitals: hospitals[];
   val: string;
@@ -31,7 +127,7 @@ District: string;
 Type: string;
 Number: string;
 selectevent: Element;
-provinceData: ProvinceData[];
+// provinceData: [];
   showdivs: boolean;
   total_tested: number;
   total_negative: number;
@@ -48,10 +144,13 @@ provinceData: ProvinceData[];
 @ViewChild('selectIt', {static: false})
 public mydiv: ElementRef;
   constructor(handler: HttpBackend, private ns: NotificationService, private apicall: AuthenticationService) {
-    this.apicall.getProvinceData().subscribe(data => {
-      this.provinceData = data;
-      this.showstuff = true;
-    });
+    this.showstuff = true;
+    // this.apicall.getProvinceData().subscribe(data => {
+    //   this.provinceData = data;
+    //   this.showstuff = true;
+    // });
+    // this.provinceData = this.sampleData;
+
     // this.httpClient = new HttpClient(handler);
     // this.httpClient.get<DataPayload>('https://covidapi.mohp.gov.np/api/v1/health-facility2/').subscribe(data => {
     //   console.log(data);
@@ -62,32 +161,32 @@ public mydiv: ElementRef;
     // });
   }
   showProvincedata1(mouse) {
-    const id = mouse.path.some(elem => {
+    // console.log('mouse',mouse)
+    const id = mouse.composedPath().some(elem => {
       if (elem.id) {
       if (elem.id.includes('pradesh')) {
         return elem.id;
       }}
     });
     if (id) {
-   mouse.path.forEach(papa => {
+   mouse.composedPath().forEach(papa => {
      if (papa.id) {
        if (papa.id.includes('pradesh')) {
          const pradesh = papa.id;
          const provinceNum = pradesh.split('-')[1];
-         const provData1 = this.provinceData.filter(elem => elem.province_id == provinceNum);
-         this.provData = provData1[0];
+         const provData = this.provinceData.filter(elem => elem.province_id === provinceNum)[0];
 
-         if (this.provData != null) {
-           this.total_in_isolation = this.provData.total_in_isolation;
-           this.total_positive = this.provData.total_positive;
-           this.total_tested = this.provData.total_tested;
-           this.total_negative = this.provData.total_negative;
-           this.total_death = this.provData.total_death;
-           this.total_recovered = this.provData.total_recovered;
-           this.num_of_isolation_bed = this.provData.num_of_isolation_bed;
-           this.occupied_isolation_bed = this.provData.occupied_isolation_bed;
-           this.facility_count = this.provData.occupied_isolation_bed;
-           this.provinceName = this.provData.province_name;
+         if (provData != null) {
+           this.total_in_isolation = provData.total_in_isolation;
+           this.total_positive = provData.total_positive;
+           this.total_tested = provData.total_tested;
+           this.total_negative = provData.total_negative;
+           this.total_death = provData.total_negative;
+           this.total_recovered = provData.total_recovered;
+           this.num_of_isolation_bed = provData.num_of_isolation_bed;
+           this.occupied_isolation_bed = provData.occupied_isolation_bed;
+           this.facility_count = provData.facility_count;
+           this.provinceName = provData.provinceName;
            const myelem = document.getElementById('selectIt');
            myelem.style.position = 'absolute';
            myelem.style.left = mouse.pageX + 'px';

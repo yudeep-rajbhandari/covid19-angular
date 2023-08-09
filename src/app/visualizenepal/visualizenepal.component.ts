@@ -22,8 +22,8 @@ export class VisualizenepalComponent implements OnInit {
 
   isDataAvailable: boolean;
   isSAARCDataAvailable: boolean;
-  positive: string;
-  negative: string;
+  positive: number;
+  negative: number;
   recovered: string;
 
 
@@ -69,21 +69,30 @@ export class VisualizenepalComponent implements OnInit {
   constructor(private apicall: AuthenticationService, private handler: HttpBackend,  private httpClient: HttpClient) {
 
     this.httpClient = new HttpClient(handler);
-    this.httpClient.get<nepaldata>('https://covid19.mohp.gov.np/covid/api/confirmedcases/?format=json').subscribe(data => {
-      this.data = data;
-      this.recovered = data.nepal.extra1;
-      this.positive = data.nepal.positive;
-      this.negative = data.nepal.negative;
-      this.mydata.push(['Total Positive', parseInt(String(data.nepal.positive), 10)]);
-      this.mydata.push(['Recovered', parseInt(String(data.nepal.extra1),10)]);
-      this.mydata.push(['Isolation', parseInt(String(data.nepal.positive), 10)-parseInt(String(data.nepal.extra1), 10)]);
+    this.mydata.push(['Total Positive', parseInt('333333', 10)]);
+    this.mydata.push(['Recovered', parseInt('33333', 10)]);
+    //       // this.recovered = data.nepal.extra1;
+    this.positive = 333333;
+    this.negative = 222222;
 //      this.mydata1.push(['Total Tested', parseInt(String(data.nepal.samples_tested), 10)]);
-      this.mydata1.push(['Negative', parseInt(String(data.nepal.negative),10)]);
-      this.mydata1.push(['Positive', parseInt(String(data.nepal.positive),10)]);
-
-      this.isDataAvailable = true;
-
-    });
+    this.mydata1.push(['Negative', parseInt('333333', 10)]);
+    this.mydata1.push(['Positive', parseInt('222222', 10)]);
+    this.isDataAvailable = true;
+//     this.httpClient.get<nepaldata>('https://covid19.mohp.gov.np/covid/api/confirmedcases/?format=json').subscribe(data => {
+//       this.data = data;
+//       // this.recovered = data.nepal.extra1;
+//       // this.positive = data.nepal.positive;
+//       // this.negative = data.nepal.negative;
+//       this.mydata.push(['Total Positive', parseInt(String(data.nepal.positive), 10)]);
+//       this.mydata.push(['Recovered', parseInt(String(data.nepal.extra1),10)]);
+//       this.mydata.push(['Isolation', parseInt(String(data.nepal.positive), 10)-parseInt(String(data.nepal.extra1), 10)]);
+// //      this.mydata1.push(['Total Tested', parseInt(String(data.nepal.samples_tested), 10)]);
+//       this.mydata1.push(['Negative', parseInt(String(data.nepal.negative),10)]);
+//       this.mydata1.push(['Positive', parseInt(String(data.nepal.positive),10)]);
+//
+//       this.isDataAvailable = true;
+//
+//     });
     // this.apicall.getNepalLivedata().subscribe(data => {
     //   console.log(data);
     //   this.mydata = this.mydata || [];

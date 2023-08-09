@@ -48,12 +48,15 @@ export class VisualizeCoronaFearComponent implements OnInit {
   constructor(private apicall: AuthenticationService, private handler: HttpBackend,  private httpClient: HttpClient, private router: Router) {
 
     this.httpClient = new HttpClient(handler);
-    this.httpClient.get<nepaldata>('https://covidapi.mohp.gov.np/api/v1/stats/?format=json').subscribe(data => {
-      this.nepaldata = data;
-      this.Cdeath = this.nepaldata.death;
-      this.mydata.unshift(['Death due to Corona', parseInt(String(this.Cdeath), 10)]);
-      this.thisdata = true;
-    });
+    this.Cdeath = 333333333;
+    this.mydata.unshift(['Death due to Corona', parseInt(String(this.Cdeath), 10)]);
+    this.thisdata = true;
+    // this.httpClient.get<nepaldata>('https://covidapi.mohp.gov.np/api/v1/stats/?format=json').subscribe(data => {
+    //   this.nepaldata = data;
+    //   this.Cdeath = this.nepaldata.death;
+    //   this.mydata.unshift(['Death due to Corona', parseInt(String(this.Cdeath), 10)]);
+    //   this.thisdata = true;
+    // });
     this.apicall.getCoronaFear().subscribe(data => {
 
       // tslint:disable-next-line:no-shadowed-variable

@@ -13,17 +13,27 @@ const $: any = jQuery;
   styleUrls: ['./hospital-list.component.css']
 })
 export class HospitalListComponent implements OnInit {
+   data1 = {
+
+     results: [{district_name: 'test',
+       category_name: 'test',
+       name: 'string',
+       contact_num: 'string',
+       municipality_name: 'string'}]
+   }
+
   filtertext = '';
   databool: boolean;
   Hospitals: hospitals[];
   data: DataPayload;
   constructor(handler: HttpBackend, private ns: NotificationService, private httpClient: HttpClient) {
     this.httpClient = new HttpClient(handler);
-    this.httpClient.get<DataPayload>('https://covidapi.mohp.gov.np/api/v1/health-facility2/').subscribe(data => {
-      this.data = data;
-      this.Hospitals = this.data.results;
-      this.databool = true;
-    });
+    this.data = this.data1;
+    this.Hospitals = this.data.results;
+    this.databool = true;
+    // this.httpClient.get<DataPayload>('https://covidapi.mohp.gov.np/api/v1/health-facility2/').subscribe(data => {
+    //
+    // });
   }
 
   ngOnInit() {

@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  serverBaseUrl: 'http://13.92.124.37:8089/',
-  serverUrl: 'http://13.92.124.37:8089/',
+  serverBaseUrl: 'http://localhost:8080/',
+  serverUrl: 'http://localhost:8080/',
 };
 
 /*

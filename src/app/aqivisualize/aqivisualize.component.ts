@@ -27,14 +27,18 @@ export class AQIvisualizeComponent implements OnInit {
     // this.enddate = new Date().toISOString().split('.')[0];
     // this.startdate = this.enddate.split('T')[0] + 'T00:00:00';
     this.httpClient = new HttpClient(handler);
-    this.httpClient.get<data1>('https://api.airvisual.com/v2/city?city=Kathmandu&state=Central%20Region&country=Nepal&key=cc48213a-38d8-430f-81a3-5973c871d7b4').subscribe(data => {
-      this.currentAQI = data.data.current.pollution.aqius;
-      this.currentPM10 = data.data.current.pollution.aqicn;
-      this.data.push(['Now(Live)', this.currentAQI, this.currentPM10]);
-      this.chart.ngOnChanges();
-
-
-    });
+    this.currentAQI = 150;
+    this.currentPM10 = 88;
+    this.data.push(['Now(Live)', this.currentAQI, this.currentPM10]);
+    // this.chart.ngOnChanges();
+    // this.httpClient.get<data1>('https://api.airvisual.com/v2/city?city=Kathmandu&state=Central%20Region&country=Nepal&key=cc48213a-38d8-430f-81a3-5973c871d7b4').subscribe(data => {
+    //   this.currentAQI = data.data.current.pollution.aqius;
+    //   this.currentPM10 = data.data.current.pollution.aqicn;
+    //   this.data.push(['Now(Live)', this.currentAQI, this.currentPM10]);
+    //   this.chart.ngOnChanges();
+    //
+    //
+    // });
 
   }
   title = 'AQI of Kathmandu';
